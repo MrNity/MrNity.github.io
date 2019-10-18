@@ -23,9 +23,20 @@
         <br>
         Последние круги: <b id="lastLoop">0</b>
         <br>
-        Громкость: <b id="volumeText"></b>
         </p>
-        <input type="range" class="" min="0" max="1" step="0.01" id="volume">
+        <div>
+            <label>Громкость: <b id="volumeText"></b></label><br>
+            <input type="range" class="" min="0" max="1" step="0.01" id="volume">
+            <br>
+            <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="mute">
+                <span class="custom-control-indicator">
+                    <i class="fas fa-volume-mute fa-2x d-none icon-mute"></i>
+                    <i class="fas fa-volume-up fa-2x icon-mute"></i>
+                </span>
+                <span class="custom-control-description"></span>
+            </label>
+        </div>
 
         <div class="mt-4">
             <button class="btn btn-success col" id="plus"><i class="fas fa-plus fa-5x"></i></button>
