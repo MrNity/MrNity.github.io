@@ -32,7 +32,7 @@ $(document).ready(function() {
     
     function play() {
         let knock = new Howl({
-            src: ['https://drive.google.com/file/d/1-Axpo0MskEu7ofy1_Jz4a7g8Y0VlEMab/view?usp=sharing'],
+            src: ['http://d.zaix.ru/favP.mp3'],
             volume,
             sprite: {
                 knock: [0, 200]
