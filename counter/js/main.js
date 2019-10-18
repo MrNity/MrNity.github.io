@@ -1,8 +1,9 @@
 $(document).ready(function() {
-    let volume = 0.5
+    let volume = 1
     let counter = 0
     let loops = 0
     let arr = []
+    let mute = false
     
     $('#volume').val(volume)
     $('#volumeText').html(`${(volume*100).toFixed(0)}%`)
@@ -14,11 +15,11 @@ $(document).ready(function() {
     
     $("#plus").click(function(){
         count(++counter)
-        play()
+        !mute ? play() : 0
     })
     $("#loop").click(function(){
         loop(++loops)
-        play()
+        !mute ? play() : 0
     })
 
     $("#reset").click(function(){
@@ -26,13 +27,16 @@ $(document).ready(function() {
         loop(0)
         arr = []
         $("#lastLoop").html(0)
-        play()
+        !mute ? play() : 0
     })
-
+    $('#mute').change(function() {
+        mute = $(this).is(':checked') ? true : false
+        $('.icon-mute').toggleClass('d-none')
+    })
     
     function play() {
         let knock = new Howl({
-            src: ['http://d.zaix.ru/favP.mp3'],
+            src: ['../audio/Stapler.mp3'],
             volume,
             sprite: {
                 knock: [0, 200]
