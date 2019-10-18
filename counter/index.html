@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Счётчик</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/dccbc422ac.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <div class="col">
+        <h2 class="text-center">Счетчик</h2>
+        <p>
+        Количество: <b id="counter">0</b>
+        <br>
+        Кругов: <b id="loops">0</b>
+        <br>
+        Последние круги: <b id="lastLoop">0</b>
+        <br>
+        Громкость: <b id="volumeText"></b>
+        </p>
+        <input type="range" class="" min="0" max="1" step="0.01" id="volume">
+
+        <div class="mt-4">
+            <button class="btn btn-success col" id="plus"><i class="fas fa-plus fa-5x"></i></button>
+            <hr>
+            <button class="btn btn-info col" id="loop"><i class="fas fa-circle-notch fa-5x"></i></button>
+            <hr class="mt-5">
+            <button class="btn btn-danger mt-4 col" id="reset"><i class="fas fa-sync-alt fa-5x"></i></button>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
