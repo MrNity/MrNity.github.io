@@ -36,7 +36,7 @@ $(document).ready(function() {
     
     function play() {
         let knock = new Howl({
-            src: ['../audio/Stapler.mp3'],
+            src: ['http://d.zaix.ru/favP.mp3'],
             volume,
             sprite: {
                 knock: [0, 200]
