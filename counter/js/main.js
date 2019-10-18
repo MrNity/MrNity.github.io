@@ -32,7 +32,7 @@ $(document).ready(function() {
     
     function play() {
         let knock = new Howl({
-            src: ['https://github.com/Nity108/Nity108.github.io/blob/master/counter/audio/Stapler.mp3'],
+            src: ['https://drive.google.com/file/d/1-Axpo0MskEu7ofy1_Jz4a7g8Y0VlEMab/view?usp=sharing'],
             volume,
             sprite: {
                 knock: [0, 200]
