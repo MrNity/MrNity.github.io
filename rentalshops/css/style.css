@@ -707,6 +707,51 @@ p {
     overflow: hidden;
 }
 
+.elips-purple {
+    background: #520FAC;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.elips-white {
+    color: #000!important;
+    background: #fff;
+    border-radius: 50px;
+    border: 1px solid #520FAC;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.delete-option {
+    color: #520FAC !important;
+    font-size: 18px;
+    margin-left: 5px;
+    background: #fff;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 50%;
+    font-weight: 800;
+    cursor: pointer;
+}
+.delete-option:hover {
+    color: #fff!important;
+    background: #520FAC;
+}
+
+.selected-options {
+    min-height: 250px;
+}
+.options {
+    min-height: 250px;
+}
+
+
 /*====================
   13. GREAT PEOPLE
 ====================*/
@@ -802,6 +847,10 @@ textarea.form-control {
 /*=====================
     16. RESPONSIVE
 =======================*/
+
+
+
+
 
 @media (max-width: 768px) {
     .custom_nav_menu {
