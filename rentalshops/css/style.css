@@ -745,10 +745,10 @@ p {
 }
 
 .selected-options {
-    min-height: 250px;
+    min-height: 100px;
 }
 .options {
-    min-height: 250px;
+    min-height: 100px;
 }
 
 
