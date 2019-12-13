@@ -83,7 +83,10 @@ $(document).ready(function() {
         amounts.forEach(a => {
             total += a
         })
-        $('#totalAmount').html(`${total}$/Мес.`)
+        let rub = (total * 62.7).toFixed(0)
+        
+        $('#totalAmount').html(`${total}$`)
+        $('#totalAmountRub').html(`${rub} р /Мес.`)
     }
     
     Spawn()
