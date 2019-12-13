@@ -86,7 +86,7 @@ $(document).ready(function() {
         let rub = (total * 62.7).toFixed(0)
         
         $('#totalAmount').html(`${total}$`)
-        $('#totalAmountRub').html(`${rub} р /Мес.`)
+        $('#totalAmountRub').html(`${rub} руб./Мес.`)
     }
     
     Spawn()
