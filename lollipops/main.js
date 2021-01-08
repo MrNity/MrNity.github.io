@@ -206,9 +206,6 @@ new Vue({
         if (localStorage.leftLollipops) {
             this.leftLollipops = localStorage.leftLollipops
         }
-        if (localStorage.spentLollipops) {
-            this.spentLollipops = localStorage.spentLollipops
-        }
         if (localStorage.earnedLollipops) {
             this.earnedLollipops = localStorage.earnedLollipops
         }
@@ -305,6 +302,17 @@ new Vue({
         },
         gift(newData) {
             localStorage.gift = newData
+        },
+        
+        // loop
+        nowLollipops(newData) {
+            localStorage.nowLollipops = newData
+        },
+        leftLollipops(newData) {
+            localStorage.leftLollipops = newData
+        },
+        earnedLollipops(newData) {
+            localStorage.earnedLollipops = newData
         },
         
         // nity
