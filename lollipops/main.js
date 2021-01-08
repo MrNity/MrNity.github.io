@@ -52,9 +52,9 @@ new Vue({
             
             switch (nick) {
                 case 'nity':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansNity = nextDate
@@ -71,9 +71,9 @@ new Vue({
                     }
                 break
                 case 'abraham':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansAbraham = nextDate
@@ -90,9 +90,9 @@ new Vue({
                     }
                 break
                 case 'keanu':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansKeanu = nextDate
@@ -109,9 +109,9 @@ new Vue({
                     }
                 break
                 case 'jonsen':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansJonsen = nextDate
@@ -128,9 +128,9 @@ new Vue({
                     }
                 break
                 case 'shpili':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansShpili = nextDate
@@ -147,9 +147,9 @@ new Vue({
                     }
                 break
                 case 'sakamoto':
-                    this.nowLollipops = +this.nowLollipops + 40
+                    this.nowLollipops = +this.nowLollipops + 10
                     this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
-                    this.earnedLollipops = +this.earnedLollipops + 40
+                    this.earnedLollipops = +this.earnedLollipops + 10
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansSakamoto = nextDate
