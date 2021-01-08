@@ -8,7 +8,7 @@ new Vue({
         
         allLollipops: 23988,
         nowLollipops: 3182,
-        leftLollipops: 17408,
+        leftLollipops: 17168,
         spentLollipops: 3638,
         earnedLollipops: 6820,
         
