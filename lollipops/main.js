@@ -4,6 +4,8 @@ new Vue({
         loop: 0,
         gift: '',
         
+        spent: 0,
+        
         allLollipops: 23988,
         nowLollipops: 3182,
         leftLollipops: 17408,
@@ -47,12 +49,12 @@ new Vue({
             let next = new Date(now.getTime() + count * (60 * 60 * 1000))
             let nextDate = `${next.getHours() < 10 ? `0${next.getHours()}` : next.getHours()}:${next.getMinutes() < 10 ? `0${next.getMinutes()}` : next.getMinutes()}`
             
-            this.nowLollipops = +this.nowLollipops + 40
-            this.leftLollipops = +(this.allLollipops - (this.nowLollipops + this.spentLollipops))
-            this.earnedLollipops = +this.earnedLollipops + 40
             
             switch (nick) {
                 case 'nity':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansNity = nextDate
@@ -69,6 +71,9 @@ new Vue({
                     }
                 break
                 case 'abraham':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansAbraham = nextDate
@@ -85,6 +90,9 @@ new Vue({
                     }
                 break
                 case 'keanu':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansKeanu = nextDate
@@ -101,6 +109,9 @@ new Vue({
                     }
                 break
                 case 'jonsen':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansJonsen = nextDate
@@ -117,6 +128,9 @@ new Vue({
                     }
                 break
                 case 'shpili':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansShpili = nextDate
@@ -133,6 +147,9 @@ new Vue({
                     }
                 break
                 case 'sakamoto':
+                    this.nowLollipops = +this.nowLollipops + 40
+                    this.leftLollipops = +this.allLollipops - (this.nowLollipops + this.spentLollipops)
+                    this.earnedLollipops = +this.earnedLollipops + 40
                     switch (oper) {
                         case 'snowmans':
                             this.snowmansSakamoto = nextDate
@@ -188,6 +205,11 @@ new Vue({
             this.treesSakamoto = ''
             this.snowballsSakamoto = ''
             this.clothSakamoto = ''
+        },
+        Spent() {
+            this.spentLollipops = +this.spentLollipops + +this.spent
+            this.nowLollipops = this.nowLollipops - this.spent
+            this.spent = 0
         }
     },
     mounted() {
@@ -208,6 +230,9 @@ new Vue({
         }
         if (localStorage.earnedLollipops) {
             this.earnedLollipops = localStorage.earnedLollipops
+        }
+        if (localStorage.spentLollipops) {
+            this.spentLollipops = localStorage.spentLollipops
         }
         
         // nity
@@ -313,6 +338,9 @@ new Vue({
         },
         earnedLollipops(newData) {
             localStorage.earnedLollipops = newData
+        },
+        spentLollipops(newData) {
+            localStorage.spentLollipops = newData
         },
         
         // nity

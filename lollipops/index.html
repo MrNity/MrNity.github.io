@@ -121,7 +121,7 @@
                 </tbody>
             </table>
 
-            <table class="col-6 mt-5">
+            <table class="col-6 my-5">
                 <thead>
                     <tr>
                         <th scope="col">Есть</th>
@@ -140,10 +140,13 @@
                         <td><b>{{ earnedLollipops }}</b></td>
                         <td><b>{{ spentLollipops }}</b></td>
                         <td><b>{{ allLollipops }}</b></td>
-<!--                        <td><button class="btn btn-primary" @click="addHours(1)"><i class="fas fa-clock"></i></button></td>-->
                     </tr>
                 </tbody>
             </table>
+            <div class="form-inline">
+                <input type="number" class="form-control" v-model="spent">
+                <button class="btn btn-success ml-3" @click="Spent()"><i class="fas fa-shopping-cart"></i></button>
+            </div>
         </div>
     </div>
     
