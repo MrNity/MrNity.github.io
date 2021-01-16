@@ -7,10 +7,10 @@ new Vue({
         spent: 0,
         
         allLollipops: 23988,
-        nowLollipops: 3182,
-        leftLollipops: 17168,
+        nowLollipops: 5842,
+        leftLollipops: 14508,
         spentLollipops: 3638,
-        earnedLollipops: 6820,
+        earnedLollipops: 9480,
         
         snowmansNity: '',
         treesNity: '',
@@ -162,7 +162,7 @@ new Vue({
                         break
                         case 'cloth':
                             this.clothSakamoto = nextDate
-                            this.loop = +this.loop + 1
+//                            this.loop = +this.loop + 1
                         break
                     }
                 break
