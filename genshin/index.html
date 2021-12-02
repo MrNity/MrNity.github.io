@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Genshin Heal & Baffs</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dccbc422ac.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <div class="content row ml-0">
+            <div class="col-md-2 col-12 mt-5">
+
+                <label for="">Перс</label>
+                <select class="form-control" v-model="char">
+                    <option value=""></option>
+                    <option value="Barbara">Барбара</option>
+                    <option value="Bennett">Беннет</option>
+                    <option value="Jean">Джин</option>
+                    <option value="Diona">Диона</option>
+                    <option value="Noelle">Ноэль</option>
+                    <option value="Sara">Сара</option>
+                    <option value="Sayu">Саю</option>
+                    <option value="Xingqiu">Син Цю</option>
+                    <option value="Qiqi">Ци Ци</option>
+                    <option value="Zhongli">Чжун Ли (дед)</option>
+                </select>
+                
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett'">
+                    <label for="">HP</label>
+                    <input type="number" class="form-control" v-model="hp">
+                </div>
+                
+                <div v-if="char == 'Jean' || char == 'Qiqi' || char == 'Sara' || char == 'Sayu' || char == 'Bennett'">
+                    <label for="">Сила Атаки</label>
+                    <input type="number" class="form-control" v-model="at">
+                </div>
+
+                <div v-if="char == 'Noelle'">
+                    <label for="">Защита</label>
+                    <input type="number" class="form-control" v-model="def">
+                </div>
+                
+                <div v-if="char == 'Sayu'">
+                    <label for="">Мастерство стихий</label>
+                    <input type="number" class="form-control" v-model="moe">
+                </div>
+                
+                <div v-if="char != 'Sara'">
+                    <label for="">Бонус лечения</label>
+                    <input type="number" class="form-control" v-model="bonusHeal">
+
+                    <label for="">Бонус получаемого лечения (тиммейтов)</label>
+                    <input type="number" class="form-control" v-model="bonusRecHeal">
+                </div>
+
+                <hr>
+                
+                <div v-if="char != 'Jean' && char != 'Sayu' && char != 'Bennett' && char != 'Xingqiu'">
+                    <label for="">Е-шка</label>
+                    <input type="number" class="form-control" v-model="talantE">
+                </div>
+                
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' && char != 'Xingqiu'">
+                    <label for="">Ульта</label>
+                    <input type="number" class="form-control" v-model="talantQ">
+                </div>
+                
+                
+                <div v-if="char == 'Diona'">
+                    <hr>
+                    <label for="">Созвездий</label>
+                    <input type="number" class="form-control" v-model="constellation">
+                </div>
+                
+                <div v-if="char == 'Barbara'">
+                    <hr>
+                    <label for="">Янтарь ранг пробуждения</label>
+                    <input type="number" class="form-control" v-model="amberRank">
+                </div>
+                
+                <button class="btn btn-success mt-3" @click=""><i class="fa fa-save"></i> Сохранить статы перса</button>
+                <button class="btn btn-success mt-3" @click=""><i class="fa fa-search"></i> Показать все</button>
+
+            </div>
+            <div class="col-md-8 col-12 mt-5">
+                
+                <table v-if="char == 'Barbara'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Хил за тычку</th>
+                            <th scope="col">Заряженка</th>
+                            <th scope="col">Регенерация</th>
+                            <th scope="col">Ульта</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Bennet'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Jean'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Хил с тычки</th>
+                            <th scope="col">Хил с ульты</th>
+                            <th scope="col">Хил с ульты в сек</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                            <td>{{ HealRec.toFixed(0) }}</td>
+                            <td>{{ HealRecPerTick.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Diona'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Щит</th>
+                            <th scope="col">Долгий щит</th>
+                            <th scope="col">Периодический хил</th>
+                            <th scope="col">Получаемый хил</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ Shield.toFixed(0) }}</td>
+                            <td>{{ LongShield.toFixed(0) }}</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ HealRecPerTick.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                 
+                <table v-if="char == 'Noelle'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Щит</th>
+                            <th scope="col">Хил с тычки</th>
+                            <th scope="col">Получаемый хил с тычки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ Shield.toFixed(0) }}</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Sara'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Бафф Силы Атаки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ AP.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Sayu'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Хил с ульты</th>
+                            <th scope="col">Хил с ульты в сек</th>
+                            <th scope="col">Рассеивание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>{{ HealRec.toFixed(0) }}</td>
+                            <td>{{ HealRecPerTick.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Xingqiu'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Хил после окончания ульты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>{{ HealRec.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Qiqi'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Zhongli'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                 </table>
+
+            </div>
+            
+        </div>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    
+    <script src="chars/barbara.js"></script>
+    <script src="chars/bennett.js"></script>
+    <script src="chars/jean.js"></script>
+    <script src="chars/diona.js"></script>
+    <script src="chars/noelle.js"></script>
+    <script src="chars/sara.js"></script>
+    <script src="chars/sayu.js"></script>
+    <script src="chars/qiqi.js"></script>
+    <script src="chars/zhongli.js"></script>
+    
+    
+    
+    
+    
+    
+    <script src="main.js"></script>
+    
+</body>
+</html>
