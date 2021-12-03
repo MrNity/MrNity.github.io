@@ -213,7 +213,7 @@ new Vue({
             
         },
         XingqiuCalc() {
-            let per = 0.18
+            let per = 0.06
             let hp = +this.hp
             let bh = +this.bonusHeal / 100
             let brh = +this.bonusRecHeal / 100
