@@ -10,9 +10,9 @@
 </head>
 <body style="padding: 0; margin: 0;">
     <div id="app">
-           <h2 class="text-center mt-2">Genshin Heal & Baffs Table</h2>
+        <h2 class="text-center mt-2">Genshin Heal & Baffs Table</h2>
         <div class="content row ml-0">
-            <div class="col-md-2 col-12 mt-5">
+            <div class="col-md-3 col-12 mt-5">
                 <label for="chara">Перс</label>
                 <select class="form-control" v-model="char" id="chara">
                     <option value=""></option>
@@ -49,18 +49,18 @@
                 </div>
                 
                 <div v-if="char != 'Sara'&& char != ''">
-                    <label for="bh">Бонус лечения</label>
+                    <label for="bh">Бонус лечения <span class="text-danger">база перса или с сета артов (юная дева)</span></label>
                     <input type="number" class="form-control" v-model="bonusHeal" id="bh">
 
-                    <label for="brh">Бонус получаемого лечения (тиммейтов)</label>
+                    <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
                 </div>
                 <div v-if="char == 'Barbara' && char != ''">
-                    <label for="brhr">Бонус получаемого лечения с резонансом (тиммейтов)</label>
+                    <label for="brhr">Бонус получаемого лечения <span class="text-info">с резонансом</span> <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHealResonance" id="brhr">
                 </div>
 
-                <hr>
+                <hr v-if="char != ''">
                 
                 <div v-if="char != 'Jean' && char != 'Sayu' && char != 'Bennett' && char != 'Xingqiu' && char != ''">
                     <label for="e">Е-шка</label>
@@ -72,19 +72,20 @@
                     <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
                 
-                
                 <div v-if="char == 'Diona'">
                     <hr>
                     <label for="con">Созвездий</label>
                     <input type="number" class="form-control" v-model="constellation" min="0" max="6" id="con">
                 </div>
                 
-                <button class="btn btn-success mt-3" @click="SaveCharInfo()" v-if="char != ''"><i class="fa fa-save"></i> Сохранить статы перса</button>
+                <button class="btn btn-success mt-3 mx-auto" @click="SaveCharInfo()" v-if="char != ''"><i class="fa fa-save"></i> Сохранить статы перса</button>
+                <button class="btn btn-info mt-3 mx-auto" @click="LoadCharInfo()" v-if="char != ''"><i class="fa fa-download"></i> Загрузить статы перса</button>
+                <hr>
                 <button class="btn btn-success mt-3" @click="ShowAll()"><i class="fa fa-search"></i> Показать все</button>
 
             </div>
             
-            <div class="col-md-8 col-12 mt-5">
+            <div class="col-md-6 col-12 mt-5">
                 <table v-if="char == 'Barbara'" class="table table-hover">
                     <thead>
                         <tr>

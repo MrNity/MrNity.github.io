@@ -362,9 +362,120 @@ new Vue({
                     
                 break
             }
+            this.ShowAll(false)
         },
-        ShowAll() {
-            this.showAll = !this.showAll
+        LoadCharInfo() {
+            switch (this.char) {
+                case 'Barbara':
+                    let barbara = JSON.parse(localStorage.barbara)
+                    this.hp = barbara.hp
+                    this.bonusHeal = barbara.bonusHeal
+                    this.bonusRecHeal = barbara.bonusRecHeal
+                    this.bonusRecHealResonance = barbara.bonusRecHealResonance
+                    this.talantE = barbara.talantE
+                    this.talantQ = barbara.talantQ
+                    this.Heal = barbara.Heal
+                    this.HealRec = barbara.HealRec
+                    this.HealRecResonance = barbara.HealRecResonance
+                    this.HealRecOnlyResonance = barbara.HealRecOnlyResonance
+                    this.HealPerTick = barbara.HealPerTick
+                    this.HealRecPerTick = barbara.HealRecPerTick
+                    this.HealRecPerTickResonance = barbara.HealRecPerTickResonance
+                    this.HealRecOnlyPerTickResonance = barbara.HealRecOnlyPerTickResonance
+                    this.HealPerAtck = barbara.HealPerAtck
+                    this.HealRecPerAtck = barbara.HealRecPerAtck
+                    this.HealRecPerAtckResonance = barbara.HealRecPerAtckResonance
+                    this.HealRecOnlyPerAtckResonance = barbara.HealRecOnlyPerAtckResonance
+                break
+                case 'Bennett':
+                    
+                    
+                break
+                case 'Jean':
+                    let jean = JSON.parse(localStorage.jean)
+                    this.at = jean.at
+                    this.bonusHeal = jean.bonusHeal
+                    this.bonusRecHeal = jean.bonusRecHeal
+                    this.talantQ = jean.talantQ
+                    this.Heal = jean.Heal
+                    this.HealRec = jean.HealRec
+                    this.HealPerTick = jean.HealPerTick
+                    this.HealPerAtck = jean.HealPerAtck
+                    this.HealRecPerTick = jean.HealRecPerTick
+                    this.HealRecPerAtck = jean.HealRecPerAtck
+                break
+                case 'Diona':
+                    let diona = JSON.parse(localStorage.diona)
+                    this.hp = diona.hp
+                    this.bonusHeal = diona.bonusHeal
+                    this.bonusRecHeal = diona.bonusRecHeal
+                    this.talantE = diona.talantE
+                    this.talantQ = diona.talantQ
+                    this.constellation = diona.constellation
+                    this.Shield = diona.Shield
+                    this.LongShield = diona.LongShield
+                    this.HealPerTick = diona.HealPerTick
+                    this.HealRecPerTick = diona.HealRecPerTick
+                break
+                case 'Noelle':
+                    let noelle = JSON.parse(localStorage.noelle)
+                    this.def = noelle.def
+                    this.bonusHeal = noelle.bonusHeal
+                    this.bonusRecHeal = noelle.bonusRecHeal
+                    this.talantE = noelle.talantE
+                    this.Shield = noelle.Shield
+                    this.Heal = noelle.Heal
+                    this.HealRec = noelle.HealRec
+                    this.HealPerAtck = noelle.HealPerAtck
+                    this.HealRecPerAtck = noelle.HealRecPerAtck
+                break
+                case 'Sara':
+                    let sara = JSON.parse(localStorage.sara)
+                    this.at = sara.at,
+                    this.talantE = sara.talantE,
+                    this.AP = sara.AP
+                break
+                case 'Sayu':
+                    let sayu = JSON.parse(localStorage.sayu)
+                    this.at = sayu.at,
+                    this.moe = sayu.moe,
+                    this.bonusHeal = sayu.bonusHeal,
+                    this.bonusRecHeal = sayu.bonusRecHeal,
+                    this.Heal = sayu.Heal,
+                    this.HealRec = sayu.HealRec,
+                    this.HealPerTick = sayu.HealPerTick,
+                    this.HealPerAtck = sayu.HealPerAtck,
+                    this.HealRecPerTick = sayu.HealRecPerTick,
+                    this.HealRecPerAtck = sayu.HealRecPerAtck
+                break
+                case 'Xingqiu':
+                    let xingqiu = JSON.parse(localStorage.xingqiu)
+                    this.hp = xingqiu.hp,
+                    this.Heal = xingqiu.Heal,
+                    this.HealRec = xingqiu.HealRec
+                break
+                case 'Qiqi':
+                
+                    let qiqi = JSON.parse(localStorage.qiqi)
+                    this.at = qiqi.at,
+                    this.bonusHeal = qiqi.bonusHeal,
+                    this.bonusRecHeal = qiqi.bonusRecHeal,
+                    this.talantE = qiqi.talantE,
+                    this.Heal = qiqi.Heal,
+                    this.HealRec = qiqi.HealRec,
+                    this.HealPerAtck = qiqi.HealPerAtck,
+                    this.HealRecPerAtck = qiqi.HealRecPerAtck
+                break
+                case 'Zhongli':
+                    
+                    
+                break
+            }
+        },
+        ShowAll(show = true) {
+            if (show) {
+                this.showAll = !this.showAll
+            }
             this.Barbara = localStorage.barbara != undefined ? JSON.parse(localStorage.barbara) : {}
             this.Bennett = localStorage.bennett != undefined ? JSON.parse(localStorage.bennett) : {}
             this.Jean = localStorage.jean != undefined ? JSON.parse(localStorage.jean) : {}
