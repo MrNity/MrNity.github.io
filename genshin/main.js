@@ -8,12 +8,11 @@ new Vue({
         moe: 0,
         bonusHeal: 0,
         bonusRecHeal: 0,
+        bonusRecHealResonance: 0,
         //
         talantE: 1,
         talantQ: 1,
         constellation: 0,
-        //
-        amberRank: 0,
         // 
         Shield: 0,
         LongShield: 0,
@@ -22,23 +21,103 @@ new Vue({
         
         Heal: 0,
         HealRec: 0,
+        HealRecResonance: 0,
+        HealRecOnlyResonance: 0,
         
         HealPerTick: 0,
-        HealPerAtck: 0,
-        
         HealRecPerTick: 0,
-        HealRecPerAtck: 0,
+        HealRecPerTickResonance: 0,
+        HealRecOnlyPerTickResonance: 0,
         
+        HealPerAtck: 0,
+        HealRecPerAtck: 0,
+        HealRecPerAtckResonance: 0,
+        HealRecOnlyPerAtckResonance: 0,
+        //
+        Barbara: {},
+        Bennett: {},
+        Jean: {},
+        Diona: {},
+        Noelle: {},
+        Sara: {},
+        Sayu: {},
+        Xingqiu: {},
+        Qiqi: {},
+        Zhongli: {},
+        showAll: false,
     },
     methods: {
         BarbaraCalc() {
             let lvE = +this.talantE
             let lvQ = +this.talantQ
             
+            let bh = +this.bonusHeal / 100
+            let brh = +this.bonusRecHeal / 100
+            let brhr = +this.bonusRecHealResonance / 100
+            
+            let hp = +this.hp
+            
+            // HEAL in Q
+            let heal = hp * Barbara.Q.lvl[lvQ-1].heal.base + Barbara.Q.lvl[lvQ-1].heal.flat
+            
+            let healBonus = heal + heal * bh
+            let healRec = healBonus + heal * brh
+            
+            this.Heal = healBonus
+            this.HealRec = healRec
+            this.HealRecResonance = healRec + heal * brhr
+            this.HealRecOnlyResonance = healBonus + heal * brhr
+            
+            // TICK in E
+            let healTick = hp * Barbara.E.lvl[lvE-1].heal.base + Barbara.E.lvl[lvE-1].heal.flat
+            
+            let healTickBonus = healTick + healTick * bh
+            let healRecPerTick = healTickBonus + healTick * brh
+            
+            this.HealPerTick = healTickBonus
+            this.HealRecPerTick = healRecPerTick
+            
+            this.HealRecPerTickResonance = healRecPerTick + healTick * brhr
+            this.HealRecOnlyPerTickResonance = healTickBonus + healTick * brhr
+            
+            // ATCK in E
+            let healPerAtck = hp * Barbara.E.lvl[lvE-1].healPerAtck.base + Barbara.E.lvl[lvE-1].healPerAtck.flat
+            
+            let healPerAtckBonus = healPerAtck + healPerAtck * bh
+            let healRecPerAtckBonus = healPerAtckBonus + healPerAtck * brh
+            
+            this.HealPerAtck = healPerAtckBonus
+            this.HealRecPerAtck = healRecPerAtckBonus
+            this.HealRecPerAtckResonance = healRecPerAtckBonus + healPerAtck * brhr
+            this.HealRecOnlyPerAtckResonance = healPerAtckBonus + healPerAtck * brhr
         },
         BennettCalc() {
             let lvE = +this.talantE
             let lvQ = +this.talantQ
+            
+            let bh = +this.bonusHeal / 100
+            let brh = +this.bonusRecHeal / 100
+            let at = +this.at
+            
+            let heal = at * Jean.Q.lvl[lvQ-1].heal.base + Jean.Q.lvl[lvQ-1].heal.flat
+            
+            let healTick = at * Jean.Q.lvl[lvQ-1].healPerTick.base + Jean.Q.lvl[lvQ-1].healPerTick.flat
+            let healPerAtck = at * Jean.hold
+            
+            heal = heal + heal * bh
+            this.Heal = heal
+            
+            healRec = heal + heal * brh
+            this.HealRec = healRec
+            
+            healTick = healTick + healTick * bh
+            this.HealPerTick = healTick
+            this.HealRecPerTick = healTick + healTick * brh
+            
+            
+            healPerAtck = healPerAtck + healPerAtck * bh
+            this.HealPerAtck = healPerAtck
+            this.HealRecPerAtck = healPerAtck + healPerAtck * brh
             
         },
         JeanCalc() {
@@ -106,8 +185,8 @@ new Vue({
         SayuCalc() {
             let lvQ = +this.talantQ
             let at = +this.at
-            let bh = +this.bonusHeal
-            let brh = +this.bonusRecHeal
+            let bh = +this.bonusHeal / 100
+            let brh = +this.bonusRecHeal / 100
             let moe = +this.moe
             
             let heal = at * Sayu.Q.lvl[lvQ-1].heal.base + Sayu.Q.lvl[lvQ-1].heal.flat
@@ -140,7 +219,21 @@ new Vue({
         },
         QiqiCalc() {
             let lvE = +this.talantE
+            let at = +this.at
+            let bh = +this.bonusHeal / 100
+            let brh = +this.bonusRecHeal / 100
             
+            let heal = at * Qiqi.E.lvl[lvE-1].heal.base + Qiqi.E.lvl[lvE-1].heal.flat
+            
+            heal = heal + heal * bh
+            healRec = heal + heal * brh
+            this.Heal = heal
+            this.HealRec = healRec + healRec * brh
+            
+            let healPerAtck = at * Qiqi.E.lvl[lvE-1].healPerAtck.base + Qiqi.E.lvl[lvE-1].healPerAtck.flat
+            healPerAtck = healPerAtck + healPerAtck * bh
+            this.HealPerAtck = healPerAtck + healPerAtck * brh
+            this.HealRecPerAtck = healPerAtck + healPerAtck * brh
         },
         ZhongliCalc() {
             let lvE = +this.talantE
@@ -149,16 +242,142 @@ new Vue({
         
         SaveCharInfo() {
             switch (this.char) {
-                
+                case 'Barbara':
+                    let barbara = {
+                        hp: +this.hp,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        bonusRecHealResonance: +this.bonusRecHealResonance,
+                        talantE: +this.talantE,
+                        talantQ: +this.talantQ,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec,
+                        HealRecResonance: +this.HealRecResonance,
+                        HealRecOnlyResonance: +this.HealRecOnlyResonance,
+                        HealPerTick: +this.HealPerTick,
+                        HealRecPerTick: +this.HealRecPerTick,
+                        HealRecPerTickResonance: +this.HealRecPerTickResonance,
+                        HealRecOnlyPerTickResonance: +this.HealRecOnlyPerTickResonance,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerAtck: +this.HealRecPerAtck,
+                        HealRecPerAtckResonance: +this.HealRecPerAtckResonance,
+                        HealRecOnlyPerAtckResonance: +this.HealRecOnlyPerAtckResonance
+                    }
+                    localStorage.barbara = JSON.stringify(barbara)
+                break
+                case 'Bennett':
+                    
+                    
+                break
+                case 'Jean':
+                    let jean = {
+                        at: +this.at,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        talantQ: +this.talantQ,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec,
+                        HealPerTick: +this.HealPerTick,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerTick: +this.HealRecPerTick,
+                        HealRecPerAtck: +this.HealRecPerAtck
+                    }
+                    localStorage.jean = JSON.stringify(jean)
+                break
+                case 'Diona':
+                    let diona = {
+                        hp: +this.hp,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        talantE: +this.talantE,
+                        talantQ: +this.talantQ,
+                        constellation: +this.constellation,
+                        Shield: +this.Shield,
+                        LongShield: +this.LongShield,
+                        HealPerTick: +this.HealPerTick,
+                        HealRecPerTick: +this.HealRecPerTick
+                    }
+                    localStorage.diona = JSON.stringify(diona)
+                break
+                case 'Noelle':
+                    let noelle = {
+                        def: +this.def,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        talantE: +this.talantE,
+                        Shield: +this.Shield,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerAtck: +this.HealRecPerAtck
+                    }
+                    localStorage.noelle = JSON.stringify(noelle)
+                break
+                case 'Sara':
+                    let sara = {
+                        at: +this.at,
+                        talantE: +this.talantE,
+                        AP: +this.AP
+                    }
+                    localStorage.sara = JSON.stringify(sara)
+                break
+                case 'Sayu':
+                    let sayu = {
+                        at: +this.at,
+                        moe: +this.moe,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec,
+                        HealPerTick: +this.HealPerTick,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerTick: +this.HealRecPerTick,
+                        HealRecPerAtck: +this.HealRecPerAtck
+                    }
+                    localStorage.sayu = JSON.stringify(sayu)
+                break
+                case 'Xingqiu':
+                    let xingqiu = {
+                        hp: +this.hp,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec
+                    }
+                    localStorage.xingqiu = JSON.stringify(xingqiu)
+                break
+                case 'Qiqi':
+                    let qiqi = {
+                        at: +this.at,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        talantE: +this.talantE,
+                        Heal: +this.Heal,
+                        HealRec: +this.HealRec,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerAtck: +this.HealRecPerAtck
+                    }
+                    localStorage.qiqi = JSON.stringify(qiqi)
+                break
+                case 'Zhongli':
+                    
+                    
+                break
             }
         },
         ShowAll() {
-            
+            this.showAll = !this.showAll
+            this.Barbara = localStorage.barbara != undefined ? JSON.parse(localStorage.barbara) : {}
+            this.Bennett = localStorage.bennett != undefined ? JSON.parse(localStorage.bennett) : {}
+            this.Jean = localStorage.jean != undefined ? JSON.parse(localStorage.jean) : {}
+            this.Diona = localStorage.diona != undefined ? JSON.parse(localStorage.diona) : {}
+            this.Noelle = localStorage.noelle != undefined ? JSON.parse(localStorage.noelle) : {}
+            this.Sara = localStorage.sara != undefined ? JSON.parse(localStorage.sara) : {}
+            this.Sayu = localStorage.sayu != undefined ? JSON.parse(localStorage.sayu) : {}
+            this.Xingqiu = localStorage.xingqiu != undefined ? JSON.parse(localStorage.xingqiu) : {}
+            this.Qiqi = localStorage.qiqi != undefined ? JSON.parse(localStorage.qiqi) : {}
+            this.Zhongli = localStorage.zhongli != undefined ? JSON.parse(localStorage.zhongli) : {}
         }
     },
     mounted() {
-        
-        
         
     },
     watch: {
@@ -261,6 +480,9 @@ new Vue({
                     this.QiqiCalc() 
                 break
             }
+        },
+        bonusRecHealResonance(newData) {
+            this.BarbaraCalc()
         },
         talantE(newData) {
             switch (this.char) {

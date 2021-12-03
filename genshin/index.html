@@ -8,15 +8,15 @@
     <script src="https://kit.fontawesome.com/dccbc422ac.js"></script>
     
 </head>
-<body>
+<body style="padding: 0; margin: 0;">
     <div id="app">
+           <h2 class="text-center mt-2">Genshin Heal & Baffs Table</h2>
         <div class="content row ml-0">
             <div class="col-md-2 col-12 mt-5">
-
-                <label for="">Перс</label>
-                <select class="form-control" v-model="char">
+                <label for="chara">Перс</label>
+                <select class="form-control" v-model="char" id="chara">
                     <option value=""></option>
-                    <option value="Barbara" disabled>Барбара</option>
+                    <option value="Barbara">Барбара</option>
                     <option value="Bennett" disabled>Беннет</option>
                     <option value="Jean">Джин</option>
                     <option value="Diona">Диона</option>
@@ -24,69 +24,67 @@
                     <option value="Sara">Сара</option>
                     <option value="Sayu">Саю</option>
                     <option value="Xingqiu">Син Цю</option>
-                    <option value="Qiqi" disabled>Ци Ци</option>
+                    <option value="Qiqi">Ци Ци</option>
                     <option value="Zhongli" disabled>Чжун Ли (дед)</option>
                 </select>
                 
                 <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett'">
-                    <label for="">HP</label>
-                    <input type="number" class="form-control" v-model="hp">
+                    <label for="hp">HP</label>
+                    <input type="number" class="form-control" v-model="hp" id="hp">
                 </div>
                 
                 <div v-if="char == 'Jean' || char == 'Qiqi' || char == 'Sara' || char == 'Sayu' || char == 'Bennett'">
-                    <label for="">Сила Атаки</label>
-                    <input type="number" class="form-control" v-model="at">
+                    <label for="ap">Сила Атаки <span v-if="char == 'Sara'" class="text-danger">(базовая)</span> </label>
+                    <input type="number" class="form-control" v-model="at" id="ap">
                 </div>
 
                 <div v-if="char == 'Noelle'">
-                    <label for="">Защита</label>
-                    <input type="number" class="form-control" v-model="def">
+                    <label for="def">Защита</label>
+                    <input type="number" class="form-control" v-model="def" id="def">
                 </div>
                 
                 <div v-if="char == 'Sayu'">
-                    <label for="">Мастерство стихий</label>
-                    <input type="number" class="form-control" v-model="moe">
+                    <label for="moe">Мастерство стихий</label>
+                    <input type="number" class="form-control" v-model="moe" id="moe">
                 </div>
                 
-                <div v-if="char != 'Sara'">
-                    <label for="">Бонус лечения</label>
-                    <input type="number" class="form-control" v-model="bonusHeal">
+                <div v-if="char != 'Sara'&& char != ''">
+                    <label for="bh">Бонус лечения</label>
+                    <input type="number" class="form-control" v-model="bonusHeal" id="bh">
 
-                    <label for="">Бонус получаемого лечения (тиммейтов)</label>
-                    <input type="number" class="form-control" v-model="bonusRecHeal">
+                    <label for="brh">Бонус получаемого лечения (тиммейтов)</label>
+                    <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
+                </div>
+                <div v-if="char == 'Barbara' && char != ''">
+                    <label for="brhr">Бонус получаемого лечения с резонансом (тиммейтов)</label>
+                    <input type="number" class="form-control" v-model="bonusRecHealResonance" id="brhr">
                 </div>
 
                 <hr>
                 
-                <div v-if="char != 'Jean' && char != 'Sayu' && char != 'Bennett' && char != 'Xingqiu'">
-                    <label for="">Е-шка</label>
-                    <input type="number" class="form-control" v-model="talantE">
+                <div v-if="char != 'Jean' && char != 'Sayu' && char != 'Bennett' && char != 'Xingqiu' && char != ''">
+                    <label for="e">Е-шка</label>
+                    <input type="number" class="form-control" v-model="talantE" min="1" max="13" id="e">
                 </div>
                 
                 <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' && char != 'Xingqiu'">
-                    <label for="">Ульта</label>
-                    <input type="number" class="form-control" v-model="talantQ">
+                    <label for="q">Ульта</label>
+                    <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
                 
                 
                 <div v-if="char == 'Diona'">
                     <hr>
-                    <label for="">Созвездий</label>
-                    <input type="number" class="form-control" v-model="constellation">
+                    <label for="con">Созвездий</label>
+                    <input type="number" class="form-control" v-model="constellation" min="0" max="6" id="con">
                 </div>
                 
-                <div v-if="char == 'Barbara'">
-                    <hr>
-                    <label for="">Янтарь ранг пробуждения</label>
-                    <input type="number" class="form-control" v-model="amberRank">
-                </div>
-                
-<!--                <button class="btn btn-success mt-3" @click=""><i class="fa fa-save"></i> Сохранить статы перса</button>-->
-<!--                <button class="btn btn-success mt-3" @click=""><i class="fa fa-search"></i> Показать все</button>-->
+                <button class="btn btn-success mt-3" @click="SaveCharInfo()" v-if="char != ''"><i class="fa fa-save"></i> Сохранить статы перса</button>
+                <button class="btn btn-success mt-3" @click="ShowAll()"><i class="fa fa-search"></i> Показать все</button>
 
             </div>
+            
             <div class="col-md-8 col-12 mt-5">
-                
                 <table v-if="char == 'Barbara'" class="table table-hover">
                     <thead>
                         <tr>
@@ -100,17 +98,32 @@
                     <tbody>
                         <tr>
                             <td>Хилит</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                            <td>{{ HealPerAtck.toFixed(0) * 4 }}</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
                         </tr>
+
                         <tr>
                             <td>Получаемый хил</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) * 4 }}</td>
+                            <td>{{ HealRecPerTick.toFixed(0) }}</td>
+                            <td>{{ HealRec.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил с резонансом</td>
+                            <td>{{ HealRecPerAtckResonance.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtckResonance.toFixed(0) * 4 }}</td>
+                            <td>{{ HealRecPerTickResonance.toFixed(0) }}</td>
+                            <td>{{ HealRecResonance.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил только с резонансом</td>
+                            <td>{{ HealRecOnlyPerAtckResonance.toFixed(0) }}</td>
+                            <td>{{ HealRecOnlyPerAtckResonance.toFixed(0) * 4 }}</td>
+                            <td>{{ HealRecOnlyPerTickResonance.toFixed(0) }}</td>
+                            <td>{{ HealRecOnlyResonance.toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -250,11 +263,20 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
+                            <th scope="col">Хил с тычки</th>
+                            <th scope="col">Регенерация</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>Хилит</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                            <td>{{ HealRec.toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -271,7 +293,236 @@
                         </tr>
                     </tbody>
                  </table>
-
+            </div>
+            
+            <div class="col-md-12 col-12 mt-5">
+                <table v-if="showAll" class="table table-hover" style="font-size: 0.88rem">
+                    <thead>
+                        <tr>
+                            <th scope="col">Перс</th>
+                            <th scope="col">Хил за тычку</th>
+                            <th scope="col">Заряженка</th>
+                            <th scope="col">Регенерация (ЕШКИ)</th>
+                            <th scope="col">Хил с УЛЬТЫ</th>
+                            <th scope="col">Периодический хил с УЛЬТЫ</th>
+                            <th scope="col">Щит</th>
+                            <th scope="col">Долгий щит</th>
+                            <th scope="col">Бафф</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #87a2cb">
+                            <td><b>Барбара</b></td>
+                            <td class="text-center">{{ Barbara.HealPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealPerAtck.toFixed(0) * 4 }}</td>
+                            <td class="text-center">{{ Barbara.HealPerTick.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.Heal.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #87a2cb">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">{{ Barbara.HealRecPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRecPerAtck.toFixed(0) * 4 }}</td>
+                            <td class="text-center">{{ Barbara.HealRecPerTick.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRec.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #87a2cb">
+                            <td class="text-center">Получаемый с резонансом</td>
+                            <td class="text-center">{{ Barbara.HealRecPerAtckResonance.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRecPerAtckResonance.toFixed(0) * 4 }}</td>
+                            <td class="text-center">{{ Barbara.HealRecPerTickResonance.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRecResonance.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #87a2cb">
+                            <td class="text-center">Получаемый только резонанс</td>
+                            <td class="text-center">{{ Barbara.HealRecOnlyPerAtckResonance.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRecOnlyPerAtckResonance.toFixed(0) * 4 }}</td>
+                            <td class="text-center">{{ Barbara.HealRecOnlyPerTickResonance.toFixed(0) }}</td>
+                            <td class="text-center">{{ Barbara.HealRecOnlyResonance.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #cb8787">
+                            <td><b>Беннет</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #87cbba">
+                            <td><b>Джин</b></td>
+                            <td class="text-center">{{ Jean.HealPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Jean.Heal.toFixed(0) }}</td>
+                            <td class="text-center">{{ Jean.HealPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #87cbba">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">{{ Jean.HealRecPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Jean.HealRec.toFixed(0) }}</td>
+                            <td class="text-center">{{ Jean.HealRecPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #db9eb9">
+                            <td><b>Диона</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Diona.HealPerTick.toFixed(0) }}</td>
+                            <td class="text-center">{{ Diona.Shield.toFixed(0) }}</td>
+                            <td class="text-center">{{ Diona.LongShield.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #db9eb9">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Diona.HealRecPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #dbcb9e">
+                            <td><b>Ноэль</b></td>
+                            <td class="text-center">{{ Noelle.HealPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Noelle.Shield.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #dbcb9e">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">{{ Noelle.HealRecPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #b9c">
+                            <td><b>Сара</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Sara.AP.toFixed(0) }}</td>
+                        </tr>
+                        <tr style="background: #adcc99">
+                            <td><b>Саю</b></td>
+                            <td class="text-center">{{ Sayu.HealPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Sayu.Heal.toFixed(0) }}</td>
+                            <td class="text-center">{{ Sayu.HealPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #adcc99">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">{{ Sayu.HealRecPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Sayu.HealRec.toFixed(0) }}</td>
+                            <td class="text-center">{{ Sayu.HealRecPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #7493b3">
+                            <td><b>Син Цю</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Xingqiu.Heal.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #7493b3">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Xingqiu.HealRec.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #88baca">
+                            <td><b>Ци Ци</b></td>
+                            <td class="text-center">{{ Qiqi.HealPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Qiqi.Heal.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #88baca">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">{{ Qiqi.HealRecPerAtck.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Qiqi.HealRec.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #b2986f">
+                            <td><b>Чжун Ли (дед)</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{  }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        
+                    </tbody>
+                 </table>
             </div>
             
         </div>
