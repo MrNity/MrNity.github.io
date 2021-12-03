@@ -18,6 +18,7 @@ new Vue({
         LongShield: 0,
         
         AP: 0,
+        CE: 0,
         
         Heal: 0,
         HealRec: 0,
@@ -178,9 +179,15 @@ new Vue({
             let lvE = +this.talantE
             let at = +this.at
             
+            let critElectro = 0
+            if (this.constellation == 6) {
+                critElectro = 60
+            }
+            
             let baff = at * Sara.E.lvl[lvE-1].abr
             
             this.AP = baff
+            this.CE = critElectro
         },
         SayuCalc() {
             let lvQ = +this.talantQ
@@ -317,7 +324,9 @@ new Vue({
                     let sara = {
                         at: +this.at,
                         talantE: +this.talantE,
-                        AP: +this.AP
+                        AP: +this.AP,
+                        constellation: +this.constellation,
+                        CE: +this.CE
                     }
                     localStorage.sara = JSON.stringify(sara)
                 break
@@ -434,6 +443,8 @@ new Vue({
                     this.at = sara.at,
                     this.talantE = sara.talantE,
                     this.AP = sara.AP
+                    this.constellation = sara.constellation
+                    this.CE = sara.CE
                 break
                 case 'Sayu':
                     let sayu = JSON.parse(localStorage.sayu)

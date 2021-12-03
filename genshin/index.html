@@ -72,7 +72,7 @@
                     <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
                 
-                <div v-if="char == 'Diona'">
+                <div v-if="char == 'Diona' || char == 'Sara'">
                     <hr>
                     <label for="con">Созвездий</label>
                     <input type="number" class="form-control" v-model="constellation" min="0" max="6" id="con">
@@ -207,11 +207,13 @@
                     <thead>
                         <tr>
                             <th scope="col">Бафф Силы Атаки</th>
+                            <th scope="col">Бафф Электро Крита</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{{ AP.toFixed(0) }}</td>
+                            <td>{{ CE.toFixed(0) }}%</td>
                         </tr>
                     </tbody>
                  </table>
@@ -300,15 +302,15 @@
                 <table v-if="showAll" class="table table-hover" style="font-size: 0.88rem">
                     <thead>
                         <tr>
-                            <th scope="col">Перс</th>
-                            <th scope="col">Хил за тычку</th>
-                            <th scope="col">Заряженка</th>
-                            <th scope="col">Регенерация (ЕШКИ)</th>
-                            <th scope="col">Хил с УЛЬТЫ</th>
-                            <th scope="col">Периодический хил с УЛЬТЫ</th>
-                            <th scope="col">Щит</th>
-                            <th scope="col">Долгий щит</th>
-                            <th scope="col">Бафф</th>
+                            <th scope="col" class="text-center">Перс</th>
+                            <th scope="col" class="text-center">Хил за тычку</th>
+                            <th scope="col" class="text-center">Заряженка</th>
+                            <th scope="col" class="text-center">Регенерация (ЕШКИ)</th>
+                            <th scope="col" class="text-center">Хил с УЛЬТЫ</th>
+                            <th scope="col" class="text-center">Периодический хил с УЛЬТЫ</th>
+                            <th scope="col" class="text-center">Щит</th>
+                            <th scope="col" class="text-center">Долгий щит</th>
+                            <th scope="col" class="text-center">Бафф</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -442,7 +444,7 @@
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
-                            <td class="text-center">{{ Sara.AP.toFixed(0) }}</td>
+                            <td class="text-center">{{ Sara.AP.toFixed(0) }} СА <span v-if="Sara.constellation == 6" class="color: #fff">+ {{ Sara.CE }}% электро крита</span></td>
                         </tr>
                         <tr style="background: #adcc99">
                             <td><b>Саю</b></td>
