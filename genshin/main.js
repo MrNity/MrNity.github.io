@@ -371,6 +371,7 @@ new Vue({
                     
                 break
             }
+            alert(`Данные персонажа сохранены в браузере!`)
             this.ShowAll(false)
         },
         LoadCharInfo() {
@@ -482,6 +483,7 @@ new Vue({
                     
                 break
             }
+            alert(`Данные персонажа загружены в форму!`)
         },
         ShowAll(show = true) {
             if (show) {
@@ -497,10 +499,117 @@ new Vue({
             this.Xingqiu = localStorage.xingqiu != undefined ? JSON.parse(localStorage.xingqiu) : {}
             this.Qiqi = localStorage.qiqi != undefined ? JSON.parse(localStorage.qiqi) : {}
             this.Zhongli = localStorage.zhongli != undefined ? JSON.parse(localStorage.zhongli) : {}
+        },
+        CheckInfo() {
+            if (localStorage.barbara == undefined) {
+                localStorage.barbara = JSON.stringify({
+                    hp: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    bonusRecHealResonance: 0,
+                    talantE: 0,
+                    talantQ: 0,
+                    Heal: 0,
+                    HealRec: 0,
+                    HealRecResonance: 0,
+                    HealRecOnlyResonance: 0,
+                    HealPerTick: 0,
+                    HealRecPerTick: 0,
+                    HealRecPerTickResonance: 0,
+                    HealRecOnlyPerTickResonance: 0,
+                    HealPerAtck: 0,
+                    HealRecPerAtck: 0,
+                    HealRecPerAtckResonance: 0,
+                    HealRecOnlyPerAtckResonance: 0
+                })
+            }
+            if (localStorage.jean == undefined) {
+                localStorage.jean = JSON.stringify({
+                    at: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    talantQ: 0,
+                    Heal: 0,
+                    HealRec: 0,
+                    HealPerTick: 0,
+                    HealPerAtck: 0,
+                    HealRecPerTick: 0,
+                    HealRecPerAtck: 0
+                })
+            }
+            if (localStorage.diona == undefined) {
+                localStorage.diona = JSON.stringify({
+                    hp: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    talantE: 0,
+                    talantQ: 0,
+                    constellation: 0,
+                    Shield: 0,
+                    LongShield: 0,
+                    HealPerTick: 0,
+                    HealRecPerTick: 0
+                })
+            }
+            if (localStorage.noelle == undefined) {
+                localStorage.noelle = JSON.stringify({
+                    def: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    talantE: 0,
+                    Shield: 0,
+                    Heal: 0,
+                    HealRec: 0,
+                    HealPerAtck: 0,
+                    HealRecPerAtck: 0
+                })
+            }
+            if (localStorage.sara == undefined) {
+                localStorage.sara = JSON.stringify({
+                    at: 0,
+                    talantE: 0,
+                    AP: 0,
+                    constellation: 0,
+                    CE: 0
+                })
+            }
+            if (localStorage.sayu == undefined) {
+                localStorage.sayu = JSON.stringify({
+                    at: 0,
+                    moe: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    Heal: 0,
+                    HealRec: 0,
+                    HealPerTick: 0,
+                    HealPerAtck: 0,
+                    HealRecPerTick: 0,
+                    HealRecPerAtck: 0
+                })
+            }
+            if (localStorage.xingqiu == undefined) {
+                localStorage.xingqiu = JSON.stringify({
+                    hp: 0,
+                    Heal: 0,
+                    HealRec: 0
+                })
+            }
+            if (localStorage.qiqi == undefined) {
+                localStorage.qiqi = JSON.stringify({
+                    at: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    talantE: 0,
+                    Heal: 0,
+                    HealRec: 0,
+                    HealPerAtck: 0,
+                    HealRecPerAtck: 0
+                })
+            }
         }
     },
     mounted() {
-        
+        this.CheckInfo()
     },
     watch: {
         hp(newData) {
