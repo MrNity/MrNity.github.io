@@ -17,8 +17,8 @@ new Vue({
         Shield: 0,
         LongShield: 0,
         
-        AP: 0,
-        CE: 0,
+        AP: 0,  // Бафф силы атаки
+        CE: 0,  // Бафф элементального урона
         
         Heal: 0,
         HealRec: 0,
@@ -45,6 +45,8 @@ new Vue({
         Xingqiu: {},
         Qiqi: {},
         Zhongli: {},
+        Shenhe: {},
+        Yunjin: {},
         showAll: false,
     },
     methods: {
@@ -151,6 +153,7 @@ new Vue({
         DionaCalc() {
             let lvE = +this.talantE
             let lvQ = +this.talantQ
+//            let con = +this.constellation
             
             let shield = +this.hp * Diona.E.lvl[lvE-1].shield.base + Diona.E.lvl[lvE-1].shield.flat
             
@@ -244,6 +247,28 @@ new Vue({
         },
         ZhongliCalc() {
             let lvE = +this.talantE
+            
+        },
+        
+        ShenheCalc() {
+            let lvE = +this.talantE
+            let at = +this.at
+            
+            let baff = at * Shenhe.E.lvl[lvE-1].abr
+            
+            this.CE = baff      // элементальный урон (крио)
+            
+        },
+        YunjinCalc() {
+            let lvE = +this.talantE
+            let lvQ = +this.talantQ
+            let def = +this.def
+            
+            let shield = +this.hp * Yunjin.E.lvl[lvE-1].shield.base + Yunjin.E.lvl[lvE-1].shield.flat
+            this.Shield = shield
+            
+            let baff = def * Yunjin.Q.lvl[lvQ-1].abr
+            this.AP = baff
             
         },
         
@@ -370,6 +395,25 @@ new Vue({
                     
                     
                 break
+                case 'Shenhe':
+                    let shenhe = {
+                        at: +this.at,
+                        talantE: +this.talantE,
+                        CE: +this.CE,
+                    }
+                    localStorage.shenhe = JSON.stringify(shenhe)
+                break
+                case 'Yun Jin':
+                    let yunjin = {
+                        def: +this.def,
+                        hp: +this.hp,
+                        talantE: +this.talantE,
+                        talantQ: +this.talantQ,
+                        Shield: +this.Shield,
+                        AP: +this.AP,
+                    }
+                    localStorage.yunjin = JSON.stringify(yunjin)
+                break
             }
             alert(`Данные персонажа сохранены в браузере!`)
             this.ShowAll(false)
@@ -482,6 +526,21 @@ new Vue({
                     
                     
                 break
+                case 'Shenhe':
+                    let shenhe = JSON.parse(localStorage.shenhe)
+                    this.at = shenhe.at
+                    this.talantE = shenhe.talantE
+                    this.CE = shenhe.CE
+                break
+                case 'Yun Jin':
+                    let yunjin = JSON.parse(localStorage.yunjin)
+                    this.def = yunjin.def
+                    this.hp = yunjin.hp
+                    this.talantE = yunjin.talantE
+                    this.talantQ = yunjin.talantQ
+                    this.Shield = yunjin.Shield
+                    this.AP = yunjin.AP
+                break
             }
             alert(`Данные персонажа загружены в форму!`)
         },
@@ -499,6 +558,8 @@ new Vue({
             this.Xingqiu = localStorage.xingqiu != undefined ? JSON.parse(localStorage.xingqiu) : {}
             this.Qiqi = localStorage.qiqi != undefined ? JSON.parse(localStorage.qiqi) : {}
             this.Zhongli = localStorage.zhongli != undefined ? JSON.parse(localStorage.zhongli) : {}
+            this.Shenhe = localStorage.shenhe != undefined ? JSON.parse(localStorage.shenhe) : {}
+            this.Yunjin = localStorage.yunjin != undefined ? JSON.parse(localStorage.yunjin) : {}
         },
         CheckInfo() {
             if (localStorage.barbara == undefined) {
@@ -606,6 +667,23 @@ new Vue({
                     HealRecPerAtck: 0
                 })
             }
+            if (localStorage.shenhe == undefined) {
+                localStorage.shenhe = JSON.stringify({
+                    at: 0,
+                    talantE: 0,
+                    CE: 0,
+                })
+            }
+            if (localStorage.yunjin == undefined) {
+                localStorage.yunjin = JSON.stringify({
+                    def: 0,
+                    hp: 0,
+                    talantE: 0,
+                    talantQ: 0,
+                    Shield: 0,
+                    AP: 0,
+                })
+            }
         }
     },
     mounted() {
@@ -629,6 +707,9 @@ new Vue({
                 case 'Zhongli': 
                     this.ZhongliCalc() 
                 break
+                case 'Yun Jin':
+                    this.YunjinCalc()
+                break
             }
         },
         at(newDate) {
@@ -648,10 +729,20 @@ new Vue({
                 case 'Qiqi': 
                     this.QiqiCalc() 
                 break
+                case 'Shenhe': 
+                    this.ShenheCalc() 
+                break
             }
         },
         def(newData) {
-            this.NoelleCalc() 
+            switch (this.char) {
+                case 'Noelle':
+                    this.NoelleCalc() 
+                break
+                case 'Yun Jin':
+                    this.YunjinCalc()
+                break
+            }
         },
         moe(newData) {
             this.SayuCalc() 
@@ -721,32 +812,38 @@ new Vue({
                     this.BarbaraCalc() 
                     break
                 case 'Bennett': 
-                this.BennettCalc() 
-                    break
+                    this.BennettCalc() 
+                break
                 case 'Jean': 
-                this.JeanCalc() 
-                    break
+                    this.JeanCalc() 
+                break
                 case 'Diona': 
-                this.DionaCalc() 
-                    break
+                    this.DionaCalc() 
+                break
                 case 'Noelle': 
-                this.NoelleCalc() 
-                    break
+                    this.NoelleCalc() 
+                break
                 case 'Sara': 
-                this.SaraCalc() 
-                    break
+                    this.SaraCalc() 
+                break
                 case 'Sayu': 
-                this.SayuCalc() 
-                    break
+                    this.SayuCalc() 
+                break
                 case 'Xingqiu': 
-                this.XingqiuCalc() 
-                    break
+                    this.XingqiuCalc() 
+                break
                 case 'Qiqi': 
-                this.QiqiCalc() 
-                    break
+                    this.QiqiCalc() 
+                break
                 case 'Zhongli': 
-                this.ZhongliCalc() 
-                    break
+                    this.ZhongliCalc() 
+                break
+                case 'Shenhe': 
+                    this.ShenheCalc() 
+                break
+                case 'Yun Jin': 
+                    this.YunjinCalc() 
+                break
             }
         },
         talantQ(newData) {
@@ -755,32 +852,35 @@ new Vue({
                     this.BarbaraCalc() 
                     break
                 case 'Bennett': 
-                this.BennettCalc() 
-                    break
+                    this.BennettCalc() 
+                break
                 case 'Jean': 
-                this.JeanCalc() 
-                    break
+                    this.JeanCalc() 
+                break
                 case 'Diona': 
-                this.DionaCalc() 
-                    break
+                    this.DionaCalc() 
+                break
                 case 'Noelle': 
-                this.NoelleCalc() 
-                    break
+                    this.NoelleCalc() 
+                break
                 case 'Sara': 
-                this.SaraCalc() 
-                    break
+                    this.SaraCalc() 
+                break
                 case 'Sayu': 
-                this.SayuCalc() 
-                    break
+                    this.SayuCalc() 
+                break
                 case 'Xingqiu': 
-                this.XingqiuCalc() 
-                    break
+                    this.XingqiuCalc() 
+                break
                 case 'Qiqi': 
-                this.QiqiCalc() 
-                    break
+                    this.QiqiCalc() 
+                break
                 case 'Zhongli': 
-                this.ZhongliCalc() 
-                    break
+                    this.ZhongliCalc() 
+                break
+                case 'Yun Jin': 
+                    this.YunjinCalc() 
+                break
             }
         },
         constellation(newData) {
@@ -789,32 +889,35 @@ new Vue({
                     this.BarbaraCalc() 
                     break
                 case 'Bennett': 
-                this.BennettCalc() 
-                    break
+                    this.BennettCalc() 
+                break
                 case 'Jean': 
-                this.JeanCalc() 
-                    break
+                    this.JeanCalc() 
+                break
                 case 'Diona': 
-                this.DionaCalc() 
-                    break
+                    this.DionaCalc() 
+                break
                 case 'Noelle': 
-                this.NoelleCalc() 
-                    break
+                    this.NoelleCalc() 
+                break
                 case 'Sara': 
-                this.SaraCalc() 
-                    break
+                    this.SaraCalc() 
+                break
                 case 'Sayu': 
-                this.SayuCalc() 
-                    break
+                    this.SayuCalc() 
+                break
                 case 'Xingqiu': 
-                this.XingqiuCalc() 
-                    break
+                    this.XingqiuCalc() 
+                break
                 case 'Qiqi': 
-                this.QiqiCalc() 
-                    break
+                    this.QiqiCalc() 
+                break
                 case 'Zhongli': 
-                this.ZhongliCalc() 
-                    break
+                    this.ZhongliCalc() 
+                break
+                case 'Shenhe': 
+                    this.ShenheCalc() 
+                break
             }
         },
     }

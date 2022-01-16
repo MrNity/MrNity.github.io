@@ -55,19 +55,21 @@
                     <option value="Xingqiu">Син Цю</option>
                     <option value="Qiqi">Ци Ци</option>
                     <option value="Zhongli" disabled>Чжун Ли (дед)</option>
+                    <option value="Shenhe">Шень Хе</option>
+                    <option value="Yun Jin">Юнь Цзинь</option>
                 </select>
                 
-                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett'">
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett' || char == 'Yun Jin'">
                     <label for="hp">HP</label>
                     <input type="number" class="form-control" v-model="hp" id="hp">
                 </div>
                 
-                <div v-if="char == 'Jean' || char == 'Qiqi' || char == 'Sara' || char == 'Sayu' || char == 'Bennett'">
+                <div v-if="char == 'Jean' || char == 'Qiqi' || char == 'Sara' || char == 'Sayu' || char == 'Bennett' || char == 'Shenhe'">
                     <label for="ap">Сила Атаки <span v-if="char == 'Sara'" class="text-danger">(базовая)</span> </label>
                     <input type="number" class="form-control" v-model="at" id="ap">
                 </div>
 
-                <div v-if="char == 'Noelle'">
+                <div v-if="char == 'Noelle' || char == 'Yun Jin'">
                     <label for="def">Защита</label>
                     <input type="number" class="form-control" v-model="def" id="def">
                 </div>
@@ -77,14 +79,14 @@
                     <input type="number" class="form-control" v-model="moe" id="moe">
                 </div>
                 
-                <div v-if="char != 'Sara'&& char != ''">
+                <div v-if="char != 'Sara' && char != 'Yun Jin' && char != 'Shenhe' && char != ''">
                     <label for="bh">Бонус лечения <span class="text-danger">база перса или с сета артов (юная дева)</span></label>
                     <input type="number" class="form-control" v-model="bonusHeal" id="bh">
 
                     <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
                 </div>
-                <div v-if="char == 'Barbara' && char != ''">
+                <div v-if="char == 'Barbara' && char != 'Yun Jin' && char != 'Shenhe' && char != ''">
                     <label for="brhr">Бонус получаемого лечения <span class="text-info">с резонансом</span> <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHealResonance" id="brhr">
                 </div>
@@ -96,12 +98,12 @@
                     <input type="number" class="form-control" v-model="talantE" min="1" max="13" id="e">
                 </div>
                 
-                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' && char != 'Xingqiu'">
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' || char == 'Yun Jin' && char != 'Xingqiu'">
                     <label for="q">Ульта</label>
                     <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
                 
-                <div v-if="char == 'Diona' || char == 'Sara'">
+                <div v-if="char == 'Diona' || char == 'Sara' || char == 'Shenhe'">
                     <hr>
                     <label for="con">Созвездий</label>
                     <input type="number" class="form-control" v-model="constellation" min="0" max="6" id="con">
@@ -325,6 +327,36 @@
                         </tr>
                     </tbody>
                  </table>
+                 
+                <table v-if="char == 'Shenhe'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Бафф крио урона</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ CE.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                 
+                <table v-if="char == 'Yun Jin'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Щит</th>
+                            <th scope="col">Бафф урона</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ Shield.toFixed(0) }}</td>
+                            <td>{{ AP.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                 
+                 
             </div>
 <!--            КОНЕЦ ТАБЛИЦ                -->
 <!--           ОБЩАЯ ТАБЛИЦА                -->
@@ -553,6 +585,28 @@
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                         </tr>
+                        <tr style="background: #27d2e6">
+                            <td><b>Шень Хе</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Shenhe.CE.toFixed(0) }} крио урона</td>
+                        </tr>
+                        <tr style="background: #e5cd8c">
+                            <td><b>Юнь Цзинь</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Yunjin.Shield.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Yunjin.AP.toFixed(0) }}</td>
+                        </tr>
                         
                     </tbody>
                  </table>
@@ -697,6 +751,8 @@
     <script src="chars/sara.js"></script>
     <script src="chars/sayu.js"></script>
     <script src="chars/qiqi.js"></script>
+    <script src="chars/shenhe.js"></script>
+    <script src="chars/yunjin.js"></script>
     <script src="chars/zhongli.js"></script>
     
     
