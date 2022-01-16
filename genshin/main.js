@@ -20,6 +20,13 @@ new Vue({
         AP: 0,  // Бафф силы атаки
         CE: 0,  // Бафф элементального урона
         
+        // Юнь пассивка
+        t1: 0,  // 
+        t2: 0,  // 
+        t3: 0,  // 
+        t4: 0,  // 
+        
+        //
         Heal: 0,
         HealRec: 0,
         HealRecResonance: 0,
@@ -270,6 +277,11 @@ new Vue({
             let baff = def * Yunjin.Q.lvl[lvQ-1].abr
             this.AP = baff
             
+            this.t1 = def * Yunjin.hold.t1
+            this.t2 = def * Yunjin.hold.t2
+            this.t3 = def * Yunjin.hold.t3
+            this.t4 = def * Yunjin.hold.t4
+            
         },
         
         SaveCharInfo() {
@@ -411,6 +423,10 @@ new Vue({
                         talantQ: +this.talantQ,
                         Shield: +this.Shield,
                         AP: +this.AP,
+                        t1: +this.t1,
+                        t2: +this.t2,
+                        t3: +this.t3,
+                        t4: +this.t4,
                     }
                     localStorage.yunjin = JSON.stringify(yunjin)
                 break
@@ -540,6 +556,10 @@ new Vue({
                     this.talantQ = yunjin.talantQ
                     this.Shield = yunjin.Shield
                     this.AP = yunjin.AP
+                    this.t1 = yunjin.t1
+                    this.t2 = yunjin.t2
+                    this.t3 = yunjin.t3
+                    this.t4 = yunjin.t4
                 break
             }
             alert(`Данные персонажа загружены в форму!`)
@@ -682,6 +702,10 @@ new Vue({
                     talantQ: 0,
                     Shield: 0,
                     AP: 0,
+                    t1: 0,
+                    t2: 0,
+                    t3: 0,
+                    t4: 0,
                 })
             }
         }
