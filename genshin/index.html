@@ -347,6 +347,7 @@
                             <th scope="col">Щит</th>
                             <th scope="col">Бафф урона</th>
                             <th scope="col">Бафф пассивки</th>
+                            <th scope="col">Сумма баффов</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -354,6 +355,7 @@
                             <td>{{ Shield.toFixed(0) }}</td>
                             <td>{{ AP.toFixed(0) }}</td>
                             <td>{{ t1.toFixed(0) }} / {{ t2.toFixed(0) }} / {{ t3.toFixed(0) }} / {{ t4.toFixed(0) }}</td>
+                            <td>{{ (+AP + t1).toFixed(0) }} / {{ (+AP + t2).toFixed(0) }} / {{ (+AP + t3).toFixed(0) }} / {{ (+AP + t4).toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -607,7 +609,7 @@
                             <td class="text-center">-</td>
                             <td class="text-center">{{ Yunjin.Shield.toFixed(0) }}</td>
                             <td class="text-center">-</td>
-                            <td class="text-center">{{ Yunjin.AP.toFixed(0) }} + {{ Yunjin.t1.toFixed(0) }} / {{ Yunjin.t2.toFixed(0) }} / {{ Yunjin.t3.toFixed(0) }} / {{ Yunjin.t4.toFixed(0) }}</td>
+                            <td class="text-center">{{ Yunjin.AP.toFixed(0) }} ({{ (+Yunjin.AP + Yunjin.t1).toFixed(0) }} / {{ (+Yunjin.AP + Yunjin.t2).toFixed(0) }} / {{ (+Yunjin.AP + Yunjin.t3).toFixed(0) }} / {{ (+Yunjin.AP + Yunjin.t4).toFixed(0) }})</td>
                         </tr>
                         
                     </tbody>
