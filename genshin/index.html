@@ -16,7 +16,7 @@
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true">Таблица хила и баффов</a>
+                <a class="nav-link active" id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true">Таблица хила и баффов (не особо нужная уже)</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false">Прога для получения ссылки круток 1 кликом</a>
@@ -30,8 +30,13 @@
             <li class="nav-item">
                 <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>
             </li>
+<!--
             <li class="nav-item">
                 <a class="nav-link disabled" id="builds-tab" data-toggle="tab" href="#builds" role="tab" aria-controls="builds" aria-selected="false">Билды</a>
+            </li>
+-->
+            <li class="nav-item">
+                <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Видосы</a>
             </li>
         </ul>
         
@@ -622,7 +627,7 @@
             <div class="tab-pane fade" id="SoftForWish" role="tabpanel" aria-labelledby="SoftForWish-tab">
                 
                 <div class="content ml-0">
-                    <p>Обновленная версия v0.3 с фиксом бага (спасибо HoYoverse за микрофикс)</p>
+                    <p class="ml-3">Обновленная версия v0.3 с фиксом бага (спасибо HoYoverse за микрофикс)</p>
                 </div>
                 <div class="content ml-0">
                     <a href="https://github.com/MrNity/GenshinWish" class="ml-3 mt-3">Ссылка на репозиторий программы</a>
@@ -641,7 +646,6 @@
 <li>- Хотелось бы дополнительные уровни Боевого пропуска как в Honkai Impact 3rd.</li>
 <li>- Сделайте сохранение очков Судьбы в оружейном баннере при его смене на новый!!!</li>
 
-<li>- Уменьшить время отката смолы, 8 минут это очень долго. И увеличить хотя бы до 180 лимит.</li>
 <li>- Кнопка для быстрого сбора руды, экспедиций, сделанного декора в чайнике.</li>
 <li>- Отдельная кнопка для сухпайка и еще одного инструмента.</li>
 <li>- Возможность прервать диалог, не заканчивая его.</li>
@@ -653,7 +657,6 @@
 <li>- Возможность блокировать выпадение одного легендарного персонажа или оружия, чтобы не выпадало со стандартного баннера или при проигрыше с ивентового.</li>
 
 <li class="unselectable">---</li>
-<li>- Возможность гладить животных.</li>
 <li>- Добавьте больше выражений лица и поз персонажам в режиме камеры.</li>
 <li>- Ивенты связанные с боем слишком сложные для новичков или людей не имеющих большое количество персонажей.</li>
 <li class="unselectable">---</li>
@@ -669,11 +672,18 @@
 
 <li class="unselectable">ЧАЙНИК БЕЗМЯТЕЖНОСТИ</li>
 
-<li>- Нагрузка в чайнике требует доработки.</li>
-<li>- Система садоводства оставляет желать лучшего, грядок мало, урожай собирать не очень удобно, ассортимент для выращивания не большой.</li>
 <li>- Иконки ног, как у мест для сидения, в какую сторону будет заспавнен персонаж на телепортах в чайнике.</li>
 <li>- Добавьте предметы с поворотом по вертикальной оси.</li>
 <li>- Возможность отзеркаливать предметы в чайнике.</li>
+
+
+<li class="unselectable">---</li>
+<li class="unselectable">МУСОР ПО ЖЕЛАНИЮ</li>
+<li>- Уменьшить время отката смолы, 8 минут это очень долго. И увеличить хотя бы до 180 лимит.</li>
+<li>- Возможность гладить животных.</li>
+<li>- Нагрузка в чайнике требует доработки.</li>
+<li>- Система садоводства оставляет желать лучшего, грядок мало, урожай собирать не очень удобно, ассортимент для выращивания не большой.</li>
+
 
 
                     </ul>
@@ -739,6 +749,7 @@
             </div>
 <!--            END TAB С кеками                      -->
 <!--            TAB С билдами                         -->
+<!--
             <div class="tab-pane fade" id="builds" role="tabpanel" aria-labelledby="builds-tab">
                 <div class="content ml-0">
                     
@@ -747,7 +758,21 @@
                     
                 </div>
             </div>
+-->
 <!--            END TAB С билдами                      -->
+<!--            TAB С видосами                         -->
+            <div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
+                <div class="content ml-0">
+                    <div class="col-8">
+                        <label for="LinkVideo">Вставьте URL видео</label>
+                        <input type="text" class="form-control " v-model="link" id="LinkVideo">
+                    </div>
+                    <div class="col mt-2">
+                        <video v-show="link != ''" width="1280" height="720" controls :src="link"></video>
+                    </div>
+                </div>
+            </div>
+<!--            END TAB С видосами                      -->
         </div>
        
        

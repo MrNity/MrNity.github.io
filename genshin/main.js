@@ -1,6 +1,8 @@
 new Vue({
     el: '#app',
     data: {
+        link: '',
+        
         char: '',
         hp: 0,
         at: 0,
