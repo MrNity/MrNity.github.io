@@ -51,7 +51,7 @@
                 <select class="form-control" v-model="char" id="chara">
                     <option value=""></option>
                     <option value="Barbara">Барбара</option>
-                    <option value="Bennett" disabled>Беннет</option>
+                    <option value="Bennett">Беннет</option>
                     <option value="Jean">Джин</option>
                     <option value="Diona">Диона</option>
                     <option value="Noelle">Ноэль</option>
@@ -59,7 +59,7 @@
                     <option value="Sayu">Саю</option>
                     <option value="Xingqiu">Син Цю</option>
                     <option value="Qiqi">Ци Ци</option>
-                    <option value="Zhongli" disabled>Чжун Ли (дед)</option>
+                    <option value="Zhongli">Чжун Ли (дед)</option>
                     <option value="Shenhe">Шень Хе</option>
                     <option value="Yun Jin">Юнь Цзинь</option>
                 </select>
@@ -70,7 +70,7 @@
                 </div>
                 
                 <div v-if="char == 'Jean' || char == 'Qiqi' || char == 'Sara' || char == 'Sayu' || char == 'Bennett' || char == 'Shenhe'">
-                    <label for="ap">Сила Атаки <span v-if="char == 'Sara'" class="text-danger">(базовая)</span> </label>
+                    <label for="ap">Сила Атаки <span v-if="char == 'Sara' || char == 'Bennett'" class="text-danger">(базовая)</span> </label>
                     <input type="number" class="form-control" v-model="at" id="ap">
                 </div>
 
@@ -84,14 +84,14 @@
                     <input type="number" class="form-control" v-model="moe" id="moe">
                 </div>
                 
-                <div v-if="char != 'Sara' && char != 'Yun Jin' && char != 'Shenhe' && char != ''">
+                <div v-if="char != 'Sara' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
                     <label for="bh">Бонус лечения <span class="text-danger">база перса или с сета артов (юная дева)</span></label>
                     <input type="number" class="form-control" v-model="bonusHeal" id="bh">
 
                     <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
                 </div>
-                <div v-if="char == 'Barbara' && char != 'Yun Jin' && char != 'Shenhe' && char != ''">
+                <div v-if="char == 'Barbara' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
                     <label for="brhr">Бонус получаемого лечения <span class="text-info">с резонансом</span> <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHealResonance" id="brhr">
                 </div>
@@ -108,7 +108,7 @@
                     <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
                 
-                <div v-if="char == 'Diona' || char == 'Sara' || char == 'Shenhe'">
+                <div v-if="char == 'Diona' || char == 'Sara' || char == 'Shenhe' || char == 'Bennett'">
                     <hr>
                     <label for="con">Созвездий</label>
                     <input type="number" class="form-control" v-model="constellation" min="0" max="6" id="con">
@@ -165,15 +165,17 @@
                     </tbody>
                  </table>
                 
-                <table v-if="char == 'Bennet'" class="table table-hover">
+                <table v-if="char == 'Bennett'" class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col">Хил за тик ульты (секунда)</th>
+                            <th scope="col">Бафф</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ AP.toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -323,12 +325,12 @@
                 <table v-if="char == 'Zhongli'" class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col">Щит</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>{{ Shield.toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -435,10 +437,10 @@
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
+                            <td class="text-center">{{ Bennett.HealPerTick.toFixed(0) }}</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
-                            <td class="text-center">-</td>
-                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Bennett.AP.toFixed(0) }}</td>
                         </tr>
                         <tr style="background: #87cbba">
                             <td><b>Джин</b></td>
@@ -500,6 +502,28 @@
                             <td class="text-center">{{ Noelle.HealRecPerAtck.toFixed(0) }}</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #00F0FF">
+                            <td><b>Кокоми</b></td>
+                            <td class="text-center">0 (в ульте)</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #00F0FF">
+                            <td class="text-center">Получаемый</td>
+                            <td class="text-center">0 (в ульте)</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">0</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
@@ -590,7 +614,7 @@
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
-                            <td class="text-center">{{  }}</td>
+                            <td class="text-center">{{ Zhongli.Shield.toFixed(0) }}</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                         </tr>
@@ -744,7 +768,7 @@
 <!--            TAB С кеками                          -->
             <div class="tab-pane fade" id="keki" role="tabpanel" aria-labelledby="keki-tab">
                 <div class="content ml-0">
-                    <iframe src="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" frameborder="0" height="905" width="100%"></iframe>
+<!--                    <iframe src="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" frameborder="0" height="905" width="100%"></iframe>-->
                 </div>
             </div>
 <!--            END TAB С кеками                      -->
@@ -799,6 +823,7 @@
     <script src="chars/bennett.js"></script>
     <script src="chars/jean.js"></script>
     <script src="chars/diona.js"></script>
+    <script src="chars/kokomi.js"></script>
     <script src="chars/noelle.js"></script>
     <script src="chars/sara.js"></script>
     <script src="chars/sayu.js"></script>

@@ -1,111 +1,110 @@
-const Bennet = {
+const Bennett = {
     Q: {
         lvl: [
+            // lvl1
             {
-                damage: 0.8,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0534,
-                    flat: 513
+                    base: 0.06,
+                    flat: 577
                 },
+                abr: 0.56
             },
+            // lvl2
             {
-                damage: 0.86,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0574,
-                    flat: 565
+                    base: 0.0645,
+                    flat: 635
                 },
+                abr: 0.6
             },
+            // lvl3
             {
-                damage: 0.92,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0614,
-                    flat: 620
+                    base: 0.069,
+                    flat: 698
                 },
+                abr: 0.64
             },
+            // lvl4
             {
-                damage: 1,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0667,
-                    flat: 680
+                    base: 0.075,
+                    flat: 765
                 },
+                abr: 0.7
             },
+            // lvl5
             {
-                damage: 1.06,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0707,
-                    flat: 744
+                    base: 0.0795,
+                    flat: 837
                 },
+                abr: 0.74
             },
+            // lvl6
             {
-                damage: 1.12,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.0747,
-                    flat: 813
+                    base: 0.084,
+                    flat: 914
                 },
+                abr: 0.78
             },
+            // lvl7
             {
-                damage: 1.20,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.08,
-                    flat: 885
+                    base: 0.09,
+                    flat: 996
                 },
+                abr: 0.84
             },
+            // lvl8
             {
-                damage: 1.28,
-                damagerPerTick: 0.526,
-                healPerTick: {
-                    base: 0.0854,
-                    flat: 962
-                },
-            },
-            {
-                damage: 1.36,
-                damagerPerTick: 0.526,
-                healPerTick: {
-                    base: 0.0907,
-                    flat: 1044
-                },
-            },
-            {
-                damage: 1.44,
-                damagerPerTick: 0.526,
                 healPerTick: {
                     base: 0.096,
-                    flat: 1129
+                    flat: 1083
                 },
+                abr: 0.9
             },
+            // lvl9
             {
-                damage: 1.52,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.1014,
-                    flat: 1218
+                    base: 0.102,
+                    flat: 1174
                 },
+                abr: 0.95
             },
+            // lvl10
             {
-                damage: 1.6,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.1067,
-                    flat: 1313
+                    base: 0.108,
+                    flat: 1270
                 },
+                abr: 1.01
             },
+            // lvl11
             {
-                damage: 1.7,
-                damagerPerTick: 0.526,
                 healPerTick: {
-                    base: 0.1134,
-                    flat: 1411
+                    base: 0.114,
+                    flat: 1371
                 },
+                abr: 1.06
             },
-            
+            // lvl12
+            {
+                healPerTick: {
+                    base: 0.12,
+                    flat: 1477
+                },
+                abr: 1.12
+            },
+            // lvl13
+            {
+                healPerTick: {
+                    base: 0.1275,
+                    flat: 1588
+                },
+                abr: 1.19
+            },
         ],
     }
 }

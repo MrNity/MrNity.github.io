@@ -48,6 +48,7 @@ new Vue({
         Bennett: {},
         Jean: {},
         Diona: {},
+        Kokomi: {},
         Noelle: {},
         Sara: {},
         Sayu: {},
@@ -104,33 +105,21 @@ new Vue({
             this.HealRecOnlyPerAtckResonance = healPerAtckBonus + healPerAtck * brhr
         },
         BennettCalc() {
-            let lvE = +this.talantE
             let lvQ = +this.talantQ
+            let constellation = +this.constellation
             
-            let bh = +this.bonusHeal / 100
-            let brh = +this.bonusRecHeal / 100
+            let hp = +this.hp
             let at = +this.at
             
-            let heal = at * Jean.Q.lvl[lvQ-1].heal.base + Jean.Q.lvl[lvQ-1].heal.flat
-            
-            let healTick = at * Jean.Q.lvl[lvQ-1].healPerTick.base + Jean.Q.lvl[lvQ-1].healPerTick.flat
-            let healPerAtck = at * Jean.hold
-            
-            heal = heal + heal * bh
-            this.Heal = heal
-            
-            healRec = heal + heal * brh
-            this.HealRec = healRec
-            
-            healTick = healTick + healTick * bh
+            let healTick = hp * Bennett.Q.lvl[lvQ-1].healPerTick.base + Bennett.Q.lvl[lvQ-1].healPerTick.flat
             this.HealPerTick = healTick
-            this.HealRecPerTick = healTick + healTick * brh
             
-            
-            healPerAtck = healPerAtck + healPerAtck * bh
-            this.HealPerAtck = healPerAtck
-            this.HealRecPerAtck = healPerAtck + healPerAtck * brh
-            
+            let bonus = 0
+            if (constellation >= 1) {
+                bonus = 0.2
+            }
+            let ap = (at + bonus * at) * Bennett.Q.lvl[lvQ-1].abr
+            this.AP = ap
         },
         JeanCalc() {
             let lvQ = +this.talantQ
@@ -174,6 +163,12 @@ new Vue({
             let brh = +this.bonusRecHeal / 100
             this.HealPerTick = heal + heal * bh
             this.HealRecPerTick = +this.HealPerTick + this.HealPerTick * brh
+        },
+        KokomiCalc() {
+            let lvE = +this.talantE
+            let lvQ = +this.talantQ
+//            let con = +this.constellation
+            
         },
         NoelleCalc() {
             let lvE = +this.talantE
@@ -257,6 +252,9 @@ new Vue({
         ZhongliCalc() {
             let lvE = +this.talantE
             
+            let shield = +this.hp * Zhongli.E.lvl[lvE-1].shield.base + Zhongli.E.lvl[lvE-1].shield.flat
+            
+            this.Shield = shield + shield * Zhongli.E.hold
         },
         
         ShenheCalc() {
@@ -312,8 +310,15 @@ new Vue({
                     localStorage.barbara = JSON.stringify(barbara)
                 break
                 case 'Bennett':
-                    
-                    
+                    let bennett = {
+                        hp: +this.hp,
+                        at: +this.at,
+                        HealPerTick: +this.HealPerTick,
+                        talantQ: +this.talantQ,
+                        AP: +this.AP,
+                        constellation: +this.constellation
+                    }
+                    localStorage.bennett = JSON.stringify(bennett)
                 break
                 case 'Jean':
                     let jean = {
@@ -406,8 +411,12 @@ new Vue({
                     localStorage.qiqi = JSON.stringify(qiqi)
                 break
                 case 'Zhongli':
-                    
-                    
+                    let zhongli = {
+                        hp: +this.hp,
+                        talantE: +this.talantE,
+                        Shield: +this.Shield
+                    }
+                    localStorage.zhongli = JSON.stringify(zhongli)
                 break
                 case 'Shenhe':
                     let shenhe = {
@@ -460,8 +469,13 @@ new Vue({
                     this.HealRecOnlyPerAtckResonance = barbara.HealRecOnlyPerAtckResonance
                 break
                 case 'Bennett':
-                    
-                    
+                    let bennett = JSON.parse(localStorage.bennett)
+                    this.hp = bennett.hp,
+                    this.at = bennett.at,
+                    this.HealPerTick = bennett.HealPerTick,
+                    this.talantQ = bennett.talantQ,
+                    this.AP = bennett.AP
+                    this.constellation = bennett.constellation
                 break
                 case 'Jean':
                     let jean = JSON.parse(localStorage.jean)
@@ -529,7 +543,6 @@ new Vue({
                     this.HealRec = xingqiu.HealRec
                 break
                 case 'Qiqi':
-                
                     let qiqi = JSON.parse(localStorage.qiqi)
                     this.at = qiqi.at,
                     this.bonusHeal = qiqi.bonusHeal,
@@ -541,8 +554,10 @@ new Vue({
                     this.HealRecPerAtck = qiqi.HealRecPerAtck
                 break
                 case 'Zhongli':
-                    
-                    
+                    let zhongli = JSON.parse(localStorage.zhongli)
+                    this.hp = zhongli.hp
+                    this.talantE = zhongli.talantE
+                    this.Shield = zhongli.Shield
                 break
                 case 'Shenhe':
                     let shenhe = JSON.parse(localStorage.shenhe)
@@ -604,6 +619,16 @@ new Vue({
                     HealRecPerAtck: 0,
                     HealRecPerAtckResonance: 0,
                     HealRecOnlyPerAtckResonance: 0
+                })
+            }
+            if (localStorage.bennett == undefined) {
+                localStorage.bennett = JSON.stringify({
+                    hp: 0,
+                    at: 0,
+                    HealPerTick: 0,
+                    talantQ: 0,
+                    AP: 0,
+                    constellation: 0
                 })
             }
             if (localStorage.jean == undefined) {
@@ -708,6 +733,13 @@ new Vue({
                     t2: 0,
                     t3: 0,
                     t4: 0,
+                })
+            }
+            if (localStorage.zhongli == undefined) {
+                localStorage.zhongli = JSON.stringify({
+                    hp: 0,
+                    talantE: 0,
+                    Shield: 0,
                 })
             }
         }
