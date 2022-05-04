@@ -832,6 +832,18 @@ new Vue({
                     }
                 })
             }
+            if (localStorage.CollectedCrystals == undefined) {
+                this.crystallCollected = 0
+                localStorage.CollectedCrystals = 0
+            } else {
+                this.crystallCollected = localStorage.CollectedCrystals
+            }
+            if (localStorage.LeftCrystals == undefined) {
+                this.crystallLeft = 72
+                localStorage.LeftCrystals = 72
+            } else {
+                this.crystallLeft = localStorage.LeftCrystals
+            }
         },
         SetCrystal(crs) {
             crs.available = !crs.available
