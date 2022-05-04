@@ -180,8 +180,35 @@ new Vue({
         KokomiCalc() {
             let lvE = +this.talantE
             let lvQ = +this.talantQ
-//            let con = +this.constellation
             
+            let bh = +this.bonusHeal / 100
+            let brh = +this.bonusRecHeal / 100
+            let brhr = +this.bonusRecHealResonance / 100
+            
+            let hp = +this.hp
+            
+            // TICK in E
+            let healTick = hp * Kokomi.E.lvl[lvE-1].heal.base + Kokomi.E.lvl[lvE-1].heal.flat
+            
+            let healTickBonus = healTick + healTick * bh
+            let healRecPerTick = healTickBonus + healTick * brh
+            
+            this.HealPerTick = healTickBonus
+            this.HealRecPerTick = healRecPerTick
+            
+            this.HealRecPerTickResonance = healRecPerTick + healTick * brhr
+            this.HealRecOnlyPerTickResonance = healTickBonus + healTick * brhr
+            
+            // ATK in Q
+            let healPerAtck = hp * Kokomi.Q.lvl[lvE-1].healPerAtck.base + Kokomi.Q.lvl[lvE-1].healPerAtck.flat
+            
+            let healPerAtckBonus = healPerAtck + healPerAtck * bh
+            let healRecPerAtckBonus = healPerAtckBonus + healPerAtck * brh
+            
+            this.HealPerAtck = healPerAtckBonus
+            this.HealRecPerAtck = healRecPerAtckBonus
+            this.HealRecPerAtckResonance = healRecPerAtckBonus + healPerAtck * brhr
+            this.HealRecOnlyPerAtckResonance = healPerAtckBonus + healPerAtck * brhr
         },
         NoelleCalc() {
             let lvE = +this.talantE
