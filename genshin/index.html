@@ -16,10 +16,10 @@
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true">Таблица хила и баффов (не особо нужная уже)</a>
+                <a class="nav-link active" id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true">Таблица хила и баффов</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false">Прога для получения ссылки круток 1 кликом</a>
+                <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false">Прога круток 1 кликом</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="wish-tab" data-toggle="tab" href="#wish" role="tab" aria-controls="wish" aria-selected="false">Пожелания для опроса</a>
@@ -28,16 +28,20 @@
                 <a class="nav-link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">Полезные ссылки</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>
+                <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Видосы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false">Лучистые кристаллы</a>
+            </li>
+            <li class="nav-item">
+<!--                <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>-->
+                <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Сколько примогемов мы получаем</a>
             </li>
 <!--
             <li class="nav-item">
                 <a class="nav-link disabled" id="builds-tab" data-toggle="tab" href="#builds" role="tab" aria-controls="builds" aria-selected="false">Билды</a>
             </li>
 -->
-            <li class="nav-item">
-                <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Видосы</a>
-            </li>
         </ul>
         
         
@@ -54,7 +58,9 @@
                     <option value="Bennett">Беннет</option>
                     <option value="Jean">Джин</option>
                     <option value="Diona">Диона</option>
+<!--                    <option value="Kuki">Куки Шинобу</option>-->
                     <option value="Noelle">Ноэль</option>
+                    <option value="Kokomi">Сангономия Кокоми</option>
                     <option value="Sara">Сара</option>
                     <option value="Sayu">Саю</option>
                     <option value="Xingqiu">Син Цю</option>
@@ -64,7 +70,7 @@
                     <option value="Yun Jin">Юнь Цзинь</option>
                 </select>
                 
-                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett' || char == 'Yun Jin'">
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett' || char == 'Yun Jin' || char == 'Kokomi'">
                     <label for="hp">HP</label>
                     <input type="number" class="form-control" v-model="hp" id="hp">
                 </div>
@@ -91,7 +97,7 @@
                     <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
                 </div>
-                <div v-if="char == 'Barbara' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
+                <div v-if="char == 'Barbara' || char == 'Kokomi' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
                     <label for="brhr">Бонус получаемого лечения <span class="text-info">с резонансом</span> <span class="text-danger">(тиммейтов)</span></label>
                     <input type="number" class="form-control" v-model="bonusRecHealResonance" id="brhr">
                 </div>
@@ -103,7 +109,7 @@
                     <input type="number" class="form-control" v-model="talantE" min="1" max="13" id="e">
                 </div>
                 
-                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' || char == 'Yun Jin' && char != 'Xingqiu'">
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Bennett' || char == 'Jean' || char == 'Sayu' || char == 'Yun Jin' || char == 'Kokomi' && char != 'Xingqiu'">
                     <label for="q">Ульта</label>
                     <input type="number" class="form-control" v-model="talantQ" min="1" max="13" id="q">
                 </div>
@@ -237,6 +243,35 @@
                             <td>{{ Shield.toFixed(0) }}</td>
                             <td>{{ HealPerAtck.toFixed(0) }}</td>
                             <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                        </tr>
+                    </tbody>
+                 </table>
+                
+                <table v-if="char == 'Kokomi'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Периодический хил</th>
+                            <th scope="col">Хил с тычки ульты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ HealPerAtck.toFixed(0) }}</td>
+                            <td>{{ Heal.toFixed(0) }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Получаемый хил</td>
+                            <td>{{ HealRecPerTick.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtck.toFixed(0) }}</td>
+                        </tr>
+                        <tr>
+                            <td>Получаемый хил с резонансом</td>
+                            <td>{{ HealRecPerTickResonance.toFixed(0) }}</td>
+                            <td>{{ HealRecPerAtckResonance.toFixed(0) }}</td>
                         </tr>
                     </tbody>
                  </table>
@@ -797,6 +832,119 @@
                 </div>
             </div>
 <!--            END TAB С видосами                      -->
+<!--            TAB С видосами                         -->
+            <div class="tab-pane fade" id="crystals" role="tabpanel" aria-labelledby="crystals-tab">
+                <div class="content ml-0">
+                    <div class="col">
+                        <h2 class="text-center">Лучистые кристаллы</h2>
+                        <p class="lead">
+                            <a href="https://www.hoyolab.com/article/4023070" target="_blank">Собрано: <b>{{ crystallCollected }}</b>, Осталось: <b>{{ crystallLeft }}</b></a>
+                        </p>
+                        <p class="">
+                            Остались номера: <b>{{ LeftNumbers.join(', ') }}</b>
+                        </p>
+                        <p class="">
+                            Номера с <sup><i class="fas fa-map-location-dot"></i></sup> кликабельны с отображением кристалла на карте!
+                        </p>
+                        <div class="modal" id="crystallModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="">Лучистый кристалл №{{ crystallId }}</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img :src="crystallImg" alt="" width="750" height="450">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row ">
+                            <table class="table align-middle table-hover col-4 strike">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="3" class="text-center"><h5>Мондштадт</h5></th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center">№</th>
+                                        <th scope="col" class="text-center">Название</th>
+                                        <th scope="col" class="text-center"><i class="fas fa-check"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="crystal in Mondstadt" :class="[crystal.available == true ? 'text-muted strikeout' : '']">
+                                        <td @click="ShowCrystalImg(crystal)"> 
+                                            <span v-if="crystal.world" class="d-block" type="button" data-toggle="modal" data-target="#crystallModal">{{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup></span>
+                                            <span class="" v-else>{{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup></span>
+                                        </td>
+                                        <td>{{ crystal.name }}</td>
+                                        <td>
+                                            <input type="checkbox" class="form-control checkbox" @click="SetCrystal(crystal)" v-bind:checked="crystal.available">
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <table class="table align-middle table-hover col-4 strike">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="3" class="text-center"><h5>Ли Юе</h5></th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center">№</th>
+                                        <th scope="col" class="text-center">Название</th>
+                                        <th scope="col" class="text-center"><i class="fas fa-check"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="crystal in Liyue" :class="[crystal.available == true ? 'text-muted strikeout' : '']">
+                                        <td @click="ShowCrystalImg(crystal)"> 
+                                            <span v-if="crystal.world" class="" type="button" data-toggle="modal" data-target="#crystallModal">
+                                                {{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup>
+                                            </span>
+                                            <span class="" v-else>{{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup></span>
+                                        </td>
+                                        <td>{{ crystal.name }}</td>
+                                        <td>
+                                            <input type="checkbox" class="form-control checkbox" @click="SetCrystal(crystal)" v-bind:checked="crystal.available">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table align-middle table-hover col-4 strike">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="3" class="text-center"><h5>Инадзума</h5></th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center">№</th>
+                                        <th scope="col" class="text-center">Название</th>
+                                        <th scope="col" class="text-center"><i class="fas fa-check"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="crystal in Inazuma" :class="[crystal.available == true ? 'text-muted strikeout' : '']">
+                                        <td @click="ShowCrystalImg(crystal)"> 
+                                            <span v-if="crystal.world" class="" type="button" data-toggle="modal" data-target="#crystallModal">
+                                                {{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup>
+                                            </span>
+                                            <span class="" v-else>{{ crystal.num }} <sup><i v-if="crystal.world" class="fas fa-map-location-dot"></i></sup></span>
+                                        </td>
+                                        <td>{{ crystal.name }}</td>
+                                        <td>
+                                            <input type="checkbox" class="form-control checkbox" @click="SetCrystal(crystal)" v-bind:checked="crystal.available">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            END TAB С видосами                      -->
         </div>
        
        
@@ -836,6 +984,7 @@
     
     
     
+    <script src="crystals.js"></script>
     
     <script src="main.js"></script>
     

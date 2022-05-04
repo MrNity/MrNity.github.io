@@ -7,3 +7,34 @@
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+.text-muted {
+    text-decoration: line-through;
+}
+
+.strike tbody {
+    display: table-row-group;
+}
+.strike tbody tr {
+/*    display: table-column;*/
+}
+/*
+.strike { 
+    border-collapse: collapse;
+    empty-cells: show;
+    font-size: 16px;
+}
+
+.strike td { 
+    position: relative; 
+}
+
+.strike tr.strikeout td:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-bottom: 1px solid #6c757d;
+    width: 100%;
+    line-height: 1rem;
+}
+*/

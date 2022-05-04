@@ -22,12 +22,6 @@ new Vue({
         AP: 0,  // Бафф силы атаки
         CE: 0,  // Бафф элементального урона
         
-        // Юнь пассивка
-        t1: 0,  // 
-        t2: 0,  // 
-        t3: 0,  // 
-        t4: 0,  // 
-        
         //
         Heal: 0,
         HealRec: 0,
@@ -58,6 +52,25 @@ new Vue({
         Shenhe: {},
         Yunjin: {},
         showAll: false,
+        
+        // crystals
+        Crystals: {
+            Mondstadt: crystals.Mondstadt,
+            Liyue: crystals.Liyue,
+            Inazuma: crystals.Inazuma
+        },
+        Mondstadt: [],
+        Liyue: [],
+        Inazuma: [],
+        
+        LeftNumbers: [],
+        
+        crystallCollected: 0,
+        crystallLeft: 72,
+        
+        crystallId: 0,
+        crystallImg: '',
+        
     },
     methods: {
         BarbaraCalc() {
@@ -350,6 +363,20 @@ new Vue({
                     }
                     localStorage.diona = JSON.stringify(diona)
                 break
+                case 'Kokomi':
+                    let kokomi = {
+                        hp: +this.hp,
+                        bonusHeal: +this.bonusHeal,
+                        bonusRecHeal: +this.bonusRecHeal,
+                        talantE: +this.talantE,
+                        talantQ: +this.talantQ,
+                        HealPerTick: +this.HealPerTick,
+                        HealRecPerTick: +this.HealRecPerTick,
+                        HealPerAtck: +this.HealPerAtck,
+                        HealRecPerAtck: +this.HealRecPerAtck
+                    }
+                    localStorage.kokomi = JSON.stringify(kokomi)
+                break
                 case 'Noelle':
                     let noelle = {
                         def: +this.def,
@@ -503,6 +530,18 @@ new Vue({
                     this.HealPerTick = diona.HealPerTick
                     this.HealRecPerTick = diona.HealRecPerTick
                 break
+                case 'Kokomi':
+                    let kokomi = JSON.parse(localStorage.kokomi)
+                    this.hp = kokomi.hp
+                    this.bonusHeal = kokomi.bonusHeal
+                    this.bonusRecHeal = kokomi.bonusRecHeal
+                    this.talantE = kokomi.talantE
+                    this.talantQ = kokomi.talantQ
+                    this.HealPerTick = kokomi.HealPerTick
+                    this.HealRecPerTick = kokomi.HealRecPerTick
+                    this.HealPerAtck = kokomi.HealPerAtck
+                    this.HealRecPerAtck = kokomi.HealRecPerAtck
+                break
                 case 'Noelle':
                     let noelle = JSON.parse(localStorage.noelle)
                     this.def = noelle.def
@@ -589,6 +628,7 @@ new Vue({
             this.Bennett = localStorage.bennett != undefined ? JSON.parse(localStorage.bennett) : {}
             this.Jean = localStorage.jean != undefined ? JSON.parse(localStorage.jean) : {}
             this.Diona = localStorage.diona != undefined ? JSON.parse(localStorage.diona) : {}
+            this.Kokomi = localStorage.kokomi != undefined ? JSON.parse(localStorage.kokomi) : {}
             this.Noelle = localStorage.noelle != undefined ? JSON.parse(localStorage.noelle) : {}
             this.Sara = localStorage.sara != undefined ? JSON.parse(localStorage.sara) : {}
             this.Sayu = localStorage.sayu != undefined ? JSON.parse(localStorage.sayu) : {}
@@ -657,6 +697,19 @@ new Vue({
                     LongShield: 0,
                     HealPerTick: 0,
                     HealRecPerTick: 0
+                })
+            }
+            if (localStorage.kokomi == undefined) {
+                localStorage.kokomi = JSON.stringify({
+                    hp: 0,
+                    bonusHeal: 0,
+                    bonusRecHeal: 0,
+                    talantE: 0,
+                    talantQ: 0,
+                    HealPerTick: 0,
+                    HealRecPerTick: 0,
+                    HealPerAtck: 0,
+                    HealRecPerAtck: 0
                 })
             }
             if (localStorage.noelle == undefined) {
@@ -742,6 +795,81 @@ new Vue({
                     Shield: 0,
                 })
             }
+            if (localStorage.Crystals == undefined) {
+                localStorage.Crystals = JSON.stringify({
+                    Mondstadt: crystals.Mondstadt,
+                    Liyue: crystals.Liyue,
+                    Inazuma: crystals.Inazuma,
+                })
+                localStorage.CollectedCrystals = 0
+                localStorage.LeftCrystals = 72
+                
+                this.Mondstadt = crystals.Mondstadt
+                this.Liyue = crystals.Liyue
+                this.Inazuma = crystals.Inazuma
+                
+            } else {
+                this.Mondstadt = JSON.parse(localStorage.Crystals).Mondstadt
+                this.Liyue = JSON.parse(localStorage.Crystals).Liyue
+                this.Inazuma = JSON.parse(localStorage.Crystals).Inazuma
+                
+                this.crystallCollected = localStorage.CollectedCrystals
+                this.crystallLeft = localStorage.LeftCrystals
+                
+                this.Mondstadt.forEach(ava => {
+                    if (!ava.available) {
+                        this.LeftNumbers.push(ava.num)
+                    }
+                })
+                this.Liyue.forEach(ava => {
+                    if (!ava.available) {
+                        this.LeftNumbers.push(ava.num)
+                    }
+                })
+                this.Inazuma.forEach(ava => {
+                    if (!ava.available) {
+                        this.LeftNumbers.push(ava.num)
+                    }
+                })
+            }
+        },
+        SetCrystal(crs) {
+            crs.available = !crs.available
+            
+            if (crs.num >= 1 && crs.num <= 23) {
+                let cr = this.Mondstadt.findIndex((c) => c.num === crs.num)
+                this.Mondstadt[cr].available = crs.available
+            }
+            if (crs.num >= 24 && crs.num <= 46) {
+                let cr = this.Liyue.findIndex((c) => c.num === crs.num)
+                this.Liyue[cr].available = crs.available
+            }
+            if (crs.num >= 47 && crs.num <= 72) {
+                let cr = this.Inazuma.findIndex((c) => c.num === crs.num)
+                this.Inazuma[cr].available = crs.available
+            }
+            localStorage.Crystals = JSON.stringify({
+                Mondstadt: this.Mondstadt,
+                Liyue: this.Liyue,
+                Inazuma: this.Inazuma,
+            })
+            if (crs.available) {
+                this.crystallCollected++
+                this.crystallLeft--
+            } else {
+                this.crystallCollected--
+                this.crystallLeft++
+            }
+            
+            localStorage.LeftCrystals = this.crystallLeft
+            localStorage.CollectedCrystals = this.crystallCollected
+        },
+        ShowCrystalImg(crs) {
+//            console.log(crs)
+            if (crs.world) {
+                this.crystallId = crs.num
+                this.crystallImg = crs.image
+            }
         }
     },
     mounted() {
@@ -758,6 +886,9 @@ new Vue({
                 break
                 case 'Diona': 
                     this.DionaCalc() 
+                break
+                case 'Kokomi': 
+                    this.KokomiCalc() 
                 break
                 case 'Xingqiu': 
                     this.XingqiuCalc() 
@@ -819,6 +950,9 @@ new Vue({
                 case 'Diona': 
                     this.DionaCalc() 
                 break
+                case 'Kokomi': 
+                    this.KokomiCalc() 
+                break
                 case 'Noelle': 
                     this.NoelleCalc() 
                 break
@@ -847,6 +981,9 @@ new Vue({
                 case 'Diona': 
                     this.DionaCalc() 
                 break
+                case 'Kokomi': 
+                    this.KokomiCalc() 
+                break
                 case 'Noelle': 
                     this.NoelleCalc() 
                 break
@@ -862,7 +999,14 @@ new Vue({
             }
         },
         bonusRecHealResonance(newData) {
-            this.BarbaraCalc()
+            switch (this.char) {
+                case 'Barbara':
+                    this.BarbaraCalc()
+                break
+                case 'Kokomi':
+                    this.KokomiCalc()
+                break
+            }
         },
         talantE(newData) {
             switch (this.char) {
@@ -877,6 +1021,9 @@ new Vue({
                 break
                 case 'Diona': 
                     this.DionaCalc() 
+                break
+                case 'Kokomi': 
+                    this.KokomiCalc() 
                 break
                 case 'Noelle': 
                     this.NoelleCalc() 
@@ -917,6 +1064,9 @@ new Vue({
                 break
                 case 'Diona': 
                     this.DionaCalc() 
+                break
+                case 'Kokomi': 
+                    this.KokomiCalc() 
                 break
                 case 'Noelle': 
                     this.NoelleCalc() 

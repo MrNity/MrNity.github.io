@@ -3,55 +3,94 @@ const Kokomi = {
         lvl: [
             // lvl1
             {
-                abr: 0.43
+                heal: {
+                    base: 0.044,
+                    flat: 424
+                }
             },
             // lvl2
             {
-                abr: 0.46
+                heal: {
+                    base: 0.047,
+                    flat: 466
+                }
             },
             // lvl3
             {
-                abr: 0.49
+                heal: {
+                    base: 0.051,
+                    flat: 561
+                }
             },
             // lvl4
             {
-                abr: 0.53
+                heal: {
+                    base: 0.055,
+                    flat: 561
+                }
             },
             // lvl5
             {
-                abr: 0.57
+                heal: {
+                    base: 0.058,
+                    flat: 614
+                }
             },
             // lvl6
             {
-                abr: 0.60
+                heal: {
+                    base: 0.062,
+                    flat: 671
+                }
             },
             // lvl7
             {
-                abr: 0.644
+                heal: {
+                    base: 0.066,
+                    flat: 731
+                }
             },
             // lvl8
             {
-                abr: 0.69
+                heal: {
+                    base: 0.07,
+                    flat: 795
+                }
             },
             // lvl9
             {
-                abr: 0.73
+                heal: {
+                    base: 0.075,
+                    flat: 862
+                }
             },
             // lvl10
             {
-                abr: 0.773
+                heal: {
+                    base: 0.079,
+                    flat: 932
+                }
             },
             // lvl11
             {
-                abr: 0.816
+                heal: {
+                    base: 0.084,
+                    flat: 1006
+                }
             },
             // lvl12
             {
-                abr: 0.859
+                heal: {
+                    base: 0.088,
+                    flat: 1084
+                }
             },
             // lvl13
             {
-                abr: 0.912
+                heal: {
+                    base: 0.094,
+                    flat: 1165
+                }
             },
         ],
     },
@@ -59,55 +98,94 @@ const Kokomi = {
         lvl: [
             // lvl1
             {
-                abr: 0.43
+                healPerAtck: {
+                    base: 0.0081,
+                    flat: 77
+                },
             },
             // lvl2
             {
-                abr: 0.46
+                healPerAtck: {
+                    base: 0.0087,
+                    flat: 85
+                },
             },
             // lvl3
             {
-                abr: 0.49
+                healPerAtck: {
+                    base: 0.0093,
+                    flat: 93
+                },
             },
             // lvl4
             {
-                abr: 0.53
+                healPerAtck: {
+                    base: 0.0101,
+                    flat: 102
+                },
             },
             // lvl5
             {
-                abr: 0.57
+                healPerAtck: {
+                    base: 0.0107,
+                    flat: 112
+                },
             },
             // lvl6
             {
-                abr: 0.60
+                healPerAtck: {
+                    base: 0.0113,
+                    flat: 122
+                },
             },
             // lvl7
             {
-                abr: 0.644
+                healPerAtck: {
+                    base: 0.0121,
+                    flat: 133
+                },
             },
             // lvl8
             {
-                abr: 0.69
+                healPerAtck: {
+                    base: 0.0129,
+                    flat: 144
+                },
             },
             // lvl9
             {
-                abr: 0.73
+                healPerAtck: {
+                    base: 0.0137,
+                    flat: 157
+                },
             },
             // lvl10
             {
-                abr: 0.773
+                healPerAtck: {
+                    base: 0.0145,
+                    flat: 169
+                },
             },
             // lvl11
             {
-                abr: 0.816
+                healPerAtck: {
+                    base: 0.0154,
+                    flat: 183
+                },
             },
             // lvl12
             {
-                abr: 0.859
+                healPerAtck: {
+                    base: 0.0162,
+                    flat: 197
+                },
             },
             // lvl13
             {
-                abr: 0.912
+                healPerAtck: {
+                    base: 0.0172,
+                    flat: 212
+                },
             },
         ],
     }
