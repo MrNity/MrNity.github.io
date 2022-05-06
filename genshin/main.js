@@ -71,6 +71,85 @@ new Vue({
         crystallId: 0,
         crystallImg: '',
         
+        // Resin
+        accountNum: 1,
+        fullResin: 160,
+        nowResin: 0,
+        needResin: 0,
+        
+        timer1: {
+            resin: null,
+            full: null,
+            toResin: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            toFull: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            }
+        },
+        timer2: {
+            resin: null,
+            full: null,
+            toResin: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            toFull: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            }
+        },
+        timer3: {
+            resin: null,
+            full: null,
+            toResin: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            toFull: {
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            }
+        },
+        
+        resin: {
+            resin1: {
+                nowResin: 0,
+                needResin: 0,
+
+                timerToNeed: '',
+                timerToFull: '',
+            },
+            resin2: {
+                nowResin: 0,
+                needResin: 0,
+
+                timerToNeed: '',
+                timerToFull: '',
+            },
+            resin3: {
+                nowResin: 0,
+                needResin: 0,
+
+                timerToNeed: '',
+                timerToFull: '',
+            },
+        },
+        
     },
     methods: {
         BarbaraCalc() {
@@ -871,7 +950,55 @@ new Vue({
             } else {
                 this.crystallLeft = localStorage.LeftCrystals
             }
+            if (localStorage.resin == undefined) {
+                localStorage.resin = JSON.stringify({
+                    resin1: {
+                        nowResin: 0,
+                        needResin: 0,
+
+                        timerToNeed: '',
+                        timerToFull: '',
+                    },
+                    resin2: {
+                        nowResin: 0,
+                        needResin: 0,
+
+                        timerToNeed: '',
+                        timerToFull: '',
+                    },
+                    resin3: {
+                        nowResin: 0,
+                        needResin: 0,
+
+                        timerToNeed: '',
+                        timerToFull: '',
+                    },
+                })
+            } else {
+                this.resin = JSON.parse(localStorage.resin)
+                
+                this.showRemaining(new Date(this.resin.resin1.timerToNeed), 1)
+                this.showRemaining(new Date(this.resin.resin1.timerToFull), 1, true)
+                
+                this.showRemaining(new Date(this.resin.resin2.timerToNeed), 2)
+                this.showRemaining(new Date(this.resin.resin2.timerToFull), 2, true)
+                
+                this.showRemaining(new Date(this.resin.resin3.timerToNeed), 3)
+                this.showRemaining(new Date(this.resin.resin3.timerToFull), 3, true)
+                
+                let dif1 = Math.floor(160 - ((new Date(this.resin.resin1.timerToFull) - new Date()) / 1000 / 60 / 8))
+                let dif2 = Math.floor(160 - ((new Date(this.resin.resin2.timerToFull) - new Date()) / 1000 / 60 / 8))
+                let dif3 = Math.floor(160 - ((new Date(this.resin.resin3.timerToFull) - new Date()) / 1000 / 60 / 8))
+                
+                this.resin.resin1.nowResin = dif1
+                this.resin.resin2.nowResin = dif2
+                this.resin.resin3.nowResin = dif3
+                
+                localStorage.resin = JSON.stringify(this.resin)
+                
+            }
         },
+        // Crystals
         SetCrystal(crs) {
             crs.available = !crs.available
             
@@ -909,10 +1036,291 @@ new Vue({
                 this.crystallId = crs.num
                 this.crystallImg = crs.image
             }
+        },
+        // Timers
+        StartResinTimer() {
+            let accountNum = +this.accountNum
+            let nowResin = +this.nowResin
+            let needResin = +this.needResin
+            const fullResin = +this.fullResin
+            
+            let difResin = needResin == 0 ? fullResin - nowResin : needResin - nowResin
+            let difResinFull = fullResin - nowResin
+            let now = new Date()
+            
+            let end = new Date (new Date().setTime(now.getTime() + difResin * 8 * 60 * 1000))
+            let endFull = new Date (new Date().setTime(now.getTime() + difResinFull * 8 * 60 * 1000))
+            
+            switch(accountNum) {
+                case 1:
+                    this.resin.resin1.nowResin = nowResin
+                    this.resin.resin1.needResin = needResin
+                    
+                    this.resin.resin1.timerToNeed = end
+                    this.resin.resin1.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                break
+                case 2:
+                    this.resin.resin2.nowResin = nowResin
+                    this.resin.resin2.needResin = needResin
+                    
+                    this.resin.resin2.timerToNeed = end
+                    this.resin.resin2.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                    
+                break
+                case 3:
+                    this.resin.resin3.nowResin = nowResin
+                    this.resin.resin3.needResin = needResin
+                    
+                    this.resin.resin3.timerToNeed = end
+                    this.resin.resin3.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                break    
+            }
+            
+            localStorage.resin = JSON.stringify(this.resin)
+            
+        },
+        StopTimer(num) {
+            switch (num) {
+                case 1:
+                    clearInterval(this.timer1.resin)
+                    clearInterval(this.timer1.full)
+                    this.timer1.toResin.loaded = false
+                    this.timer1.toFull.loaded = false
+                break
+                case 2:
+                    clearInterval(this.timer2.resin)
+                    clearInterval(this.timer2.full)
+                    this.timer2.toResin.loaded = false
+                    this.timer2.toFull.loaded = false
+                break
+                case 3:
+                    clearInterval(this.timer3.resin)
+                    clearInterval(this.timer3.full)
+                    this.timer3.toResin.loaded = false
+                    this.timer3.toFull.loaded = false
+                break
+            }
+        },
+        AddResin(num) {
+            let resin = {}
+            resin = JSON.parse(localStorage.resin)
+            switch(num) {
+                case 1:
+                    resin.resin1.nowResin++
+                break
+                case 2:
+                    resin.resin2.nowResin++
+                break
+                case 3:
+                    resin.resin3.nowResin++
+                break
+            }
+            localStorage.resin = JSON.stringify(resin)
+        },
+        showRemaining(end, account, full) {
+            switch (account) {
+                case 1: 
+                    if (!full) {
+                        clearInterval(this.timer1.resin)
+                        let countSeconds = 1
+                        let countMinutes = 1
+                        this.timer1.resin = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+                            
+                            countSeconds++
+                            if (countSeconds % 61 == 0) {
+                                countMinutes++
+                                countSeconds = 1
+                                showNotification(`Смола`, {
+                                    body: `Смола откатилась на 1 аккаунте до нужной!`
+                                })
+                            }
+                            if (countMinutes % 9 == 0) {
+                                countMinutes = 1
+                                this.AddResin(1)
+                                this.resin.resin1.nowResin++
+                            }
+                            
+                            if (distance < 0) {
+                                clearInterval(this.timer1.resin)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer1.toResin.displayMinutes = this.formatNumb(minutes)
+                            this.timer1.toResin.displaySeconds = this.formatNumb(seconds)
+                            this.timer1.toResin.displayHours = this.formatNumb(hours)
+                            this.timer1.toResin.loaded = true
+                        }, 1000)
+                    } else {
+                        clearInterval(this.timer1.full)
+                        this.timer1.full = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+                            
+                            if(distance < 0) {
+                                clearInterval(this.timer1.full)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer1.toFull.displayMinutes = this.formatNumb(minutes)
+                            this.timer1.toFull.displaySeconds = this.formatNumb(seconds)
+                            this.timer1.toFull.displayHours = this.formatNumb(hours)
+                            this.timer1.toFull.loaded = true
+                        }, 1000)
+                    }
+                break
+                case 2: 
+                    if (!full) {
+                        clearInterval(this.timer2.resin)
+                        let countSeconds = 1
+                        let countMinutes = 1
+                        this.timer2.resin = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+
+                            countSeconds++
+                            if (countSeconds % 61 == 0) {
+                                countMinutes++
+                                countSeconds = 1
+                            }
+                            if (countMinutes % 9 == 0) {
+                                countMinutes = 1
+                                this.AddResin(2)
+                                this.resin.resin2.nowResin++
+                            }
+
+                            if(distance < 0) {
+                                clearInterval(this.timer2.resin)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer2.toResin.displayMinutes = this.formatNumb(minutes)
+                            this.timer2.toResin.displaySeconds = this.formatNumb(seconds)
+                            this.timer2.toResin.displayHours = this.formatNumb(hours)
+                            this.timer2.toResin.loaded = true
+                        }, 1000)
+                    } else {
+                        clearInterval(this.timer2.full)
+                        this.timer2.full = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+
+                            if(distance < 0) {
+                                clearInterval(this.timer2.full)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer2.toFull.displayMinutes = this.formatNumb(minutes)
+                            this.timer2.toFull.displaySeconds = this.formatNumb(seconds)
+                            this.timer2.toFull.displayHours = this.formatNumb(hours)
+                            this.timer2.toFull.loaded = true
+                        }, 1000)
+                    }
+                break
+                case 3: 
+                    if (!full) {
+                        clearInterval(this.timer3.resin)
+                        let countSeconds = 1
+                        let countMinutes = 1
+                        this.timer3.resin = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+                            
+                            countSeconds++
+                            if (countSeconds % 61 == 0) {
+                                countMinutes++
+                                countSeconds = 1
+                            }
+                            if (countMinutes % 9 == 0) {
+                                countMinutes = 1
+                                this.AddResin(3)
+                                this.resin.resin3.nowResin++
+                            }
+
+                            if(distance < 0) {
+                                clearInterval(this.timer3.resin)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer3.toResin.displayMinutes = this.formatNumb(minutes)
+                            this.timer3.toResin.displaySeconds = this.formatNumb(seconds)
+                            this.timer3.toResin.displayHours = this.formatNumb(hours)
+                            this.timer3.toResin.loaded = true
+                        }, 1000)
+                    } else {
+                        clearInterval(this.timer3.full)
+                        this.timer3.full = setInterval(() => {
+                            let now = new Date()
+                            let distance = end.getTime() - now.getTime()
+
+                            if(distance < 0) {
+                                clearInterval(this.timer3.full)
+                                return
+                            }
+
+                            let hours = Math.floor((distance % this._days) / this._hours)
+                            let minutes = Math.floor((distance % this._hours) / this._minutes)
+                            let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                            this.timer3.toFull.displayMinutes = this.formatNumb(minutes)
+                            this.timer3.toFull.displaySeconds = this.formatNumb(seconds)
+                            this.timer3.toFull.displayHours = this.formatNumb(hours)
+                            this.timer3.toFull.loaded = true
+                        }, 1000)
+                    }
+                break
+            }
+            
+        },
+        formatNumb(num) {
+            return num < 10 ? `0${num}` : num;
+        },
+    },
+    computed: {
+        _seconds: () => 1000,
+        _minutes() {
+            return this._seconds * 60
+        },
+        _hours() {
+            return this._minutes * 60
+        },
+        _days() {
+            return this._hours * 24
         }
     },
     mounted() {
         this.CheckInfo()
+        showNotification()
     },
     watch: {
         hp(newData) {
