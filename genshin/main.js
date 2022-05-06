@@ -1141,9 +1141,6 @@ new Vue({
                             if (countSeconds % 61 == 0) {
                                 countMinutes++
                                 countSeconds = 1
-                                showNotification(`Смола`, {
-                                    body: `Смола откатилась на 1 аккаунте до нужной!`
-                                })
                             }
                             if (countMinutes % 9 == 0) {
                                 countMinutes = 1
@@ -1320,7 +1317,7 @@ new Vue({
     },
     mounted() {
         this.CheckInfo()
-        showNotification()
+//        showNotification()
     },
     watch: {
         hp(newData) {

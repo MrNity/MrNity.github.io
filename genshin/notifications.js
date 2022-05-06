@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('sw.js');
+//navigator.serviceWorker.register('sw.js');
 
 function showNotification() {
   Notification.requestPermission(function(result) {
