@@ -1234,22 +1234,22 @@ new Vue({
                 case 1: 
                     if (!full) {
                         clearInterval(this.timer1.resin)
-                        let countSeconds = 1
-                        let countMinutes = 1
+//                        let countSeconds = 1
+//                        let countMinutes = 1
                         this.timer1.resin = setInterval(() => {
                             let now = new Date()
                             let distance = end.getTime() - now.getTime()
                             
-                            countSeconds++
-                            if (countSeconds % 61 == 0) {
-                                countMinutes++
-                                countSeconds = 1
-                            }
-                            if (countMinutes % 9 == 0) {
-                                countMinutes = 1
-                                this.AddResin(1)
-                                this.resin.resin1.nowResin++
-                            }
+//                            countSeconds++
+//                            if (countSeconds % 61 == 0) {
+//                                countMinutes++
+//                                countSeconds = 1
+//                            }
+//                            if (countMinutes % 9 == 0) {
+//                                countMinutes = 1
+//                                this.AddResin(1)
+//                                this.resin.resin1.nowResin++
+//                            }
                             
                             if (distance < 0) {
                                 clearInterval(this.timer1.resin)
@@ -1290,22 +1290,22 @@ new Vue({
                 case 2: 
                     if (!full) {
                         clearInterval(this.timer2.resin)
-                        let countSeconds = 1
-                        let countMinutes = 1
+//                        let countSeconds = 1
+//                        let countMinutes = 1
                         this.timer2.resin = setInterval(() => {
                             let now = new Date()
                             let distance = end.getTime() - now.getTime()
 
-                            countSeconds++
-                            if (countSeconds % 61 == 0) {
-                                countMinutes++
-                                countSeconds = 1
-                            }
-                            if (countMinutes % 9 == 0) {
-                                countMinutes = 1
-                                this.AddResin(2)
-                                this.resin.resin2.nowResin++
-                            }
+//                            countSeconds++
+//                            if (countSeconds % 61 == 0) {
+//                                countMinutes++
+//                                countSeconds = 1
+//                            }
+//                            if (countMinutes % 9 == 0) {
+//                                countMinutes = 1
+//                                this.AddResin(2)
+//                                this.resin.resin2.nowResin++
+//                            }
 
                             if(distance < 0) {
                                 clearInterval(this.timer2.resin)
@@ -1346,22 +1346,22 @@ new Vue({
                 case 3: 
                     if (!full) {
                         clearInterval(this.timer3.resin)
-                        let countSeconds = 1
-                        let countMinutes = 1
+//                        let countSeconds = 1
+//                        let countMinutes = 1
                         this.timer3.resin = setInterval(() => {
                             let now = new Date()
                             let distance = end.getTime() - now.getTime()
                             
-                            countSeconds++
-                            if (countSeconds % 61 == 0) {
-                                countMinutes++
-                                countSeconds = 1
-                            }
-                            if (countMinutes % 9 == 0) {
-                                countMinutes = 1
-                                this.AddResin(3)
-                                this.resin.resin3.nowResin++
-                            }
+//                            countSeconds++
+//                            if (countSeconds % 61 == 0) {
+//                                countMinutes++
+//                                countSeconds = 1
+//                            }
+//                            if (countMinutes % 9 == 0) {
+//                                countMinutes = 1
+//                                this.AddResin(3)
+//                                this.resin.resin3.nowResin++
+//                            }
 
                             if(distance < 0) {
                                 clearInterval(this.timer3.resin)
