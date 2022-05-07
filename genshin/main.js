@@ -54,11 +54,6 @@ new Vue({
         showAll: false,
         
         // Accounts
-        
-        account1Enable: false,
-        account2Enable: false,
-        account3Enable: false,
-        
         account1: {
             uid: '',
             login: '',
@@ -1812,21 +1807,5 @@ new Vue({
                 break
             }
         },
-        account1Enabled(newDate) {
-            console.log('Переключение 1')
-            console.log(newDate)
-            this.account1.enable = newDate
-            
-        },
-        account2Enable(newDate) {
-            console.log('Переключение 2')
-            this.account2.enable = newDate
-            
-        },
-        account3Enable(newDate) {
-            console.log('Переключение 3')
-            this.account3.enable = newDate
-            
-        }
     }
 })

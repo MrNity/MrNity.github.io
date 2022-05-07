@@ -698,7 +698,7 @@
             <div class="tab-pane fade" id="SoftForWish" role="tabpanel" aria-labelledby="SoftForWish-tab">
                 
                 <div class="content ml-0">
-                    <p class="ml-3">Обновленная версия v0.3 с фиксом бага (спасибо HoYoverse за микрофикс)</p>
+                    <p class="ml-3">Последняя версия v0.3</p>
                 </div>
                 <div class="content ml-0">
                     <a href="https://github.com/MrNity/GenshinWish" class="ml-3 mt-3"><i class="fa-solid fa-link"></i> Ссылка на репозиторий программы</a>
@@ -1076,6 +1076,7 @@
 
                         <button class="btn btn-success my-2" @click="StartResinTimer">Начать отсчет</button>
                         
+                        <h6 class="text-warning lead">Чтобы обновить количество смолы обновите страницу! <small>автообновление работает криво поэтому пошло оно в П***У</small></h6>
                         <div class="row">
                             <div class="col-4">
                                 <h5>Аккаунт {{ account1.login || '1' }}</h5>
@@ -1212,6 +1213,9 @@
                    
 <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> Преобразователи на все акки</li>
 <hr>
+<!--
+    Считать количество часов от ближайшей будущей указанной минуты и умножать на количество указанных монет/дружбы в час, считая сколько их сейчас в наличии прибавляя к тому что было
+-->
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Монеты в чайнике</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Дружба в чайнике</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Крафт мебели</li>
@@ -1238,8 +1242,7 @@
 <hr>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Изменить дизайн сайта</li>
                    
-                   
-                   
+
                     </ul>
                 </div>
             </div>
