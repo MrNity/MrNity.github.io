@@ -1119,7 +1119,7 @@
                         <div class="col mt-2">
                             <h5>Когда последний раз использовали преобразователь <small>(примерно)</small></h5>
                             <label class="text-danger col pl-0">Оставить пустым если только что!</label>
-                            <label>Аккаунт {{ account1.login || '1' }}</label>
+                            <label>Аккаунт <b>{{ account1.login || '1' }}</b></label>
                             <div class="form-inline">
                                 <input type="datetime-local" class="form-control col-6" v-model="dateTimePT1" pattern="[0-9]4-[0-9]2-[0-9]2T[0-9]2:[0-9]2">
                                 <button class="btn btn-success ml-3" @click="startPT(1)">Начать</button>
@@ -1129,7 +1129,7 @@
                             </p>
                         </div>
                         <div class="col mt-2" v-if="account2.enable">
-                            <label>Аккаунт {{ account2.login || '2' }}</label>
+                            <label>Аккаунт <b>{{ account2.login || '2' }}</b></label>
                             <div class="form-inline">
                                 <input type="datetime-local" class="form-control col-6" v-model="dateTimePT2">
                                 <button class="btn btn-success ml-3" @click="startPT(2)">Начать</button>
@@ -1139,7 +1139,7 @@
                             </p>
                         </div>
                         <div class="col mt-2" v-if="account3.enable">
-                            <label>Аккаунт {{ account3.login || '3' }}</label>
+                            <label>Аккаунт <b>{{ account3.login || '3' }}</b></label>
                             <div class="form-inline">
                                 <input type="datetime-local" class="form-control col-6" v-model="dateTimePT3">
                                 <button class="btn btn-success ml-3" @click="startPT(3)">Начать</button>
@@ -1225,6 +1225,8 @@
 <hr>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Синхронизация с Гугл Диском</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Залить на Firebase (в идеале)</li>
+<!--<li>Если заработает на Firebase</li>-->
+<!--<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Бот </li>-->
                    
                    
                    
