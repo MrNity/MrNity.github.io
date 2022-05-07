@@ -53,6 +53,28 @@ new Vue({
         Yunjin: {},
         showAll: false,
         
+        // Accounts
+        
+        account1Enable: false,
+        account2Enable: false,
+        account3Enable: false,
+        
+        account1: {
+            uid: '',
+            login: '',
+            enable: true,
+        },
+        account2: {
+            uid: '',
+            login: '',
+            enable: false,
+        },
+        account3: {
+            uid: '',
+            login: '',
+            enable: false,
+        },
+        
         // crystals
         Crystals: {
             Mondstadt: crystals.Mondstadt,
@@ -72,6 +94,8 @@ new Vue({
         crystallImg: '',
         
         // Resin
+        constParametricTransformer: 597600000,
+        
         accountNum: 1,
         fullResin: 160,
         nowResin: 0,
@@ -150,6 +174,42 @@ new Vue({
             },
         },
         
+        // pt
+        dateTimePT1: '',
+        dateTimePT2: '',
+        dateTimePT3: '',
+        
+        parametricTransformer: {
+            pt1: '',
+            pt2: '',
+            pt3: '',
+            timerPT1: null,
+            timerPT2: null,
+            timerPT3: null,
+        },
+        timersPT: {
+            pt1: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            pt2: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            pt3: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+        }
     },
     methods: {
         BarbaraCalc() {
@@ -744,7 +804,9 @@ new Vue({
             this.Shenhe = localStorage.shenhe != undefined ? JSON.parse(localStorage.shenhe) : {}
             this.Yunjin = localStorage.yunjin != undefined ? JSON.parse(localStorage.yunjin) : {}
         },
+        // check info
         CheckInfo() {
+            //chars
             if (localStorage.barbara == undefined) {
                 localStorage.barbara = JSON.stringify({
                     hp: 0,
@@ -901,6 +963,7 @@ new Vue({
                     Shield: 0,
                 })
             }
+            // crystals
             if (localStorage.Crystals == undefined) {
                 localStorage.Crystals = JSON.stringify({
                     Mondstadt: crystals.Mondstadt,
@@ -950,6 +1013,7 @@ new Vue({
             } else {
                 this.crystallLeft = localStorage.LeftCrystals
             }
+            // timers
             if (localStorage.resin == undefined) {
                 localStorage.resin = JSON.stringify({
                     resin1: {
@@ -996,6 +1060,45 @@ new Vue({
                 
                 localStorage.resin = JSON.stringify(this.resin)
                 
+            }
+            if (localStorage.parametricTransformer == undefined) {
+                localStorage.parametricTransformer = JSON.stringify({
+                    pt1: '',
+                    pt2: '',
+                    pt3: '',
+                    timerPT1: null,
+                    timerPT2: null,
+                    timerPT3: null,
+                })
+            } else {
+                this.parametricTransformer = JSON.parse(localStorage.parametricTransformer)
+                this.showPT()
+            }
+            
+            // accs
+            if (localStorage.accounts == undefined) {
+                localStorage.accounts = JSON.stringify({
+                    account1: {
+                        uid: '',
+                        login: '',
+                        enable: true
+                    },
+                    account2: {
+                        uid: '',
+                        login: '',
+                        enable: false
+                    },
+                    account3: {
+                        uid: '',
+                        login: '',
+                        enable: false
+                    }
+                })
+            } else {
+                let accs = JSON.parse(localStorage.accounts)
+                this.account1 = accs.account1
+                this.account2 = accs.account2
+                this.account3 = accs.account3
             }
         },
         // Crystals
@@ -1299,6 +1402,142 @@ new Vue({
             }
             
         },
+        
+        // parametric transormer
+        startPT(acc) {
+            switch (acc) {
+                case 1:
+                    let start1 = ''
+                    if (this.dateTimePT1 != '') {
+                        start1 = new Date(this.dateTimePT1)
+                    } else {
+                        start1 = new Date()
+                    }
+                    let end1 = new Date(new Date().setTime(start1.getTime() + this.constParametricTransformer))
+                    this.parametricTransformer.pt1 = end1
+                break
+                case 2:
+                    let start2 = ''
+                    if (this.dateTimePT2 != '') {
+                        start2 = new Date(this.dateTimePT2)
+                    } else {
+                        start2 = new Date()
+                    }
+                    let end2 = new Date(new Date().setTime(start2.getTime() + this.constParametricTransformer))
+                    this.parametricTransformer.pt2 = end2
+                break
+                case 3:
+                    let start3 = ''
+                    if (this.dateTimePT3 != '') {
+                        start3 = new Date(this.dateTimePT3)
+                    } else {
+                        start3 = new Date()
+                    }
+                    let end3 = new Date(new Date().setTime(start3.getTime() + this.constParametricTransformer))
+                    this.parametricTransformer.pt3 = end3
+                break
+            }
+            this.showPT()
+            localStorage.parametricTransformer = JSON.stringify(this.parametricTransformer)
+        },
+        showPT() {
+            let pt1 = new Date(this.parametricTransformer.pt1)
+            let pt2 = new Date(this.parametricTransformer.pt2)
+            let pt3 = new Date(this.parametricTransformer.pt3)
+            
+            if (pt1.valueOf('Invalid Date')) {
+                this.parametricTransformer.timerPT1 = setInterval(() => {
+                    let now = new Date()
+                    let distance = pt1.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.timer1.resin)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersPT.pt1.displayMinutes = this.formatNumb(minutes)
+                    this.timersPT.pt1.displaySeconds = this.formatNumb(seconds)
+                    this.timersPT.pt1.displayHours = this.formatNumb(hours)
+                    this.timersPT.pt1.displayDays = this.formatNumb(days)
+
+                    this.timersPT.pt1.loaded = true
+                }, 1000)
+            }
+            if (pt2.valueOf('Invalid Date')) {
+                this.parametricTransformer.timerPT2 = setInterval(() => {
+                    let now = new Date()
+                    let distance = pt2.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.timer1.resin)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersPT.pt2.displayMinutes = this.formatNumb(minutes)
+                    this.timersPT.pt2.displaySeconds = this.formatNumb(seconds)
+                    this.timersPT.pt2.displayHours = this.formatNumb(hours)
+                    this.timersPT.pt2.displayDays = this.formatNumb(days)
+
+                    this.timersPT.pt2.loaded = true
+                }, 1000)
+            }
+            if (pt3.valueOf('Invalid Date')) {
+                this.parametricTransformer.timerPT3 = setInterval(() => {
+                    let now = new Date()
+                    let distance = pt3.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.timer1.resin)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersPT.pt3.displayMinutes = this.formatNumb(minutes)
+                    this.timersPT.pt3.displaySeconds = this.formatNumb(seconds)
+                    this.timersPT.pt3.displayHours = this.formatNumb(hours)
+                    this.timersPT.pt3.displayDays = this.formatNumb(days)
+
+                    this.timersPT.pt3.loaded = true
+                }, 1000)
+            }
+        },
+        
+        // settings
+        SaveAccountsNames() {
+            localStorage.accounts = JSON.stringify({
+                account1: {
+                    uid: this.account1.uid,
+                    login: this.account1.login,
+                    enable: this.account1.enable
+                },
+                account2: {
+                    uid: this.account2.uid,
+                    login: this.account2.login,
+                    enable: this.account2.enable
+                },
+                account3: {
+                    uid: this.account3.uid,
+                    login: this.account3.login,
+                    enable: this.account3.enable
+                },
+            })
+            alert('Данные аккаунтов сохранены!')
+        },
+        // others
         formatNumb(num) {
             return num < 10 ? `0${num}` : num;
         },
@@ -1317,6 +1556,7 @@ new Vue({
     },
     mounted() {
         this.CheckInfo()
+        
 //        showNotification()
     },
     watch: {
@@ -1572,5 +1812,21 @@ new Vue({
                 break
             }
         },
+        account1Enabled(newDate) {
+            console.log('Переключение 1')
+            console.log(newDate)
+            this.account1.enable = newDate
+            
+        },
+        account2Enable(newDate) {
+            console.log('Переключение 2')
+            this.account2.enable = newDate
+            
+        },
+        account3Enable(newDate) {
+            console.log('Переключение 3')
+            this.account3.enable = newDate
+            
+        }
     }
 })

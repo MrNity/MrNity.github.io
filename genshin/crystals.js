@@ -509,4 +509,14 @@ const crystals = {
             image: ''
         },
     ],
+    // в будущем
+    Sumeru: [
+        {
+            num: 73,
+            name: '',
+            available: false,
+            world: false,
+            image: ''
+        },
+    ],
 }

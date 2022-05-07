@@ -12,17 +12,9 @@
 </head>
 <body style="padding: 0; margin: 0;">
     <div id="app">
-<!--        <h2 class="text-center mt-2">Genshin</h2>-->
-
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="resin-tab" data-toggle="tab" href="#resin" role="tab" aria-controls="resin" aria-selected="false"><i class="fa-solid fa-clock"></i> Таймеры</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true">Таблица хила и баффов</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false">Прога круток 1 кликом</a>
+                <a class="nav-link active" id="resin-tab" data-toggle="tab" href="#resin" role="tab" aria-controls="resin" aria-selected="false"><img src="https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Fragile_Resin.png/revision/latest/scale-to-width-down/256?cb=20210106074218" width="20" height="20" alt=""> Таймеры</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="wish-tab" data-toggle="tab" href="#wish" role="tab" aria-controls="wish" aria-selected="false">Пожелания для опроса</a>
@@ -31,20 +23,27 @@
                 <a class="nav-link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">Полезные ссылки</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link " id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true"><i class="fa-solid fa-briefcase-medical"></i> Таблица хила и баффов</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Видосы</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false">Лучистые кристаллы</a>
+                <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false"><img src="imgs/Item_Radiant_Spincrystal.webp" width="20" height="20" alt=""> Лучистые кристаллы</a>
             </li>
             <li class="nav-item">
 <!--                <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>-->
                 <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Сколько примогемов мы получаем</a>
             </li>
-<!--
+            <li class="nav-item">
+                <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-cog"></i> Настройки</a>
             </li>
--->
+            <li class="nav-item">
+                <a class="nav-link" id="plans-tab" data-toggle="tab" href="#plans" role="tab" aria-controls="plans" aria-selected="false"><i class="fa-solid fa-calendar-check"></i> Планы</a>
+            </li>
 <!--
             <li class="nav-item">
                 <a class="nav-link disabled" id="builds-tab" data-toggle="tab" href="#builds" role="tab" aria-controls="builds" aria-selected="false">Билды</a>
@@ -52,12 +51,12 @@
 -->
         </ul>
         
-        
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade" id="TableHeal" role="tabpanel" aria-labelledby="TableHeal-tab">
+<!--            TAB ХИЛА И БАФФОВ                   -->
+        <div class="tab-pane fade" id="TableHeal" role="tabpanel" aria-labelledby="TableHeal-tab">
             
-        <div class="content row ml-0">
-<!--           ФОРМА             -->
+            <div class="content row ml-0">
+            <!--           ФОРМА             -->
             <div class="col-md-3 col-12 mt-5">
                 <label for="chara">Перс</label>
                 <select class="form-control" v-model="char" id="chara">
@@ -133,8 +132,8 @@
                 <hr>
                 <button class="btn btn-success mt-3" @click="ShowAll()"><i class="fa fa-search"></i> Показать все</button>
             </div>
-<!--            КОНЕЦ ФОРМЫ             -->
-<!--           ТАБЛИЦЫ                 -->
+            <!--            КОНЕЦ ФОРМЫ             -->
+            <!--           ТАБЛИЦЫ                 -->
             <div class="col-md-6 col-12 mt-5">
                 <table v-if="char == 'Barbara'" class="table table-hover">
                     <thead>
@@ -416,8 +415,8 @@
                  
                  
             </div>
-<!--            КОНЕЦ ТАБЛИЦ                -->
-<!--           ОБЩАЯ ТАБЛИЦА                -->
+            <!--            КОНЕЦ ТАБЛИЦ                -->
+            <!--           ОБЩАЯ ТАБЛИЦА                -->
             <div class="col-md-12 col-12 mt-5">
                 <table v-if="showAll" class="table table-hover" style="font-size: 0.88rem">
                     <thead>
@@ -691,9 +690,10 @@
                     </tbody>
                  </table>
             </div>
-<!--            КОНЕЦ ОБЩЕЙ ТАБЛИЦЫ            -->
-        </div>
+            <!--            КОНЕЦ ОБЩЕЙ ТАБЛИЦЫ            -->
             </div>
+        </div>
+<!--            END ХИЛА И БАФФОВ                   -->
 <!--            TAB С СОФТОМ                        -->
             <div class="tab-pane fade" id="SoftForWish" role="tabpanel" aria-labelledby="SoftForWish-tab">
                 
@@ -701,15 +701,15 @@
                     <p class="ml-3">Обновленная версия v0.3 с фиксом бага (спасибо HoYoverse за микрофикс)</p>
                 </div>
                 <div class="content ml-0">
-                    <a href="https://github.com/MrNity/GenshinWish" class="ml-3 mt-3">Ссылка на репозиторий программы</a>
+                    <a href="https://github.com/MrNity/GenshinWish" class="ml-3 mt-3"><i class="fa-solid fa-link"></i> Ссылка на репозиторий программы</a>
                 </div>
                 <div class="content ml-0">
                     <a href="/genshin/GenshinWish.exe" class="btn btn-success mt-3 ml-3" download><i class="fa fa-download"></i> Скачать прогу</a>
                 </div>
                 
             </div>
-<!--            END TAB С СОФТОМ                          -->
-<!--            TAB С пожеланиями для опроса              -->
+<!--            END TAB С СОФТОМ                    -->
+<!--            TAB С пожеланиями для опроса        -->
             <div class="tab-pane fade" id="wish" role="tabpanel" aria-labelledby="wish-tab">
                 <div class="content ml-0">
                     <ul>
@@ -760,44 +760,94 @@
                     </ul>
                 </div>
             </div>
-<!--            END TAB С пожеланиями для опроса          -->
-<!--            TAB С полезными ссылками                  -->
+<!--            END TAB С пожеланиями для опроса    -->
+<!--            TAB С полезными ссылками            -->
             <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
                 <div class="content ml-0">
-                    <ul>
+                    <ul class="fa-ul">
                         <h4>ПАТЧ 2.6</h4>
-                        <li><a href="https://www.hoyolab.com/article/4032598" target="_blank">[Путеводитель] Новые задания мира 2.6 и где их искать (без спойлеров прохождения)</a></li>
-                        <li><a href="https://www.hoyolab.com/article/4030020" target="_blank">[Гайды 2.6] Новые скрытые достижения (в процессе)</a></li>
-                        <li><a href="https://www.hoyolab.com/article/4023070" target="_blank">Местонахождение Лучистых кристаллов</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/4032598" target="_blank">[Путеводитель] Новые задания мира 2.6 и где их искать (без спойлеров прохождения)</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/4030020" target="_blank">[Гайды 2.6] Новые скрытые достижения (в процессе)</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/4023070" target="_blank">Местонахождение Лучистых кристаллов</a>
+                        </li>
                         <hr>
                         <h4>Основные оф ссылки</h4>
-                        <li><a href="https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481&lang=ru-ru" target="_blank">Ежедневные отметки</a></li>
-                        <li><a href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=ru-ru#/map/2?shown_types=">Интерактивная карта</a></li>
-                        <li><a href="https://webstatic-sea.mihoyo.com/ys/event/calculator-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&utm_source=sns&utm_medium=vk#/" target="_blank">Калькулятор прокачки персонажей</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481&lang=ru-ru" target="_blank">Ежедневные отметки</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=ru-ru#/map/2?shown_types=">Интерактивная карта</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://webstatic-sea.mihoyo.com/ys/event/calculator-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&utm_source=sns&utm_medium=vk#/" target="_blank">Калькулятор прокачки персонажей</a>
+                        </li>
                         <h4>Доп ссылки</h4>
-                        <li><a href="https://paimon.moe/wish/" target="_blank">Paimon.moe для сохранения круток и тд</a></li>
-                        <li><a href="https://chrome.google.com/webstore/detail/genshin-impact-daily-chec/egjaodonpaepmffoecblgjfffoidlgkc/related?hl=ru" target="_blank">Расширение для автосбора ежедневных отметок</a></li>
-                        <li><a href="https://www.gensh.in/events/gacha-banners" target="_blank">Последовательность баннеров</a></li>
-                        <li><a href="https://genshin-impact.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F#.D0.98.D0.BD.D0.B0.D0.B4.D0.B7.D1.83.D0.BC.D0.B0" target="_blank">Поручения</a></li>
-                        <li><a href="https://genshin-impact.fandom.com/ru/wiki/%D0%95%D0%B4%D0%B0" target="_blank">Вся еда</a></li>
-                        <li><a href="https://shinshin.moe/" target="_blank">Генератор карточек персонажей</a></li>
-                        <li><a href="https://www.myinstants.com/search/?page=1&name=genshin" target="_blank">Геншин Саундбоард</a></li>
-                        <li><a href="https://genshin.aspirine.su/" target="_blank">Калькулятор по геншину</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=mn4Dz1v5ut0&ab_channel=Nuke73" target="_blank">Видео гайд от Нюка по калькулятору</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://paimon.moe/wish/" target="_blank">Paimon.moe для сохранения круток и тд</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://chrome.google.com/webstore/detail/genshin-impact-daily-chec/egjaodonpaepmffoecblgjfffoidlgkc/related?hl=ru" target="_blank">Расширение для автосбора ежедневных отметок</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.gensh.in/events/gacha-banners" target="_blank">Последовательность баннеров</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://genshin-impact.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F#.D0.98.D0.BD.D0.B0.D0.B4.D0.B7.D1.83.D0.BC.D0.B0" target="_blank">Поручения</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://genshin-impact.fandom.com/ru/wiki/%D0%95%D0%B4%D0%B0" target="_blank">Вся еда</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://shinshin.moe/" target="_blank">Генератор карточек персонажей</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.myinstants.com/search/?page=1&name=genshin" target="_blank">Геншин Саундбоард</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://genshin.aspirine.su/" target="_blank">Калькулятор по геншину</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.youtube.com/watch?v=mn4Dz1v5ut0&ab_channel=Nuke73" target="_blank">Видео гайд от Нюка по калькулятору</a>
+                        </li>
                         <hr>
                         <h4>Форумные ссылки на гайды и пр.</h4>
-                        <li><a href="https://www.hoyolab.com/genshin/article/580540" target="_blank">Скрытые достижения 2.0</a></li>
-                        <li><a href="https://www.hoyolab.com/genshin/article/797555" target="_blank">Скрытые достижения 2.1</a></li>
-                        <li><a href="https://www.hoyolab.com/genshin/article/809175" target="_blank">Ежедневные активности для сундуков и достижений в Инадзуме 2.1</a></li>
-                        <li><a href="https://www.hoyolab.com/article/1891273" target="_blank">[Путеводитель] Рецепты 2.3/2.4 и где их найти</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/genshin/article/580540" target="_blank">Скрытые достижения 2.0</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/genshin/article/797555" target="_blank">Скрытые достижения 2.1</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/genshin/article/809175" target="_blank">Ежедневные активности для сундуков и достижений в Инадзуме 2.1</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1891273" target="_blank">[Путеводитель] Рецепты 2.3/2.4 и где их найти</a>
+                        </li>
                         <hr>
-                        <li><a href="https://www.hoyolab.com/article/1864273" target="_blank">[Версия 2.4] Локальное Задание: «Особая удача» + скрытое достижение «SYUUMATSU GAIDEN» + 1 роскошный сундук</a></li>
-                        <li><a href="https://www.hoyolab.com/article/1877873" target="_blank">Загадки Энканомии (Где посидеть)</a></li>
-                        <li><a href="https://www.hoyolab.com/article/1877043" target="_blank">Достижение «Прямо в яблочко!»</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1864273" target="_blank">[Версия 2.4] Локальное Задание: «Особая удача» + скрытое достижение «SYUUMATSU GAIDEN» + 1 роскошный сундук</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1877873" target="_blank">Загадки Энканомии (Где посидеть)</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1877043" target="_blank">Достижение «Прямо в яблочко!»</a>
+                        </li>
                         <hr>
-                        <li><a href="https://www.hoyolab.com/article/1895223" target="_blank">Маршрут по артефактам (только богатые места) плюс видео</a></li>
-                        <li><a href="https://www.hoyolab.com/article/1891997" target="_blank">V2.4 Где найти книги? Мировой квест "Собрание драконов и змей " Энканомия. Инадзума</a></li>
-                        <li><a href="https://www.hoyolab.com/article/1878020" target="_blank">[Inazuma 2.4] Задания "Собрание драконов и змей" и достижение "Если б Токоё узнал..."</a></li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1895223" target="_blank">Маршрут по артефактам (только богатые места) плюс видео</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1891997" target="_blank">V2.4 Где найти книги? Мировой квест "Собрание драконов и змей " Энканомия. Инадзума</a>
+                        </li>
+                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                            <a href="https://www.hoyolab.com/article/1878020" target="_blank">[Inazuma 2.4] Задания "Собрание драконов и змей" и достижение "Если б Токоё узнал..."</a>
+                        </li>
 
 <!--
                         <hr>
@@ -811,15 +861,17 @@
                     </ul>
                 </div>
             </div>
-<!--            END TAB С полезными ссылками          -->
-<!--            TAB С кеками                          -->
+<!--            END TAB С полезными ссылками        -->
+<!--            TAB С кеками                        -->
+<!--
             <div class="tab-pane fade" id="keki" role="tabpanel" aria-labelledby="keki-tab">
                 <div class="content ml-0">
-<!--                    <iframe src="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" frameborder="0" height="905" width="100%"></iframe>-->
+                    <iframe src="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" frameborder="0" height="905" width="100%"></iframe>
                 </div>
             </div>
-<!--            END TAB С кеками                      -->
-<!--            TAB С билдами                         -->
+-->
+<!--            END TAB С кеками                    -->
+<!--            TAB С билдами                       -->
 <!--
             <div class="tab-pane fade" id="builds" role="tabpanel" aria-labelledby="builds-tab">
                 <div class="content ml-0">
@@ -830,8 +882,8 @@
                 </div>
             </div>
 -->
-<!--            END TAB С билдами                      -->
-<!--            TAB С видосами                         -->
+<!--            END TAB С билдами                   -->
+<!--            TAB С видосами                      -->
             <div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
                 <div class="content ml-0">
                     <div class="col-8">
@@ -843,14 +895,14 @@
                     </div>
                 </div>
             </div>
-<!--            END TAB С видосами                      -->
-<!--            TAB С Кристаллами                         -->
+<!--            END TAB С видосами                  -->
+<!--            TAB С Кристаллами                   -->
             <div class="tab-pane fade" id="crystals" role="tabpanel" aria-labelledby="crystals-tab">
                 <div class="content ml-0">
                     <div class="col">
-                        <h2 class="text-center">Лучистые кристаллы</h2>
+                        <h2 class="text-center"><img src="imgs/Item_Radiant_Spincrystal.webp" alt="" width="40" height="40"> Лучистые кристаллы</h2>
                         <p class="lead">
-                            <a href="https://www.hoyolab.com/article/4023070" target="_blank">Собрано: <b>{{ crystallCollected }}</b>, Осталось: <b>{{ crystallLeft }}</b></a>
+                            <a href="https://www.hoyolab.com/article/4023070" target="_blank"><i class="fa-solid fa-link"></i> Собрано: <b>{{ crystallCollected }}</b>, Осталось: <b>{{ crystallLeft }}</b></a>
                         </p>
                         <p class="">
                             Остались номера: <b>{{ LeftNumbers.join(', ') }}</b>
@@ -878,7 +930,7 @@
                             <table class="table align-middle table-hover col-4 strike">
                                 <thead>
                                     <tr>
-                                        <th scope="col" colspan="3" class="text-center"><h5>Мондштадт</h5></th>
+                                        <th scope="col" colspan="3" class="text-center"><h5><img src="imgs/Emblem_Mondstadt.webp" alt="" width="32" height="32"> Мондштадт</h5></th>
                                     </tr>
                                     <tr>
                                         <th scope="col" class="text-center">№</th>
@@ -903,7 +955,7 @@
                             <table class="table align-middle table-hover col-4 strike">
                                 <thead>
                                     <tr>
-                                        <th scope="col" colspan="3" class="text-center"><h5>Ли Юе</h5></th>
+                                        <th scope="col" colspan="3" class="text-center"><h5><img src="imgs/Emblem_Liyue.webp" alt="" width="32" height="32"> Ли Юе</h5></th>
                                     </tr>
                                     <tr>
                                         <th scope="col" class="text-center">№</th>
@@ -929,7 +981,7 @@
                             <table class="table align-middle table-hover col-4 strike">
                                 <thead>
                                     <tr>
-                                        <th scope="col" colspan="3" class="text-center"><h5>Инадзума</h5></th>
+                                        <th scope="col" colspan="3" class="text-center"><h5><img src="imgs/Emblem_Inazuma.webp" alt="" width="32" height="32"> Инадзума</h5></th>
                                     </tr>
                                     <tr>
                                         <th scope="col" class="text-center">№</th>
@@ -956,36 +1008,65 @@
                     </div>
                 </div>
             </div>
-<!--            END TAB С Кристаллами                      -->
-<!--            TAB С настройками                         -->
+<!--            END TAB С Кристаллами               -->
+<!--            TAB С настройками                   -->
             <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                 <div class="content ml-0">
-                    <div class="col-8">
-                        <label>Синхронизация с гугл</label>
-                        <button class="btn btn-primary"><i class="fa-brands fa-google-drive"></i> Включить синхронизацию</button>
+                    <div class="col">
+                        <h4 class="mt-2 ml-3">UID и логин аккаунта</h4>
+                        <div class="row ml-0 mt-2">
+                            <div class="col-4">
+<!--                                <label for="">Аккаунт 1</label>-->
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="accountSet1" v-bind:checked="account1.enable" @click="account1.enable = !account1.enable">
+                                    <label class="form-check-label" for="accountSet1">Аккаунт 1</label>
+                                </div>
+                                <input type="text" class="form-control col-8 mt-2" placeholder="Никнейм" v-model="account1.login">
+                                <input type="text" class="form-control col-8 mt-2" placeholder="UID" v-model="account1.uid">
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="accountSet2" v-bind:checked="account2.enable" @click="account2.enable = !account2.enable">
+                                    <label class="form-check-label" for="accountSet2">Аккаунт 2</label>
+                                </div>
+                                <input type="text" class="form-control col-8 mt-2" placeholder="Никнейм" v-model="account2.login">
+                                <input type="text" class="form-control col-8 mt-2" placeholder="UID" v-model="account2.uid">
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="accountSet3" v-bind:checked="account3.enable" @click="account3.enable = !account3.enable">
+                                    <label class="form-check-label" for="accountSet3">Аккаунт 3</label>
+                                </div>
+                                <input type="text" class="form-control col-8 mt-2" placeholder="Никнейм" v-model="account3.login">
+                                <input type="text" class="form-control col-8 mt-2" placeholder="UID" v-model="account3.uid">
+
+                            </div>
+                            <button class="btn btn-success mt-2 ml-3" @click="SaveAccountsNames"><i class="fa-solid fa-save"></i> Сохранить</button>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <h5>Синхронизация с гугл (в будущем)</h5>
+                        <button class="btn btn-primary"><i class="fa-brands fa-google-drive"></i> Подключить</button>
                     </div>
                 </div>
             </div>
-<!--            END TAB Со СМОЛОЙ                      -->
-<!--            TAB С настройками                         -->
+<!--            END TAB С настройками               -->
+<!--            TAB С ТАЙМЕРАМИ                     -->
             <div class="tab-pane fade show active" id="resin" role="tabpanel" aria-labelledby="resin-tab">
                 <div class="content">
+<!--       
+                            СМОЛА И ПРЕОБРАЗОВАТЕЛЬ
+-->
                    <div class="row ml-3 mt-2">
                     <div class="col-7">
-                        <h3>Смола</h3>
-                        
-<!--
-                        <img src="https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Fragile_Resin.png/revision/latest/scale-to-width-down/256?cb=20210106074218" alt="">
-                        <img src="https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Parametric_Transformer.png/revision/latest/scale-to-width-down/256?cb=20210312183450" alt="">
-                        <img src="https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Item_Serenitea_Pot.png/revision/latest/scale-to-width-down/256?cb=20210416180724" alt="">
-                        <img src="https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Realm_Currency.png/revision/latest/scale-to-width-down/256?cb=20210428025414" alt="">
--->
-                       
+                        <h3><img src="imgs/Item_Fragile_Resin.webp" alt="" width="32" height="32"> Смола</h3>
                         <label for="">Аккаунт</label>
-                        <select class="form-control col-4" v-model="accountNum">
-                            <option value="1" selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                        <select class="form-control col-12" v-model="accountNum">
+                            <option value="1" selected>{{ account1.login + ' ' + account1.uid || '1'  }}</option>
+                            <option value="2" v-if="account2.enable">{{ account2.login + ' ' + account2.uid || '2'  }}</option>
+                            <option value="3" v-if="account3.enable">{{ account3.login + ' ' + account3.uid || '3'  }}</option>
                         </select>
                         <label for="">Сейчас смолы <small>(лучше на 1 больше)</small></label>
                         <input type="number" placeholder="Сейчас смолы" class="form-control col-4" v-model="nowResin" min="0" max="160">
@@ -997,7 +1078,7 @@
                         
                         <div class="row">
                             <div class="col-4">
-                                <h5>Аккаунт 1</h5>
+                                <h5>Аккаунт {{ account1.login || '1' }}</h5>
                                 <p>Сейчас смолы: ~<b>{{ resin.resin1.nowResin }}</b></p>
                                 <p>Осталось до <b>{{ resin.resin1.needResin }}</b> нужной: 
                                 
@@ -1005,10 +1086,10 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer1.toFull.loaded">~{{ timer1.toFull.displayHours }}:{{ timer1.toFull.displayMinutes }}:{{ timer1.toFull.displaySeconds }}</b></p>
-                                <button class="btn btn-danger my-2" @click="StopTimer(1)">Остановить таймер</button>
+<!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
-                            <div class="col-4 p-0 m-0">
-                                <h5>Аккаунт 2</h5>
+                            <div class="col-4 p-0 m-0" v-if="account2.enable">
+                                <h5>Аккаунт {{ account2.login || '2' }}</h5>
                                 <p>Сейчас смолы: ~<b>{{ resin.resin2.nowResin }}</b></p>
                                 <p>Осталось до <b>{{ resin.resin2.needResin }}</b> нужной: 
                                 
@@ -1016,10 +1097,10 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer2.toFull.loaded">~{{ timer2.toFull.displayHours }}:{{ timer2.toFull.displayMinutes }}:{{ timer2.toFull.displaySeconds }}</b></p>
-                                <button class="btn btn-danger my-2" @click="StopTimer(2)">Остановить таймер</button>
+<!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
-                            <div class="col-4 p-0 m-0">
-                                <h5>Аккаунт 3</h5>
+                            <div class="col-4 p-0 m-0" v-if="account3.enable">
+                                <h5>Аккаунт {{ account3.login || '3' }}</h5>
                                 <p>Сейчас смолы: ~<b>{{ resin.resin3.nowResin }}</b></p>
                                 <p>Осталось до <b>{{ resin.resin3.needResin }}</b> нужной: 
                                 
@@ -1027,64 +1108,154 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer3.toFull.loaded">~{{ timer3.toFull.displayHours }}:{{ timer3.toFull.displayMinutes }}:{{ timer3.toFull.displaySeconds }}</b></p>
-                                <button class="btn btn-danger my-2" @click="StopTimer(3)">Остановить таймер</button>
+<!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
                             
                         </div>
                         
                     </div>
-                    <div class="col-3">
-                        <h3>Преобразователь</h3>
-                        
-                        
+                    <div class="col-5">
+                        <h3><img src="imgs/Item_Parametric_Transformer.webp" alt="" width="32" height="32"> Преобразователь</h3>
+                        <div class="col mt-2">
+                            <h5>Когда последний раз использовали преобразователь <small>(примерно)</small></h5>
+                            <label class="text-danger col pl-0">Оставить пустым если только что!</label>
+                            <label>Аккаунт {{ account1.login || '1' }}</label>
+                            <div class="form-inline">
+                                <input type="datetime-local" class="form-control col-6" v-model="dateTimePT1" pattern="[0-9]4-[0-9]2-[0-9]2T[0-9]2:[0-9]2">
+                                <button class="btn btn-success ml-3" @click="startPT(1)">Начать</button>
+<!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
+                            </div>
+                            <p>Осталось: <b v-if="timersPT.pt1.loaded">{{ timersPT.pt1.displayDays }} дней (я/ень) {{ timersPT.pt1.displayHours }}:{{ timersPT.pt1.displayMinutes }}:{{ timersPT.pt1.displaySeconds }}</b>
+                            </p>
+                        </div>
+                        <div class="col mt-2" v-if="account2.enable">
+                            <label>Аккаунт {{ account2.login || '2' }}</label>
+                            <div class="form-inline">
+                                <input type="datetime-local" class="form-control col-6" v-model="dateTimePT2">
+                                <button class="btn btn-success ml-3" @click="startPT(2)">Начать</button>
+<!--                                <button class="btn btn-danger ml-3"> <i class="fa-solid fa-bell-slash"></i> </button>-->
+                            </div>
+                            <p>Осталось: <b v-if="timersPT.pt2.loaded">{{ timersPT.pt2.displayDays }} дней (я/ень) {{ timersPT.pt2.displayHours }}:{{ timersPT.pt2.displayMinutes }}:{{ timersPT.pt2.displaySeconds }}</b>
+                            </p>
+                        </div>
+                        <div class="col mt-2" v-if="account3.enable">
+                            <label>Аккаунт {{ account3.login || '3' }}</label>
+                            <div class="form-inline">
+                                <input type="datetime-local" class="form-control col-6" v-model="dateTimePT3">
+                                <button class="btn btn-success ml-3" @click="startPT(3)">Начать</button>
+<!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i></button>-->
+                            </div>
+                            <p>Осталось: <b v-if="timersPT.pt3.loaded">{{ timersPT.pt3.displayDays }} дней (я/ень) {{ timersPT.pt3.displayHours }}:{{ timersPT.pt3.displayMinutes }}:{{ timersPT.pt3.displaySeconds }}</b>
+                            </p>
+                        </div>
                     </div>
                        
                    </div>
+<!--        
+                                ЧАЙНИК
+-->
+                      <hr>
+                       <h2 class="text-center"><img src="imgs/Item_Serenitea_Pot.webp" alt="" width="46" height="46"> Чайничек <small>раздел временно не работает</small></h2>
+                   <div class="row ml-3 mt-2">
+                       <div class="col-2">
+                           <h3><img src="imgs/Item_Realm_Currency.webp" alt="" width="32" height="32"> Монетки</h3>
+                           <label for="">Примерные минуты получения монеток</label>
+                           <input type="number" min="0" max="60" class="form-control" placeholder="0 до 60">
+
+                           <label for="">Сейчас монет в чаше</label>
+                           <input type="number" min="0" class="form-control" placeholder="0">
+
+                           <button class="btn btn-success mt-2">Начать</button>
+                           
+                       </div>
+                       <div class="col-2">
+                           <h3><img src="imgs/Item_Companionship_EXP.webp" alt="" width="32" height="32"> Дружба</h3>
+                           
+                           <label for="">Примерные минуты получения дружбы</label>
+                           <input type="number" min="0" max="60" class="form-control" placeholder="0 до 60">
+                           
+                           <label for="">Сейчас дружбы</label>
+                           <input type="number" min="0" class="form-control" placeholder="0">
+                           
+                           <button class="btn btn-success mt-2">Начать</button>
+                       </div>
+                       <div class="col-2">
+                           <h5>Накопилось монет/дружбы</h5>
+                           <p>Аккаунт <b>{{ account1.login || '1' }}</b>: <i>150</i> / <i>25</i></p>
+                           <p v-if="account2.enable">Аккаунт <b>{{ account2.login || '2' }}</b>: <i>32</i> / <i>8</i></p>
+                           <p v-if="account3.enable">Аккаунт <b>{{ account3.login || '3' }}</b>: <i>210</i> / <i>35</i></p>
+                       </div>
+                       
+                       <div class="col-6">
+                           <h3>Крафт <i class="fa-solid fa-hammer mirror"></i> <small>отложен</small></h3>
+                           <label for="">Тип мебели</label>
+                           <select name="" id="" class="form-control col-6">
+                               <option value=""></option>
+                               <option value="">Зеленый</option>
+                               <option value="">Синий</option>
+                               <option value="">Эпик</option>
+                           </select>
+                           
+                           <button class="btn btn-success mt-2">Начать</button>
+                       </div>
+                   </div>
                 </div>
             </div>
-<!--            END TAB Со СМОЛОЙ                      -->
+<!--            END TAB С ТАЙМЕРАМИ                 -->
+<!--            TAB С ПЛАНАМИ                       -->
+            <div class="tab-pane fade" id="plans" role="tabpanel" aria-labelledby="plans-tab">
+                <div class="content ml-0">
+                    <h3 class="m-3">Планы</h3>
+<!--                   <i class="fa-solid fa-check"></i>-->
+<!--                   <i class="fa-solid fa-x"></i>-->
+                   <ul class="fa-ul">
+                   
+<li><span class="fa-li"><i class="fa-solid fa-check"></i></span> Преобразователи на все акки</li>
+<hr>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Монеты в чайнике</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Дружба в чайнике</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Крафт мебели</li>
+<hr>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Уведомления</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Готовая смола за 5 минут</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Фулл смола за 30 минут</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Преобразователь за 30 минут</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Монеты/дружба за 60-120-180 минут</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Крафт за 5 минут</li>
+<hr>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Синхронизация с Гугл Диском</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Залить на Firebase (в идеале)</li>
+                   
+                   
+                   
+                    </ul>
+                </div>
+            </div>
+<!--            END TAB С ПЛАНАМИ                   -->
         </div>
        
     </div>
-    
-    
-<!--
-<script src="https://apis.google.com/js/api.js" onload="this.onload=function(){}; gapi.load('client:auth2', initClient)" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
-<script src="drive.js"></script>
--->
-<script src="notifications.js"></script>
-
+<!--             БИБЛИОТЕКИ                         -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<!-- JS, Popper.js, and jQuery -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!--             ПЕРСЫ                              -->
+<script src="chars/barbara.js"></script>
+<script src="chars/bennett.js"></script>
+<script src="chars/jean.js"></script>
+<script src="chars/diona.js"></script>
+<script src="chars/kokomi.js"></script>
+<script src="chars/noelle.js"></script>
+<script src="chars/sara.js"></script>
+<script src="chars/sayu.js"></script>
+<script src="chars/qiqi.js"></script>
+<script src="chars/shenhe.js"></script>
+<script src="chars/yunjin.js"></script>
+<script src="chars/zhongli.js"></script>
     
-    
-    <script src="chars/barbara.js"></script>
-    <script src="chars/bennett.js"></script>
-    <script src="chars/jean.js"></script>
-    <script src="chars/diona.js"></script>
-    <script src="chars/kokomi.js"></script>
-    <script src="chars/noelle.js"></script>
-    <script src="chars/sara.js"></script>
-    <script src="chars/sayu.js"></script>
-    <script src="chars/qiqi.js"></script>
-    <script src="chars/shenhe.js"></script>
-    <script src="chars/yunjin.js"></script>
-    <script src="chars/zhongli.js"></script>
-    
-    
-    
-    
-    
-    <script src="crystals.js"></script>
-    
-    <script src="main.js"></script>
-    
+<script src="crystals.js"></script>
+
+<script src="main.js"></script>
 </body>
 </html>
