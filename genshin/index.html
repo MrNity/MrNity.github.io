@@ -12,51 +12,14 @@
 </head>
 <body style="padding: 0; margin: 0;">
     <div id="app">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="resin-tab" data-toggle="tab" href="#resin" role="tab" aria-controls="resin" aria-selected="false"><img src="imgs/Item_Fragile_Resin.webp" width="20" height="20" alt=""> Таймеры</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="wish-tab" data-toggle="tab" href="#wish" role="tab" aria-controls="wish" aria-selected="false">Пожелания для опроса</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">Полезные ссылки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true"><i class="fa-solid fa-briefcase-medical"></i> Таблица хила и баффов</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Видосы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false"><img src="imgs/Item_Radiant_Spincrystal.webp" width="20" height="20" alt=""> Лучистые кристаллы</a>
-            </li>
-            <li class="nav-item">
-<!--                <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>-->
-                <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Сколько примогемов мы получаем</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-cog"></i> Настройки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="plans-tab" data-toggle="tab" href="#plans" role="tab" aria-controls="plans" aria-selected="false"><i class="fa-solid fa-calendar-check"></i> Планы</a>
-            </li>
-<!--
-            <li class="nav-item">
-                <a class="nav-link disabled" id="builds-tab" data-toggle="tab" href="#builds" role="tab" aria-controls="builds" aria-selected="false">Билды</a>
-            </li>
--->
-        </ul>
+        <menu-nav></menu-nav>
         
         <div class="tab-content" id="myTabContent">
 <!--            TAB ХИЛА И БАФФОВ                   -->
         <div class="tab-pane fade" id="TableHeal" role="tabpanel" aria-labelledby="TableHeal-tab">
             
             <div class="content row ml-0">
-            <!--           ФОРМА             -->
+            <!--           ФОРМА                    -->
             <div class="col-md-3 col-12 mt-5">
                 <label for="chara">Перс</label>
                 <select class="form-control" v-model="char" id="chara">
@@ -90,6 +53,11 @@
                 <div v-if="char == 'Noelle' || char == 'Yun Jin'">
                     <label for="def">Защита</label>
                     <input type="number" class="form-control" v-model="def" id="def">
+                </div>
+
+                <div v-if="char == 'Noelle'">
+                    <label for="ss">Прочность щита</label>
+                    <input type="number" class="form-control" v-model="ss" id="ss">
                 </div>
                 
                 <div v-if="char == 'Sayu'">
@@ -133,7 +101,7 @@
                 <button class="btn btn-success mt-3" @click="ShowAll()"><i class="fa fa-search"></i> Показать все</button>
             </div>
             <!--            КОНЕЦ ФОРМЫ             -->
-            <!--           ТАБЛИЦЫ                 -->
+            <!--           ТАБЛИЦЫ                  -->
             <div class="col-md-6 col-12 mt-5">
                 <table v-if="char == 'Barbara'" class="table table-hover">
                     <thead>
@@ -415,8 +383,8 @@
                  
                  
             </div>
-            <!--            КОНЕЦ ТАБЛИЦ                -->
-            <!--           ОБЩАЯ ТАБЛИЦА                -->
+            <!--            КОНЕЦ ТАБЛИЦ            -->
+            <!--           ОБЩАЯ ТАБЛИЦА            -->
             <div class="col-md-12 col-12 mt-5">
                 <table v-if="showAll" class="table table-hover" style="font-size: 0.88rem">
                     <thead>
@@ -690,178 +658,13 @@
                     </tbody>
                  </table>
             </div>
-            <!--            КОНЕЦ ОБЩЕЙ ТАБЛИЦЫ            -->
+            <!--            КОНЕЦ ОБЩЕЙ ТАБЛИЦЫ     -->
             </div>
         </div>
 <!--            END ХИЛА И БАФФОВ                   -->
-<!--            TAB С СОФТОМ                        -->
-            <div class="tab-pane fade" id="SoftForWish" role="tabpanel" aria-labelledby="SoftForWish-tab">
-                
-                <div class="content ml-0">
-                    <p class="ml-3">Последняя версия v0.3</p>
-                </div>
-                <div class="content ml-0">
-                    <a href="https://github.com/MrNity/GenshinWish" class="ml-3 mt-3"><i class="fa-solid fa-link"></i> Ссылка на репозиторий программы</a>
-                </div>
-                <div class="content ml-0">
-                    <a href="/genshin/GenshinWish.exe" class="btn btn-success mt-3 ml-3" download><i class="fa fa-download"></i> Скачать прогу</a>
-                </div>
-                
-            </div>
-<!--            END TAB С СОФТОМ                    -->
-<!--            TAB С пожеланиями для опроса        -->
-            <div class="tab-pane fade" id="wish" role="tabpanel" aria-labelledby="wish-tab">
-                <div class="content ml-0">
-                    <ul>
-                        <li class="unselectable">МИР</li>
-<li>- Хотелось бы дополнительные уровни Боевого пропуска как в Honkai Impact 3rd.</li>
-<li>- Сделайте сохранение очков Судьбы в оружейном баннере при его смене на новый!!!</li>
-
-<li>- Кнопка для быстрого сбора руды, экспедиций, сделанного декора в чайнике.</li>
-<li>- Отдельная кнопка для сухпайка и еще одного инструмента.</li>
-<li>- Возможность прервать диалог, не заканчивая его.</li>
-<li>- Готовность элементального навыка на экране, по аналогии со взрывом стихий.</li>
-<li>- Визуальный эффект длительности баффов от еды и зелий, чтобы видеть когда он закончится.</li>
-<li>- Визуализация шкалы прочности щита над шкалой хп.</li>
-<li>- Выбирать пачки для бездны как в быстром доступе при смене отряда, чтобы персонажи помечались цифрами 1-2-3-4 и менять первых не меняя порядок последних.</li>
-<li>- Выбирать своих персонажей для пачки в тестовых забегах к тестируемому.</li>
-<li>- Возможность блокировать выпадение одного легендарного персонажа или оружия, чтобы не выпадало со стандартного баннера или при проигрыше с ивентового.</li>
-
-<li class="unselectable">---</li>
-<li>- Добавьте больше выражений лица и поз персонажам в режиме камеры.</li>
-<li>- Ивенты связанные с боем слишком сложные для новичков или людей не имеющих большое количество персонажей.</li>
-<li class="unselectable">---</li>
-<li>- Расширьте количество слотов для добавления друзей.</li>
-<li>- Расширьте количество меток на карте.</li>
-<li>- Расширьте количество слотов на стенде в профиле для персонажей и именных карточек.</li>
-<li>- Сделайте возможность телепортации на ПК быстрым нажатием (ПКМ или двойное нажатие ЛКМ), чтобы не выбирались ближайшие метки.</li>
-<li>- Сделайте возможность ставить временные метки на карте (пинговать) в кооперативном режиме, которые будут видеть все члены отряда.</li>
-<li>- Добавьте возможность сохранять группы артов/быстро менять пачками арты между персонажами.</li>
-<li>- Сделайте сортировку в автоматической загрузке артов от лучшего качество до худшего при вливании их в другие арты и наоборот.</li>
-
-<!--<li>- Добавьте переносную табуретку чтобы можно было сидеть в любом месте мира.</li>-->
-
-<li class="unselectable">ЧАЙНИК БЕЗМЯТЕЖНОСТИ</li>
-
-<li>- Иконки ног, как у мест для сидения, в какую сторону будет заспавнен персонаж на телепортах в чайнике.</li>
-<li>- Добавьте предметы с поворотом по вертикальной оси.</li>
-<li>- Возможность отзеркаливать предметы в чайнике.</li>
-
-
-<li class="unselectable">---</li>
-<li class="unselectable">МУСОР ПО ЖЕЛАНИЮ</li>
-<li>- Уменьшить время отката смолы, 8 минут это очень долго. И увеличить хотя бы до 180 лимит.</li>
-<li>- Возможность гладить животных.</li>
-<li>- Нагрузка в чайнике требует доработки.</li>
-<li>- Система садоводства оставляет желать лучшего, грядок мало, урожай собирать не очень удобно, ассортимент для выращивания не большой.</li>
-
-
-
-                    </ul>
-                </div>
-            </div>
-<!--            END TAB С пожеланиями для опроса    -->
-<!--            TAB С полезными ссылками            -->
-            <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
-                <div class="content ml-0">
-                    <ul class="fa-ul">
-                        <h4>ПАТЧ 2.6</h4>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/4032598" target="_blank">[Путеводитель] Новые задания мира 2.6 и где их искать (без спойлеров прохождения)</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/4030020" target="_blank">[Гайды 2.6] Новые скрытые достижения (в процессе)</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/4023070" target="_blank">Местонахождение Лучистых кристаллов</a>
-                        </li>
-                        <hr>
-                        <h4>Основные оф ссылки</h4>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481&lang=ru-ru" target="_blank">Ежедневные отметки</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=ru-ru#/map/2?shown_types=">Интерактивная карта</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://webstatic-sea.mihoyo.com/ys/event/calculator-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&utm_source=sns&utm_medium=vk#/" target="_blank">Калькулятор прокачки персонажей</a>
-                        </li>
-                        <h4>Доп ссылки</h4>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://paimon.moe/wish/" target="_blank">Paimon.moe для сохранения круток и тд</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://chrome.google.com/webstore/detail/genshin-impact-daily-chec/egjaodonpaepmffoecblgjfffoidlgkc/related?hl=ru" target="_blank">Расширение для автосбора ежедневных отметок</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.gensh.in/events/gacha-banners" target="_blank">Последовательность баннеров</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://genshin-impact.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F#.D0.98.D0.BD.D0.B0.D0.B4.D0.B7.D1.83.D0.BC.D0.B0" target="_blank">Поручения</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://genshin-impact.fandom.com/ru/wiki/%D0%95%D0%B4%D0%B0" target="_blank">Вся еда</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://shinshin.moe/" target="_blank">Генератор карточек персонажей</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.myinstants.com/search/?page=1&name=genshin" target="_blank">Геншин Саундбоард</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://genshin.aspirine.su/" target="_blank">Калькулятор по геншину</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.youtube.com/watch?v=mn4Dz1v5ut0&ab_channel=Nuke73" target="_blank">Видео гайд от Нюка по калькулятору</a>
-                        </li>
-                        <hr>
-                        <h4>Форумные ссылки на гайды и пр.</h4>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/genshin/article/580540" target="_blank">Скрытые достижения 2.0</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/genshin/article/797555" target="_blank">Скрытые достижения 2.1</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/genshin/article/809175" target="_blank">Ежедневные активности для сундуков и достижений в Инадзуме 2.1</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1891273" target="_blank">[Путеводитель] Рецепты 2.3/2.4 и где их найти</a>
-                        </li>
-                        <hr>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1864273" target="_blank">[Версия 2.4] Локальное Задание: «Особая удача» + скрытое достижение «SYUUMATSU GAIDEN» + 1 роскошный сундук</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1877873" target="_blank">Загадки Энканомии (Где посидеть)</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1877043" target="_blank">Достижение «Прямо в яблочко!»</a>
-                        </li>
-                        <hr>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1895223" target="_blank">Маршрут по артефактам (только богатые места) плюс видео</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1891997" target="_blank">V2.4 Где найти книги? Мировой квест "Собрание драконов и змей " Энканомия. Инадзума</a>
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                            <a href="https://www.hoyolab.com/article/1878020" target="_blank">[Inazuma 2.4] Задания "Собрание драконов и змей" и достижение "Если б Токоё узнал..."</a>
-                        </li>
-
-<!--
-                        <hr>
-                        <li><a href="ыыы" target="_blank">sss</a></li>
-                        <li><a href="ыыы" target="_blank">sss</a></li>
-                        <li><a href="ыыы" target="_blank">sss</a></li>
-                        <li><a href="ыыы" target="_blank">sss</a></li>
-                        <li><a href="ыыы" target="_blank">sss</a></li>
--->
-                        
-                    </ul>
-                </div>
-            </div>
-<!--            END TAB С полезными ссылками        -->
+            <soft></soft>
+            <wishes></wishes>
+            <links></links>
 <!--            TAB С кеками                        -->
 <!--
             <div class="tab-pane fade" id="keki" role="tabpanel" aria-labelledby="keki-tab">
@@ -871,18 +674,6 @@
             </div>
 -->
 <!--            END TAB С кеками                    -->
-<!--            TAB С билдами                       -->
-<!--
-            <div class="tab-pane fade" id="builds" role="tabpanel" aria-labelledby="builds-tab">
-                <div class="content ml-0">
-                    
-                    
-                    
-                    
-                </div>
-            </div>
--->
-<!--            END TAB С билдами                   -->
 <!--            TAB С видосами                      -->
             <div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
                 <div class="content ml-0">
@@ -1087,6 +878,7 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer1.toFull.loaded">~{{ timer1.toFull.displayHours }}:{{ timer1.toFull.displayMinutes }}:{{ timer1.toFull.displaySeconds }}</b></p>
+                                <p>Полная смола в: <b v-if="timer1.toFull.loaded">{{ formatNumb(new Date(resin.resin1.timerToFull).getDate()) }}.{{ formatNumb(new Date(resin.resin1.timerToFull).getMonth() + 1) }} ~{{ formatNumb(new Date(resin.resin1.timerToFull).getHours()) }}:{{ formatNumb(new Date(resin.resin1.timerToFull).getMinutes()) }} </b></p>
 <!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
                             <div class="col-4 p-0 m-0" v-if="account2.enable">
@@ -1098,6 +890,7 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer2.toFull.loaded">~{{ timer2.toFull.displayHours }}:{{ timer2.toFull.displayMinutes }}:{{ timer2.toFull.displaySeconds }}</b></p>
+                                <p>Полная смола в: <b v-if="timer1.toFull.loaded">{{ formatNumb(new Date(resin.resin2.timerToFull).getDate()) }}.{{ formatNumb(new Date(resin.resin2.timerToFull).getMonth() + 1) }} ~{{ formatNumb(new Date(resin.resin2.timerToFull).getHours()) }}:{{ formatNumb(new Date(resin.resin2.timerToFull).getMinutes()) }} </b></p>
 <!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
                             <div class="col-4 p-0 m-0" v-if="account3.enable">
@@ -1109,6 +902,7 @@
                                 
                                 </p>
                                 <p>Осталось до 160: <b v-if="timer3.toFull.loaded">~{{ timer3.toFull.displayHours }}:{{ timer3.toFull.displayMinutes }}:{{ timer3.toFull.displaySeconds }}</b></p>
+                                <p>Полная смола в: <b v-if="timer1.toFull.loaded">{{ formatNumb(new Date(resin.resin3.timerToFull).getDate()) }}.{{ formatNumb(new Date(resin.resin3.timerToFull).getMonth() + 1) }} ~{{ formatNumb(new Date(resin.resin3.timerToFull).getHours()) }}:{{ formatNumb(new Date(resin.resin3.timerToFull).getMinutes()) }} </b></p>
 <!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i> | <i class="fa-solid fa-bell-slash"></i> </button>-->
                             </div>
                             
@@ -1128,6 +922,7 @@
                             </div>
                             <p>Осталось: <b v-if="timersPT.pt1.loaded">{{ timersPT.pt1.displayDays }} дней (я/ень) {{ timersPT.pt1.displayHours }}:{{ timersPT.pt1.displayMinutes }}:{{ timersPT.pt1.displaySeconds }}</b>
                             </p>
+                            <p>Откат: <b v-if="timersPT.pt1.loaded">{{ formatNumb(new Date(parametricTransformer.pt1).getDate()) }}.{{ formatNumb(new Date(parametricTransformer.pt1).getMonth() + 1) }} ~{{ formatNumb(new Date(parametricTransformer.pt1).getHours()) }}:{{ formatNumb(new Date(parametricTransformer.pt1).getMinutes()) }} </b></p>
                         </div>
                         <div class="col mt-2" v-if="account2.enable">
                             <label>Аккаунт <b>{{ account2.login || '2' }}</b></label>
@@ -1138,6 +933,7 @@
                             </div>
                             <p>Осталось: <b v-if="timersPT.pt2.loaded">{{ timersPT.pt2.displayDays }} дней (я/ень) {{ timersPT.pt2.displayHours }}:{{ timersPT.pt2.displayMinutes }}:{{ timersPT.pt2.displaySeconds }}</b>
                             </p>
+                            <p>Откат: <b v-if="timersPT.pt2.loaded">{{ formatNumb(new Date(parametricTransformer.pt2).getDate()) }}.{{ formatNumb(new Date(parametricTransformer.pt2).getMonth() + 1) }} ~{{ formatNumb(new Date(parametricTransformer.pt2).getHours()) }}:{{ formatNumb(new Date(parametricTransformer.pt2).getMinutes()) }} </b></p>
                         </div>
                         <div class="col mt-2" v-if="account3.enable">
                             <label>Аккаунт <b>{{ account3.login || '3' }}</b></label>
@@ -1148,6 +944,7 @@
                             </div>
                             <p>Осталось: <b v-if="timersPT.pt3.loaded">{{ timersPT.pt3.displayDays }} дней (я/ень) {{ timersPT.pt3.displayHours }}:{{ timersPT.pt3.displayMinutes }}:{{ timersPT.pt3.displaySeconds }}</b>
                             </p>
+                            <p>Откат: <b v-if="timersPT.pt3.loaded">{{ formatNumb(new Date(parametricTransformer.pt3).getDate()) }}.{{ formatNumb(new Date(parametricTransformer.pt3).getMonth() + 1) }} ~{{ formatNumb(new Date(parametricTransformer.pt3).getHours()) }}:{{ formatNumb(new Date(parametricTransformer.pt3).getMinutes()) }} </b></p>
                         </div>
                     </div>
                        
@@ -1180,73 +977,83 @@
                            
                            <button class="btn btn-success mt-2">Начать</button>
                        </div>
-                       <div class="col-2">
+                       <div class="col-3">
                            <h5>Накопилось монет/дружбы</h5>
                            <p>Аккаунт <b>{{ account1.login || '1' }}</b>: <i>150</i> / <i>25</i></p>
                            <p v-if="account2.enable">Аккаунт <b>{{ account2.login || '2' }}</b>: <i>32</i> / <i>8</i></p>
                            <p v-if="account3.enable">Аккаунт <b>{{ account3.login || '3' }}</b>: <i>210</i> / <i>35</i></p>
+                           
+                           <hr>
+                           <h5><i class="fa-solid fa-seedling"></i> Посевы (таймер/дата)</h5>
+                           <p v-if="timersSeeding.seed1.loaded">Аккаунт <b>{{ account1.login || '1' }}</b>: 
+                           
+                            <i>{{ timersSeeding.seed1.displayDays }} дней (я/ень) {{ timersSeeding.seed1.displayHours }}:{{ timersSeeding.seed1.displayMinutes }}:{{ timersSeeding.seed1.displaySeconds }}</i>
+                            / 
+                            <i>{{ formatNumb(new Date(seeding.seed1).getDate()) }}.{{ formatNumb(new Date(seeding.seed1).getMonth() + 1) }} ~{{ formatNumb(new Date(seeding.seed1).getHours()) }}:{{ formatNumb(new Date(seeding.seed1).getMinutes()) }}</i>
+                            
+                            </p>
+                           <p v-if="account2.enable && timersSeeding.seed2.loaded">Аккаунт <b>{{ account2.login || '2' }}</b>: 
+                           
+                           <i>{{ timersSeeding.seed2.displayDays }} дней (я/ень) {{ timersSeeding.seed2.displayHours }}:{{ timersSeeding.seed2.displayMinutes }}:{{ timersSeeding.seed2.displaySeconds }}</i>
+                            / 
+                            <i>{{ formatNumb(new Date(seeding.seed2).getDate()) }}.{{ formatNumb(new Date(seeding.seed2).getMonth() + 1) }} ~{{ formatNumb(new Date(seeding.seed2).getHours()) }}:{{ formatNumb(new Date(seeding.seed2).getMinutes()) }}</i>
+                           
+                           </p>
+                           <p v-if="account3.enable && timersSeeding.seed3.loaded">Аккаунт <b>{{ account3.login || '3' }}</b>: 
+                           
+                           <i>{{ timersSeeding.seed3.displayDays }} дней (я/ень) {{ timersSeeding.seed3.displayHours }}:{{ timersSeeding.seed3.displayMinutes }}:{{ timersSeeding.seed3.displaySeconds }}</i>
+                            / 
+                            <i>{{ formatNumb(new Date(seeding.seed3).getDate()) }}.{{ formatNumb(new Date(seeding.seed3).getMonth() + 1) }} ~{{ formatNumb(new Date(seeding.seed3).getHours()) }}:{{ formatNumb(new Date(seeding.seed3).getMinutes()) }}</i>
+                           
+                           </p>
                        </div>
                        
-                       <div class="col-6">
-                           <h3>Крафт <i class="fa-solid fa-hammer mirror"></i> <small>отложен</small></h3>
-                           <label for="">Тип мебели</label>
-                           <select name="" id="" class="form-control col-6">
-                               <option value=""></option>
-                               <option value="">Зеленый</option>
-                               <option value="">Синий</option>
-                               <option value="">Эпик</option>
-                           </select>
+                       <div class="col-5">
+                           <h3><i class="fa-solid fa-seedling"></i> Посевы</h3>
+                           <label class="text-danger">Нужно выбрать нужный аккаунт вверху где смола!</label>
+                           <div class="col mt-2">
+                                <div class="form-inline">
+                                    <input type="datetime-local" class="form-control col-6" v-model="dateTimeSeed">
+                                    <button class="btn btn-success ml-3" @click="startSeeding">Начать</button>
+    <!--                                <button class="btn btn-primary ml-3"> <i class="fa-solid fa-bell"></i></button>-->
+                                </div>
+                                <p>Осталось: 
+<!--                                <b v-if="">{{ timersPT.pt3.displayDays }} дней (я/ень) {{ timersPT.pt3.displayHours }}:{{ timersPT.pt3.displayMinutes }}:{{ timersPT.pt3.displaySeconds }}</b>-->
+                                </p>
+                                <p>Откат: 
+<!--                                <b v-if="">{{ formatNumb(new Date(parametricTransformer.pt3).getDate()) }}.{{ formatNumb(new Date(parametricTransformer.pt3).getMonth() + 1) }} ~{{ formatNumb(new Date(parametricTransformer.pt3).getHours()) }}:{{ formatNumb(new Date(parametricTransformer.pt3).getMinutes()) }} </b>-->
+                                </p>
+                            </div>
                            
                            <button class="btn btn-success mt-2">Начать</button>
+                       </div>
+                       <div class="col-12">
+                       <hr>
+                           <h3>Крафт <i class="fa-solid fa-hammer mirror"></i> <small>отложен</small></h3>
+                           <p>Выберите аккаунт сверху</p>
+                           <p>Мебель: <span v-html="selectedFurnitures"></span></p>
+                           <button class="btn btn-success">2 <i class="fa-solid fa-star star"></i></button>
+                           <button class="btn btn-info">3 <i class="fa-solid fa-star star"></i></button>
+                           <button class="btn star4">4 <i class="fa-solid fa-star star"></i></button>
+                           
+<!--                           <button class="btn btn-success mt-2">Начать</button>-->
                        </div>
                    </div>
                 </div>
             </div>
 <!--            END TAB С ТАЙМЕРАМИ                 -->
-<!--            TAB С ПЛАНАМИ                       -->
-            <div class="tab-pane fade" id="plans" role="tabpanel" aria-labelledby="plans-tab">
+            <plans></plans>
+<!--            EMPTY TAB                           -->
+            <div class="tab-pane fade" id="empty" role="tabpanel" aria-labelledby="empty-tab">
                 <div class="content ml-0">
-                    <h3 class="m-3">Планы</h3>
-<!--                   <i class="fa-solid fa-check"></i>-->
-<!--                   <i class="fa-solid fa-x"></i>-->
-                   <ul class="fa-ul">
-                   
-<li><span class="fa-li"><i class="fa-solid fa-check"></i></span> Преобразователи на все акки</li>
-<hr>
-<!--
-    Считать количество часов от ближайшей будущей указанной минуты и умножать на количество указанных монет/дружбы в час, считая сколько их сейчас в наличии прибавляя к тому что было
--->
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Монеты в чайнике</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Дружба в чайнике</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Крафт мебели</li>
-<hr>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Календарь Аждахи (где-то надо чет придумать)</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить параметр прочность щита у щитовиков в таблице</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить Синь Янь и Бей Доу</li>
-<hr>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Уведомления</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Готовая смола за 5 минут</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Фулл смола за 30 минут</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Преобразователь за 30 минут</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Монеты/дружба за 60-120-180 минут</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Крафт за 5 минут</li>
-<hr>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Синхронизация с Гугл Диском</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Залить на Firebase (в идеале)</li>
-<li>Если заработает на Firebase</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Бот </li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить в прогу автообновление</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить в прогу экспорт круток (своя история круток вместо паймон.мое)</li>
-<li>Если крутки</li>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить импорт данных с паймон.мое</li>
-<hr>
-<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Изменить дизайн сайта</li>
-                   
-
-                    </ul>
+                    
+                    
+                    
+                    
                 </div>
             </div>
-<!--            END TAB С ПЛАНАМИ                   -->
+<!--            END EMPTY TAB                       -->
+       
         </div>
        
     </div>
@@ -1255,6 +1062,13 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!--             КОМПОНЕНТЫ                         -->
+<script src="components/nav.js"></script>
+<script src="components/plans.js"></script>
+<script src="components/wish.js"></script>
+<script src="components/links.js"></script>
+<script src="components/soft.js"></script>
+<script src="components/videos.js"></script>
 <!--             ПЕРСЫ                              -->
 <script src="chars/barbara.js"></script>
 <script src="chars/bennett.js"></script>

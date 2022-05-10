@@ -8,6 +8,7 @@ new Vue({
         at: 0,
         def: 0,
         moe: 0,
+        ss: 0,
         bonusHeal: 0,
         bonusRecHeal: 0,
         bonusRecHealResonance: 0,
@@ -90,6 +91,7 @@ new Vue({
         
         // Resin
         constParametricTransformer: 597600000,
+        constSeeding: 252000000,
         
         accountNum: 1,
         fullResin: 160,
@@ -204,7 +206,46 @@ new Vue({
                 displaySeconds: 0,
                 loaded: false
             },
-        }
+        },
+        
+        // seeding
+        dateTimeSeed: '',
+        seeding: {
+            seed1: '',
+            seed2: '',
+            seed3: '',
+            timerSeed1: null,
+            timerSeed2: null,
+            timerSeed3: null,
+        },
+        timersSeeding: {
+            seed1: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            seed2: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+            seed3: {
+                displayDays: 0,
+                displayHours: 0,
+                displayMinutes: 0,
+                displaySeconds: 0,
+                loaded: false
+            },
+        },
+        
+        // furniture
+        furniture: ['2', '2', '3', '3', '4'],
+        selectedFurnitures: [`2<i class="fa-solid fa-star star"></i>`, '2<i class="fa-solid fa-star star"></i>', '3<i class="fa-solid fa-star star"></i>', '3<i class="fa-solid fa-star star"></i>', '4<i class="fa-solid fa-star star"></i>'],
+        
     },
     methods: {
         BarbaraCalc() {
@@ -1069,6 +1110,19 @@ new Vue({
                 this.parametricTransformer = JSON.parse(localStorage.parametricTransformer)
                 this.showPT()
             }
+            if (localStorage.seeding == undefined) {
+                localStorage.seeding = JSON.stringify({
+                    seed1: '',
+                    seed2: '',
+                    seed3: '',
+                    timerSeed1: null,
+                    timerSeed2: null,
+                    timerSeed3: null,
+                })
+            } else {
+                this.seeding = JSON.parse(localStorage.seeding)
+                this.showSeeding()
+            }
             
             // accs
             if (localStorage.accounts == undefined) {
@@ -1186,27 +1240,8 @@ new Vue({
             localStorage.resin = JSON.stringify(this.resin)
             
         },
-        StopTimer(num) {
-            switch (num) {
-                case 1:
-                    clearInterval(this.timer1.resin)
-                    clearInterval(this.timer1.full)
-                    this.timer1.toResin.loaded = false
-                    this.timer1.toFull.loaded = false
-                break
-                case 2:
-                    clearInterval(this.timer2.resin)
-                    clearInterval(this.timer2.full)
-                    this.timer2.toResin.loaded = false
-                    this.timer2.toFull.loaded = false
-                break
-                case 3:
-                    clearInterval(this.timer3.resin)
-                    clearInterval(this.timer3.full)
-                    this.timer3.toResin.loaded = false
-                    this.timer3.toFull.loaded = false
-                break
-            }
+        StopTimer(timer) {
+            clearInterval(timer)
         },
         AddResin(num) {
             let resin = {}
@@ -1224,17 +1259,16 @@ new Vue({
             }
             localStorage.resin = JSON.stringify(resin)
         },
-        showRemaining(end, account, full) {
+        showRemaining(end, account, full = false) {
             switch (account) {
                 case 1: 
                     if (!full) {
-                        clearInterval(this.timer1.resin)
+//                        clearInterval(this.timer1.resin)
 //                        let countSeconds = 1
 //                        let countMinutes = 1
                         this.timer1.resin = setInterval(() => {
                             let now = new Date()
                             let distance = end.getTime() - now.getTime()
-                            
 //                            countSeconds++
 //                            if (countSeconds % 61 == 0) {
 //                                countMinutes++
@@ -1446,7 +1480,7 @@ new Vue({
                     let distance = pt1.getTime() - now.getTime()
 
                     if (distance < 0) {
-                        clearInterval(this.timer1.resin)
+                        clearInterval(this.parametricTransformer.timerPT1)
                         return
                     }
 
@@ -1469,7 +1503,7 @@ new Vue({
                     let distance = pt2.getTime() - now.getTime()
 
                     if (distance < 0) {
-                        clearInterval(this.timer1.resin)
+                        clearInterval(this.parametricTransformer.timerPT2)
                         return
                     }
 
@@ -1492,7 +1526,7 @@ new Vue({
                     let distance = pt3.getTime() - now.getTime()
 
                     if (distance < 0) {
-                        clearInterval(this.timer1.resin)
+                        clearInterval(this.parametricTransformer.timerPT3)
                         return
                     }
 
@@ -1507,6 +1541,106 @@ new Vue({
                     this.timersPT.pt3.displayDays = this.formatNumb(days)
 
                     this.timersPT.pt3.loaded = true
+                }, 1000)
+            }
+        },
+        // seeding 
+        startSeeding() {
+            let start = ''
+            if (this.dateTimeSeed != '') {
+                start = new Date(this.dateTimeSeed)
+            } else {
+                start = new Date()
+            }
+            switch (+this.accountNum) {
+                case 1:
+                    let end1 = new Date(new Date().setTime(start.getTime() + this.constSeeding))
+                    this.seeding.seed1 = end1
+                break
+                case 2:
+                    let end2 = new Date(new Date().setTime(start.getTime() + this.constSeeding))
+                    this.seeding.seed2 = end2
+                break
+                case 3:
+                    let end3 = new Date(new Date().setTime(start.getTime() + this.constSeeding))
+                    this.seeding.seed3 = end3
+                break
+            }
+            this.showSeeding()
+            localStorage.seeding = JSON.stringify(this.seeding)
+        },
+        showSeeding() {
+            let seed1 = new Date(this.seeding.seed1)
+            let seed2 = new Date(this.seeding.seed2)
+            let seed3 = new Date(this.seeding.seed3)
+            
+            if (seed1.valueOf('Invalid Date')) {
+                this.seeding.timerSeed1 = setInterval(() => {
+                    let now = new Date()
+                    let distance = seed1.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.seeding.timerSeed1)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersSeeding.seed1.displayMinutes = this.formatNumb(minutes)
+                    this.timersSeeding.seed1.displaySeconds = this.formatNumb(seconds)
+                    this.timersSeeding.seed1.displayHours = this.formatNumb(hours)
+                    this.timersSeeding.seed1.displayDays = this.formatNumb(days)
+
+                    this.timersSeeding.seed1.loaded = true
+                }, 1000)
+            }
+            if (seed2.valueOf('Invalid Date')) {
+                this.seeding.timerSeed2 = setInterval(() => {
+                    let now = new Date()
+                    let distance = seed2.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.seeding.timerSeed2)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersSeeding.seed2.displayMinutes = this.formatNumb(minutes)
+                    this.timersSeeding.seed2.displaySeconds = this.formatNumb(seconds)
+                    this.timersSeeding.seed2.displayHours = this.formatNumb(hours)
+                    this.timersSeeding.seed2.displayDays = this.formatNumb(days)
+
+                    this.timersSeeding.seed2.loaded = true
+                }, 1000)
+            }
+            if (seed3.valueOf('Invalid Date')) {
+                this.seeding.timerSeed3 = setInterval(() => {
+                    let now = new Date()
+                    let distance = seed3.getTime() - now.getTime()
+
+                    if (distance < 0) {
+                        clearInterval(this.seeding.timerSeed3)
+                        return
+                    }
+
+                    let days = Math.floor((distance / this._days))
+                    let hours = Math.floor((distance % this._days) / this._hours)
+                    let minutes = Math.floor((distance % this._hours) / this._minutes)
+                    let seconds = Math.floor((distance % this._minutes) / this._seconds)
+
+                    this.timersSeeding.seed3.displayMinutes = this.formatNumb(minutes)
+                    this.timersSeeding.seed3.displaySeconds = this.formatNumb(seconds)
+                    this.timersSeeding.seed3.displayHours = this.formatNumb(hours)
+                    this.timersSeeding.seed3.displayDays = this.formatNumb(days)
+
+                    this.timersSeeding.seed3.loaded = true
                 }, 1000)
             }
         },

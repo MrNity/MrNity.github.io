@@ -45,4 +45,22 @@
 transform: scale(-1, 1);
 filter: FlipH;
 -ms-filter: "FlipH";
+},
+
+.star2 {
+    background: #78be78!important;
+}
+.star3 {
+    background: #76b1bc!important;
+}
+.star4 {
+    color: #fff;
+    background: #966aaf!important;
+}
+.star4:hover {
+    color: #fff;
+    background: #855e9b!important;
+}
+.star {
+    color: #fc3;
 }
