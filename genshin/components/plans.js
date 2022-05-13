@@ -18,6 +18,7 @@ template:
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Календарь Аждахи (где-то надо чет придумать)</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить параметр прочность щита у щитовиков в таблице</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить Синь Янь и Бей Доу</li>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Планы на дни недели с напоминаниями</li>
 <hr>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Уведомления</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Готовая смола за 5 минут</li>

@@ -1089,9 +1089,9 @@ new Vue({
                 this.showRemaining(new Date(this.resin.resin3.timerToNeed), 3)
                 this.showRemaining(new Date(this.resin.resin3.timerToFull), 3, true)
                 
-                let dif1 = Math.floor(160 - ((new Date(this.resin.resin1.timerToFull) - new Date()) / 1000 / 60 / 8))
-                let dif2 = Math.floor(160 - ((new Date(this.resin.resin2.timerToFull) - new Date()) / 1000 / 60 / 8))
-                let dif3 = Math.floor(160 - ((new Date(this.resin.resin3.timerToFull) - new Date()) / 1000 / 60 / 8))
+                let dif1 = Math.round(160 - ((new Date(this.resin.resin1.timerToFull) - new Date()) / 1000 / 60 / 8))
+                let dif2 = Math.round(160 - ((new Date(this.resin.resin2.timerToFull) - new Date()) / 1000 / 60 / 8))
+                let dif3 = Math.round(160 - ((new Date(this.resin.resin3.timerToFull) - new Date()) / 1000 / 60 / 8))
                 
                 this.resin.resin1.nowResin = dif1
                 this.resin.resin2.nowResin = dif2
@@ -1104,6 +1104,7 @@ new Vue({
                 localStorage.resin = JSON.stringify(this.resin)
                 
             }
+            // parametric transformer
             if (localStorage.parametricTransformer == undefined) {
                 localStorage.parametricTransformer = JSON.stringify({
                     pt1: '',
@@ -1117,6 +1118,7 @@ new Vue({
                 this.parametricTransformer = JSON.parse(localStorage.parametricTransformer)
                 this.showPT()
             }
+            // seeding
             if (localStorage.seeding == undefined) {
                 localStorage.seeding = JSON.stringify({
                     seed1: '',
@@ -1249,29 +1251,28 @@ new Vue({
             clearInterval(timer)
         },
         AddResin(num) {
+            this.CheckInfo()
             let resin = {}
             resin = JSON.parse(localStorage.resin)
             switch(+this.accountNum) {
                 case 1:
-                    resin.resin1.nowResin+=+num
+                    resin.resin1.nowResin = Math.round(160 - ((new Date(resin.resin1.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin1.nowResin
                 break
                 case 2:
-                    console.log({num, res2: resin.resin2.nowResin})
-                    resin.resin2.nowResin+=+num
-                    console.log({num, res2: resin.resin2.nowResin})
+                    resin.resin2.nowResin = Math.round(160 - ((new Date(resin.resin2.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin2.nowResin
                 break
                 case 3:
-                    console.log({num, res2: resin.resin3.nowResin})
-                    resin.resin3.nowResin+=+num
-                    console.log({num, res2: resin.resin3.nowResin})
+                    resin.resin3.nowResin = Math.round(160 - ((new Date(resin.resin3.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin3.nowResin
                 break
             }
             
             localStorage.resin = JSON.stringify(resin)
+            this.CheckInfo()
             this.StartResinTimer()
+            this.nowResin = 0
         },
         showRemaining(end, account, full = false) {
             switch (account) {
