@@ -151,6 +151,7 @@ new Vue({
             resin1: {
                 nowResin: 0,
                 needResin: 0,
+                overflow: 0,
 
                 timerToNeed: '',
                 timerToFull: '',
@@ -158,6 +159,7 @@ new Vue({
             resin2: {
                 nowResin: 0,
                 needResin: 0,
+                overflow: 0,
 
                 timerToNeed: '',
                 timerToFull: '',
@@ -165,6 +167,7 @@ new Vue({
             resin3: {
                 nowResin: 0,
                 needResin: 0,
+                overflow: 0,
 
                 timerToNeed: '',
                 timerToFull: '',
@@ -1094,6 +1097,10 @@ new Vue({
                 this.resin.resin2.nowResin = dif2
                 this.resin.resin3.nowResin = dif3
                 
+                this.resin.resin1.overflow = dif1 >= this.fullResin ? dif1 - this.fullResin : 0
+                this.resin.resin2.overflow = dif2 >= this.fullResin ? dif2 - this.fullResin : 0
+                this.resin.resin3.overflow = dif3 >= this.fullResin ? dif3 - this.fullResin : 0
+                
                 localStorage.resin = JSON.stringify(this.resin)
                 
             }
@@ -1236,9 +1243,7 @@ new Vue({
                     this.showRemaining(endFull, accountNum, true)
                 break    
             }
-            
             localStorage.resin = JSON.stringify(this.resin)
-            
         },
         StopTimer(timer) {
             clearInterval(timer)
@@ -1246,24 +1251,33 @@ new Vue({
         AddResin(num) {
             let resin = {}
             resin = JSON.parse(localStorage.resin)
-            switch(num) {
+            switch(+this.accountNum) {
                 case 1:
-                    resin.resin1.nowResin++
+                    resin.resin1.nowResin+=+num
+                    this.nowResin = resin.resin1.nowResin
                 break
                 case 2:
-                    resin.resin2.nowResin++
+                    console.log({num, res2: resin.resin2.nowResin})
+                    resin.resin2.nowResin+=+num
+                    console.log({num, res2: resin.resin2.nowResin})
+                    this.nowResin = resin.resin2.nowResin
                 break
                 case 3:
-                    resin.resin3.nowResin++
+                    console.log({num, res2: resin.resin3.nowResin})
+                    resin.resin3.nowResin+=+num
+                    console.log({num, res2: resin.resin3.nowResin})
+                    this.nowResin = resin.resin3.nowResin
                 break
             }
+            
             localStorage.resin = JSON.stringify(resin)
+            this.StartResinTimer()
         },
         showRemaining(end, account, full = false) {
             switch (account) {
                 case 1: 
                     if (!full) {
-//                        clearInterval(this.timer1.resin)
+                        clearInterval(this.timer1.resin)
 //                        let countSeconds = 1
 //                        let countMinutes = 1
                         this.timer1.resin = setInterval(() => {
