@@ -3,6 +3,9 @@ Vue.component('links', {
 <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
     <div class="content ml-0">
         <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/307742" target="_blank">Ежедневные квесты [ОБНОВЛЯЕТСЯ]</a>
+            </li>
             <h4>ПАТЧ 2.6</h4>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://www.hoyolab.com/article/4032598" target="_blank">[Путеводитель] Новые задания мира 2.6 и где их искать (без спойлеров прохождения)</a>
