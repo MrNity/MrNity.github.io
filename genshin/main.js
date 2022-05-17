@@ -1052,6 +1052,34 @@ new Vue({
             } else {
                 this.crystallLeft = localStorage.LeftCrystals
             }
+            
+            // accs
+            if (localStorage.accounts == undefined) {
+                localStorage.accounts = JSON.stringify({
+                    account1: {
+                        uid: '',
+                        login: '',
+                        enable: true
+                    },
+                    account2: {
+                        uid: '',
+                        login: '',
+                        enable: false
+                    },
+                    account3: {
+                        uid: '',
+                        login: '',
+                        enable: false
+                    }
+                })
+            } else {
+                let accs = JSON.parse(localStorage.accounts)
+                this.account1 = accs.account1
+                this.account2 = accs.account2
+                this.account3 = accs.account3
+            }
+        },
+        CheckTimers() {
             // timers
             if (localStorage.resin == undefined) {
                 localStorage.resin = JSON.stringify({
@@ -1131,32 +1159,6 @@ new Vue({
             } else {
                 this.seeding = JSON.parse(localStorage.seeding)
                 this.showSeeding()
-            }
-            
-            // accs
-            if (localStorage.accounts == undefined) {
-                localStorage.accounts = JSON.stringify({
-                    account1: {
-                        uid: '',
-                        login: '',
-                        enable: true
-                    },
-                    account2: {
-                        uid: '',
-                        login: '',
-                        enable: false
-                    },
-                    account3: {
-                        uid: '',
-                        login: '',
-                        enable: false
-                    }
-                })
-            } else {
-                let accs = JSON.parse(localStorage.accounts)
-                this.account1 = accs.account1
-                this.account2 = accs.account2
-                this.account3 = accs.account3
             }
         },
         // Crystals
@@ -1251,7 +1253,7 @@ new Vue({
             clearInterval(timer)
         },
         AddResin(num) {
-            this.CheckInfo()
+            this.CheckTimers()
             let resin = {}
             resin = JSON.parse(localStorage.resin)
             switch(+this.accountNum) {
@@ -1270,7 +1272,7 @@ new Vue({
             }
             
             localStorage.resin = JSON.stringify(resin)
-            this.CheckInfo()
+            this.CheckTimers()
             this.StartResinTimer()
             this.nowResin = 0
         },
@@ -1681,6 +1683,16 @@ new Vue({
             })
             alert('Данные аккаунтов сохранены!')
         },
+        
+        // notifications
+        PUSH(title, description) {
+            requestPermission()
+            self.addEventListener('push', function(event) {
+              var promise = self.registration.showNotification('Push notification!')
+
+              event.waitUntil(promise)
+            })
+        },
         // others
         formatNumb(num) {
             return num < 10 ? `0${num}` : num;
@@ -1700,7 +1712,7 @@ new Vue({
     },
     mounted() {
         this.CheckInfo()
-        
+        this.CheckTimers()
 //        showNotification()
     },
     watch: {
@@ -1958,3 +1970,23 @@ new Vue({
         },
     }
 })
+
+
+
+function requestPermission() {
+  return new Promise(function(resolve, reject) {
+    const permissionResult = Notification.requestPermission(function(result) {
+      // Поддержка устаревшей версии с функцией обратного вызова.
+      resolve(result);
+    });
+
+    if (permissionResult) {
+      permissionResult.then(resolve, reject);
+    }
+  })
+  .then(function(permissionResult) {
+    if (permissionResult !== 'granted') {
+      throw new Error('Permission not granted.');
+    }
+  });
+}
