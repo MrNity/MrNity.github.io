@@ -1,2 +1,4 @@
 /node_modules/
 /bot/node_modules/
+/bot/token.js
+/bot/cids.json
