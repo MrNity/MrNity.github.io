@@ -32,6 +32,9 @@ Vue.component('links', {
                 <a href="https://paimon.moe/wish/" target="_blank">Paimon.moe для сохранения круток и тд</a>
             </li>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank">Таблица примогемов</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://chrome.google.com/webstore/detail/genshin-impact-daily-chec/egjaodonpaepmffoecblgjfffoidlgkc/related?hl=ru" target="_blank">Расширение для автосбора ежедневных отметок</a>
             </li>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>

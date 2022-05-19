@@ -19,9 +19,13 @@ Vue.component('menu-nav', {
     <li class="nav-item">
         <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false"><img src="imgs/Item_Radiant_Spincrystal.webp" width="20" height="20" alt=""> Лучистые кристаллы</a>
     </li>
+    <!--
     <li class="nav-item">
-<!--                <a class="nav-link" id="keki-tab" data-toggle="tab" href="#keki" role="tab" aria-controls="keki" aria-selected="false">Сколько примогемов мы получаем</a>-->
-        <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Сколько примогемов мы получаем</a>
+        <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Таблица примогемов</a>
+    </li>
+    -->
+    <li class="nav-item">
+        <a class="nav-link" id="bot-tab" href="https://t.me/NyanpasuCodesBot" target="_blank"><i class="fa-solid fa-link"></i> Рассылка промокодов</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
