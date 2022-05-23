@@ -1,4 +1,13 @@
 const crystals = {
+    Default: [
+        {
+            num: '', 
+            name: '',
+            available: true,
+            world: false,
+            image: ''
+        },
+    ],
     Mondstadt: [
         {
             num: 1, 
@@ -298,7 +307,7 @@ const crystals = {
         },
         {
             num: 43,
-            name: 'Slumbering Lore',
+            name: 'Slumbering Lores',
             available: false,
             world: false,
             image: ''

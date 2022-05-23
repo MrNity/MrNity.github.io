@@ -15,6 +15,7 @@ template:
 <li><span class="fa-li"><i class="fa-solid fa-check"></i></span> Растения</li>
 <li><span class="fa-li"><i class="fa-solid fa-clock"></i></span> Крафт мебели</li>
 <hr>
+<li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Смена темы</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Календарь Аждахи (где-то надо чет придумать)</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить параметр прочность щита у щитовиков в таблице</li>
 <li><span class="fa-li"><i class="fa-solid fa-x"></i></span> Добавить Синь Янь и Бей Доу</li>
