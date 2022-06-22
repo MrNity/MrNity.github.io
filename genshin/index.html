@@ -30,7 +30,7 @@
                     <option value="Bennett">Беннет</option>
                     <option value="Jean">Джин</option>
                     <option value="Diona">Диона</option>
-<!--                    <option value="Kuki">Куки Шинобу</option>-->
+                    <option value="Kuki">Куки Шинобу</option>
                     <option value="Noelle">Ноэль</option>
                     <option value="Kokomi">Сангономия Кокоми</option>
                     <option value="Sara">Сара</option>
@@ -42,7 +42,7 @@
                     <option value="Yun Jin">Юнь Цзинь</option>
                 </select>
                 
-                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett' || char == 'Yun Jin' || char == 'Kokomi'">
+                <div v-if="char == 'Diona' || char == 'Barbara' || char == 'Zhongli' || char == 'Xingqiu' || char == 'Bennett' || char == 'Yun Jin' || char == 'Kokomi' || char == 'Kuki'">
                     <label for="hp">HP</label>
                     <input type="number" class="form-control" v-model="hp" id="hp">
                 </div>
@@ -62,17 +62,19 @@
                     <input type="number" class="form-control" v-model="ss" id="ss">
                 </div>
                 
-                <div v-if="char == 'Sayu'">
+                <div v-if="char == 'Sayu' || char == 'Kuki'">
                     <label for="moe">Мастерство стихий</label>
                     <input type="number" class="form-control" v-model="moe" id="moe">
                 </div>
                 
                 <div v-if="char != 'Sara' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
-                    <label for="bh">Бонус лечения <span class="text-danger">база перса или с сета артов</span></label>
+                    <label for="bh">Бонус лечения <span class="text-danger">база перса или с артов</span></label>
                     <input type="number" class="form-control" v-model="bonusHeal" id="bh">
-
-                    <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
-                    <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
+                    
+                    <div v-if="char != 'Kuki'">
+                        <label for="brh">Бонус получаемого лечения <span class="text-danger">(тиммейтов)</span></label>
+                        <input type="number" class="form-control" v-model="bonusRecHeal" id="brh">
+                    </div>
                 </div>
                 <div v-if="char == 'Barbara' || char == 'Kokomi' && char != 'Yun Jin' && char != 'Shenhe' && char != 'Zhongli' && char != 'Bennett' && char != ''">
                     <label for="brhr">Бонус получаемого лечения <span class="text-info">с резонансом</span> <span class="text-danger">(тиммейтов)</span></label>
@@ -254,6 +256,23 @@
                             <td>{{ HealRecPerTickResonance.toFixed(0) }}</td>
                             <td>{{ HealRecPerAtckResonance.toFixed(0) }}</td>
                         </tr>
+                    </tbody>
+                 </table>
+                <table v-if="char == 'Kuki'" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Периодический хил</th>
+                            <th scope="col">При ниже 50% ХП</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Хилит</td>
+                            <td>{{ HealPerTick.toFixed(0) }}</td>
+                            <td>{{ HealPerTickOnLow.toFixed(0) }}</td>
+                        </tr>
+
                     </tbody>
                  </table>
                 
@@ -540,6 +559,17 @@
                             <td class="text-center">{{ Kokomi.HealRecPerAtck.toFixed(0) }} (в ульте)</td>
                             <td class="text-center">-</td>
                             <td class="text-center">{{ Kokomi.HealRecPerTick.toFixed(0) }}</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                        </tr>
+                        <tr style="background: #a567c3">
+                            <td><b>Куки Синобу</b></td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">{{ Kuki.HealPerTick.toFixed(0) }} / {{ Kuki.HealPerTickOnLow.toFixed(0) }}</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
                             <td class="text-center">-</td>
@@ -1101,6 +1131,7 @@
 <script src="chars/jean.js"></script>
 <script src="chars/diona.js"></script>
 <script src="chars/kokomi.js"></script>
+<script src="chars/kuki.js"></script>
 <script src="chars/noelle.js"></script>
 <script src="chars/sara.js"></script>
 <script src="chars/sayu.js"></script>

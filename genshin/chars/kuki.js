@@ -6,92 +6,92 @@ const Kuki = {
             // lvl1
             {
                 heal: {
-                    base: 0.696,
-                    flat: 451
+                    base: 0.03,
+                    flat: 288
                 },
             },
             // lvl2
             {
                 heal: {
-                    base: 0.7482,
-                    flat: 496
+                    base: 0.032,
+                    flat: 317
                 },
             },
             // lvl3
             {
                 heal: {
-                    base: 0.8004,
-                    flat: 544
+                    base: 0.035,
+                    flat: 349
                 },
             },
             // lvl4
             {
                 heal: {
-                    base: 0.87,
-                    flat: 597
+                    base: 0.038,
+                    flat: 383
                 },
             },
             // lvl5
             {
                 heal: {
-                    base: 0.9222,
-                    flat: 653
+                    base: 0.04,
+                    flat: 418
                 },
             },
             // lvl6
             {
                 heal: {
-                    base: 0.9744,
-                    flat: 713
+                    base: 0.042,
+                    flat: 457
                 },
             },
             // lvl7
             {
                 heal: {
-                    base: 1.044,
-                    flat: 777
+                    base: 0.045,
+                    flat: 498
                 },
             },
             // lvl8
             {
                 heal: {
-                    base: 1.1136,
-                    flat: 845
+                    base: 0.048,
+                    flat: 541
                 },
             },
             // lvl9
             {
                 heal: {
-                    base: 1.1832,
-                    flat: 916
+                    base: 0.051,
+                    flat: 587
                 },
             },
             // lvl10
             {
                 heal: {
-                    base: 1.2528,
-                    flat: 991
+                    base: 0.054,
+                    flat: 635
                 },
             },
             // lvl11
             {
                 heal: {
-                    base: 1.3224,
-                    flat: 1070
+                    base: 0.057,
+                    flat: 686
                 },
             },
             // lvl12
             {
                 heal: {
-                    base: 1.3924,
-                    flat: 1153
+                    base: 0.06,
+                    flat: 739
                 },
             },
             // lvl13
             {
                 heal: {
-                    base: 1.479,
-                    flat: 1239
+                    base: 0.064,
+                    flat: 794
                 },
             },
         ],

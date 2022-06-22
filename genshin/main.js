@@ -30,6 +30,7 @@ new Vue({
         HealRecOnlyResonance: 0,
         
         HealPerTick: 0,
+        HealPerTickOnLow: 0,
         HealRecPerTick: 0,
         HealRecPerTickResonance: 0,
         HealRecOnlyPerTickResonance: 0,
@@ -44,6 +45,7 @@ new Vue({
         Jean: {},
         Diona: {},
         Kokomi: {},
+        Kuki: {},
         Noelle: {},
         Sara: {},
         Sayu: {},
@@ -388,6 +390,24 @@ new Vue({
             this.HealRecPerAtckResonance = healRecPerAtckBonus + healPerAtck * brhr
             this.HealRecOnlyPerAtckResonance = healPerAtckBonus + healPerAtck * brhr
         },
+        KukiCalc() {
+            let lvE = +this.talantE
+            
+            let bh = +this.bonusHeal / 100
+            let hp = +this.hp
+            let moe = +this.moe
+            
+            let bonus = Kuki.base * moe
+            
+            // TICK in E
+            let healTick = hp * Kuki.E.lvl[lvE-1].heal.base + Kuki.E.lvl[lvE-1].heal.flat
+            
+            let healTickBonus = healTick + healTick * bh
+            let healTickBonusLow = healTick + healTick * (bh + Kuki.low)
+            
+            this.HealPerTick = healTickBonus + bonus
+            this.HealPerTickOnLow = healTickBonusLow + bonus
+        },
         NoelleCalc() {
             let lvE = +this.talantE
             
@@ -582,6 +602,17 @@ new Vue({
                     }
                     localStorage.kokomi = JSON.stringify(kokomi)
                 break
+                case 'Kuki':
+                    let kuki = {
+                        hp: +this.hp,
+                        bonusHeal: +this.bonusHeal,
+                        moe: +this.moe,
+                        talantE: +this.talantE,
+                        HealPerTick: +this.HealPerTick,
+                        HealPerTickOnLow: +this.HealPerTickOnLow,
+                    }
+                    localStorage.kuki = JSON.stringify(kuki)
+                break
                 case 'Noelle':
                     let noelle = {
                         def: +this.def,
@@ -747,6 +778,15 @@ new Vue({
                     this.HealPerAtck = kokomi.HealPerAtck
                     this.HealRecPerAtck = kokomi.HealRecPerAtck
                 break
+                case 'Kuki':
+                    let kuki = JSON.parse(localStorage.kuki)
+                    this.hp = kuki.hp
+                    this.bonusHeal = kuki.bonusHeal
+                    this.moe = kuki.moe
+                    this.talantE = kuki.talantE
+                    this.HealPerTick = kuki.HealPerTick
+                    this.HealPerTickOnLow = kuki.HealPerTickOnLow
+                break
                 case 'Noelle':
                     let noelle = JSON.parse(localStorage.noelle)
                     this.def = noelle.def
@@ -834,6 +874,7 @@ new Vue({
             this.Jean = localStorage.jean != undefined ? JSON.parse(localStorage.jean) : {}
             this.Diona = localStorage.diona != undefined ? JSON.parse(localStorage.diona) : {}
             this.Kokomi = localStorage.kokomi != undefined ? JSON.parse(localStorage.kokomi) : {}
+            this.Kuki = localStorage.kuki != undefined ? JSON.parse(localStorage.kuki) : {}
             this.Noelle = localStorage.noelle != undefined ? JSON.parse(localStorage.noelle) : {}
             this.Sara = localStorage.sara != undefined ? JSON.parse(localStorage.sara) : {}
             this.Sayu = localStorage.sayu != undefined ? JSON.parse(localStorage.sayu) : {}
@@ -917,6 +958,16 @@ new Vue({
                     HealRecPerTick: 0,
                     HealPerAtck: 0,
                     HealRecPerAtck: 0
+                })
+            }
+            if (localStorage.kuki == undefined) {
+                localStorage.kuki = JSON.stringify({
+                    hp: 0,
+                    bonusHeal: 0,
+                    moe: 0,
+                    talantE: 0,
+                    HealPerTick: 0,
+                    HealPerTickOnLow: 0,
                 })
             }
             if (localStorage.noelle == undefined) {
@@ -1730,6 +1781,9 @@ new Vue({
                 case 'Kokomi': 
                     this.KokomiCalc() 
                 break
+                case 'Kuki': 
+                    this.KukiCalc()
+                break
                 case 'Xingqiu': 
                     this.XingqiuCalc() 
                 break
@@ -1774,7 +1828,14 @@ new Vue({
             }
         },
         moe(newData) {
-            this.SayuCalc() 
+            switch (this.char) {
+                case 'Sayu':
+                    this.SayuCalc() 
+                break
+                case 'Kuki': 
+                    this.KukiCalc()
+                break
+            }
         },
         bonusHeal(newData) {
             switch (this.char) {
@@ -1792,6 +1853,9 @@ new Vue({
                 break
                 case 'Kokomi': 
                     this.KokomiCalc() 
+                break
+                case 'Kuki': 
+                    this.KukiCalc()
                 break
                 case 'Noelle': 
                     this.NoelleCalc() 
@@ -1864,6 +1928,9 @@ new Vue({
                 break
                 case 'Kokomi': 
                     this.KokomiCalc() 
+                break
+                case 'Kuki': 
+                    this.KukiCalc()
                 break
                 case 'Noelle': 
                     this.NoelleCalc() 
