@@ -11,6 +11,11 @@ Vue.component('soft', {
     <div class="content ml-0">
         <a href="/genshin/GenshinWish.exe" class="btn btn-success mt-3 ml-3" download><i class="fa fa-download"></i> Скачать прогу</a>
     </div>
+    
+    <div class="content ml-0 mt-3">
+        <a href="https://t.me/NyanpasuCodesBot" class="ml-3 mt-3"><i class="fa-brands fa-telegram"></i> Nyanpasu Codes Bot</a>
+    </div>
 
-</div>`
+</div>
+`
 })

@@ -25,7 +25,7 @@ Vue.component('menu-nav', {
     </li>
     -->
     <li class="nav-item">
-        <a class="nav-link" id="bot-tab" href="https://t.me/NyanpasuCodesBot" target="_blank"><i class="fa-solid fa-link"></i> Рассылка промокодов</a>
+        <a class="nav-link disabled" id="BannersChars-tab" data-toggle="tab" href="#BannersChars" role="tab" aria-controls="BannersChars" aria-selected="false">Отсутствие персов....</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
