@@ -6,6 +6,48 @@ Vue.component('links', {
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://www.hoyolab.com/article/307742" target="_blank">Ежедневные квесты [ОБНОВЛЯЕТСЯ]</a>
             </li>
+            <h4>ПАТЧ 3.0</h4>
+            <h6 clas="mt-3">Marishka</h6>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7176702" target="_blank">Все 16 обзорных точек и условия для их появления (от Marishka)</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7851051" target="_blank">Все новые скрытые достижения (в процессе) (от Marishka)</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7195596" target="_blank">Новые задания и где их найти (без спойлеров прохождения)</a>
+            </li>
+            <h6 clas="mt-3">Mentalist</h6>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7296438" target="_blank">Мировой путеводитель по Сумеру v3.0</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7165144" target="_blank">Расположение всех лучистых кристаллов v3.0</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/7159002" target="_blank">Новые книги v3.0</a>
+            </li>
+            <h6 clas="mt-3">Другое</h6>
+            <li><span class="fa-li"><i class="fa-brands fa-youtube"></i></span>
+                <a href="https://www.youtube.com/watch?v=gSc0zgHnXJY" target="_blank">Как спустить воду под данжем "Фрагмент детских снов"</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://wotpack.ru/tainstvennyj-albom-v-genshin-impact-gde-najti-vse-sunduki-so-snimkov-v-sumeru/#_2" target="_blank">[WOTPACK] Таинственный альбом в Genshin Impact: где найти все сундуки со снимков в Сумеру</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://wotpack.ru/vse-aranary-v-sumeru-v-genshin-impact-gde-najti-i-kak-vypolnit-zadanija/#___Genshin_Impact-2" target="_blank">[WOTPACK] Все Аранары в Genshin Impact: где найти и как выполнить задания</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://landofgames.ru/articles/guides/21823-vse-aranary-v-genshin-impact-kak-najti-i-projti-ispytanija.html" target="_blank">[LANDOFGAMES] Все Аранары в Genshin Impact: где найти и как выполнить задания</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://wotpack.ru/legendy-kamennogo-zamka-v-genshin-impact-kak-nachat-i-projti-v-peshheru-aradashana/#___Genshin_Impact" target="_blank">[WOTPACK] Легенды каменного замка в Genshin Impact: как начать и пройти в пещеру Арадашана</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-brands fa-youtube"></i></span>
+                <a href="https://www.youtube.com/watch?v=kpM0gS6R5mk" target="_blank">РОСКОШНЫЙ СУНДУК ВАНАРАНА ПРОШЛОГО , ДОСТИЖЕНИЕ ПЕСНЬ НОЧИ И РАССВЕТА</a>
+            </li>
+
+            <hr>
             <h4>ПАТЧ 2.6</h4>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://www.hoyolab.com/article/4032598" target="_blank">[Путеводитель] Новые задания мира 2.6 и где их искать (без спойлеров прохождения)</a>

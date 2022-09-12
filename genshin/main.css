@@ -38,6 +38,21 @@
     line-height: 1rem;
 }
 */
+.fz-24 {
+    font-size: 24px;
+}
+.fz-24 .form-check-input {
+    height: 24px;
+    width: 24px;
+}
+
+.toRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
 .mirror {
 -moz-transform: scale(-1, 1);
 -webkit-transform: scale(-1, 1);

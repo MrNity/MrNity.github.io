@@ -1252,7 +1252,7 @@ new Vue({
             }
         },
         // Timers
-        StartResinTimer() {
+        StartResinTimer(flagNeed) {
             let accountNum = +this.accountNum
             let nowResin = +this.nowResin
             let needResin = +this.needResin
@@ -1267,7 +1267,7 @@ new Vue({
             
             switch(accountNum) {
                 case 1:
-                    this.resin.resin1.nowResin = nowResin
+                    this.resin.resin1.nowResin = flagNeed ? this.resin.resin1.nowResin : nowResin 
                     this.resin.resin1.needResin = needResin
                     
                     this.resin.resin1.timerToNeed = end
@@ -1277,7 +1277,7 @@ new Vue({
                     this.showRemaining(endFull, accountNum, true)
                 break
                 case 2:
-                    this.resin.resin2.nowResin = nowResin
+                    this.resin.resin2.nowResin = flagNeed ? this.resin.resin2.nowResin : nowResin
                     this.resin.resin2.needResin = needResin
                     
                     this.resin.resin2.timerToNeed = end
@@ -1288,7 +1288,7 @@ new Vue({
                     
                 break
                 case 3:
-                    this.resin.resin3.nowResin = nowResin
+                    this.resin.resin3.nowResin = flagNeed ? this.resin.resin3.nowResin : nowResin
                     this.resin.resin3.needResin = needResin
                     
                     this.resin.resin3.timerToNeed = end
