@@ -524,7 +524,63 @@ const crystals = {
             num: 73,
             name: '',
             available: false,
-            world: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 74,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 75,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 76,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 77,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 78,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 79,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 80,
+            name: '',
+            available: false,
+            world: true,
+            image: ''
+        },
+        {
+            num: 81,
+            name: '',
+            available: false,
+            world: true,
             image: ''
         },
     ],

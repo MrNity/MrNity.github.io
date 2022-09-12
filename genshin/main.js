@@ -1736,13 +1736,12 @@ new Vue({
         },
         
         // notifications
-        PUSH(title, description) {
-            requestPermission()
-            self.addEventListener('push', function(event) {
-              var promise = self.registration.showNotification('Push notification!')
-
-              event.waitUntil(promise)
+        showNotification(text) {
+            let not = new Audio(`audio/notification.mp3`)   
+            not.addEventListener("canplaythrough", (event) => {
+              not.play()
             })
+//            not.play()
         },
         // others
         formatNumb(num) {
@@ -1764,7 +1763,7 @@ new Vue({
     mounted() {
         this.CheckInfo()
         this.CheckTimers()
-//        showNotification()
+        this.showNotification('ЛОЛ')
     },
     watch: {
         hp(newData) {
