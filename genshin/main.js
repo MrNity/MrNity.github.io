@@ -1369,14 +1369,17 @@ new Vue({
                 case 1:
                     resin.resin1.nowResin = Math.round(160 - ((new Date(resin.resin1.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin1.nowResin
+                    this.needResin = resin.resin1.needResin
                 break
                 case 2:
                     resin.resin2.nowResin = Math.round(160 - ((new Date(resin.resin2.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin2.nowResin
+                    this.needResin = resin.resin2.needResin
                 break
                 case 3:
                     resin.resin3.nowResin = Math.round(160 - ((new Date(resin.resin3.timerToFull) - new Date()) / 1000 / 60 / 8) + num)
                     this.nowResin = resin.resin3.nowResin
+                    this.needResin = resin.resin3.needResin
                 break
             }
             
@@ -1384,6 +1387,7 @@ new Vue({
             this.CheckTimers()
             this.StartResinTimer(true)
             this.nowResin = 0
+            this.needResin = 0
         },
         showRemaining(end, account, full = false) {
             switch (account) {
