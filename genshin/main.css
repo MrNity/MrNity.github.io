@@ -45,13 +45,10 @@
     height: 24px;
     width: 24px;
 }
-
 .toRight {
   display: flex;
   justify-content: flex-end;
 }
-
-
 
 .mirror {
 -moz-transform: scale(-1, 1);
