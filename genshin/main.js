@@ -1252,7 +1252,7 @@ new Vue({
             }
         },
         // Timers
-        StartResinTimer(flagNeed) {
+        StartResinTimer() {
             let accountNum = +this.accountNum
             let nowResin = +this.nowResin
             let needResin = +this.needResin
@@ -1267,7 +1267,7 @@ new Vue({
             
             switch(accountNum) {
                 case 1:
-                    this.resin.resin1.nowResin = flagNeed ? this.resin.resin1.nowResin : nowResin 
+                    this.resin.resin1.nowResin = nowResin
                     this.resin.resin1.needResin = needResin
                     
                     this.resin.resin1.timerToNeed = end
@@ -1277,7 +1277,7 @@ new Vue({
                     this.showRemaining(endFull, accountNum, true)
                 break
                 case 2:
-                    this.resin.resin2.nowResin = flagNeed ? this.resin.resin2.nowResin : nowResin
+                    this.resin.resin2.nowResin = nowResin
                     this.resin.resin2.needResin = needResin
                     
                     this.resin.resin2.timerToNeed = end
@@ -1288,7 +1288,7 @@ new Vue({
                     
                 break
                 case 3:
-                    this.resin.resin3.nowResin = flagNeed ? this.resin.resin3.nowResin : nowResin
+                    this.resin.resin3.nowResin = nowResin
                     this.resin.resin3.needResin = needResin
                     
                     this.resin.resin3.timerToNeed = end
@@ -1298,6 +1298,64 @@ new Vue({
                     this.showRemaining(endFull, accountNum, true)
                 break    
             }
+            localStorage.resin = JSON.stringify(this.resin)
+        },
+        ResetNeedResin() {
+            let accountNum = +this.accountNum
+            let nowResin = 0
+            let needResin = +this.needResin
+            const fullResin = +this.fullResin
+            
+            switch(accountNum) {
+                case 1:
+                    nowResin = this.resin.resin1.nowResin
+                break
+                case 2:
+                    nowResin = this.resin.resin2.nowResin
+                break
+                case 3:
+                    nowResin = this.resin.resin3.nowResin
+                break    
+            }
+            
+            let difResin = needResin == 0 ? fullResin - nowResin : needResin - nowResin
+            let difResinFull = fullResin - nowResin
+            let now = new Date()
+            
+            let end = new Date (new Date().setTime(now.getTime() + difResin * 8 * 60 * 1000))
+            let endFull = new Date (new Date().setTime(now.getTime() + difResinFull * 8 * 60 * 1000))
+            
+            switch(accountNum) {
+                case 1:
+                    this.resin.resin1.needResin = needResin
+                    
+                    this.resin.resin1.timerToNeed = end
+                    this.resin.resin1.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                break
+                case 2:
+                    this.resin.resin2.needResin = needResin
+                    
+                    this.resin.resin2.timerToNeed = end
+                    this.resin.resin2.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                    
+                break
+                case 3:
+                    this.resin.resin3.needResin = needResin
+                    
+                    this.resin.resin3.timerToNeed = end
+                    this.resin.resin3.timerToFull = endFull
+                    
+                    this.showRemaining(end, accountNum)
+                    this.showRemaining(endFull, accountNum, true)
+                break    
+            }
+            
             localStorage.resin = JSON.stringify(this.resin)
         },
         StopTimer(timer) {
@@ -1324,7 +1382,7 @@ new Vue({
             
             localStorage.resin = JSON.stringify(resin)
             this.CheckTimers()
-            this.StartResinTimer()
+            this.StartResinTimer(true)
             this.nowResin = 0
         },
         showRemaining(end, account, full = false) {
@@ -1738,9 +1796,9 @@ new Vue({
         // notifications
         showNotification(text) {
             let not = new Audio(`audio/notification.mp3`)   
-            not.addEventListener("canplaythrough", (event) => {
-              not.play()
-            })
+//            not.addEventListener("canplaythrough", (event) => {
+//              not.play()
+//            })
 //            not.play()
         },
         // others

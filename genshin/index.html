@@ -926,7 +926,7 @@
                                 <label for="" class="">Нужно <small>(оставить 0 если до полного)</small></label>
                                 <div class="form-inline">
                                     <input type="number" placeholder="Нужно смолы" class="form-control col-10 mr-2" v-model="needResin" min="0" max="160">
-                                    <button class="btn btn-success" @click="StartResinTimer(true)"><i class="fa-solid fa-rotate"></i></button>
+                                    <button class="btn btn-success" @click="ResetNeedResin"><i class="fa-solid fa-rotate"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -964,7 +964,7 @@
                                 <button class="btn btn-success mr-3" @click="AddResin(160)">160</button>
                         </div>
 
-                        <button class="btn btn-success my-2" @click="StartResinTimer(false)">Начать отсчет</button>
+                        <button class="btn btn-success my-2" @click="StartResinTimer()">Начать отсчет</button>
                         
                         <h6 class="text-warning lead">Чтобы обновить количество смолы обновите страницу! <small>автообновление работает криво</small></h6>
                         <div class="row mt-2">
