@@ -89,7 +89,7 @@ Vue.component('links', {
                 <a href="https://genshin-impact.fandom.com/ru/wiki/%D0%95%D0%B4%D0%B0" target="_blank">Вся еда</a>
             </li>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
-                <a href="https://shinshin.moe/" target="_blank">Генератор карточек персонажей</a>
+                <a href="https://enka.shinshin.moe/" target="_blank">Генератор карточек персонажей Enka.ShinShin.Moe </a>
             </li>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://www.myinstants.com/search/?page=1&name=genshin" target="_blank">Геншин Саундбоард</a>
