@@ -6,6 +6,15 @@ Vue.component('links', {
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
                 <a href="https://www.hoyolab.com/article/307742" target="_blank">Ежедневные квесты [ОБНОВЛЯЕТСЯ]</a>
             </li>
+            <h4>ПАТЧ 3.1</h4>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/9763733" target="_blank">Все новые достижения «Чудеса света» и «Победитель VI»</a>
+            </li>
+            <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>
+                <a href="https://www.hoyolab.com/article/11294630" target="_blank">Все 30 страниц «Тысячи ночей», тома с IV по VI</a>
+            </li>
+            
+            <hr>
             <h4>ПАТЧ 3.0</h4>
             <h6 clas="mt-3">Marishka</h6>
             <li><span class="fa-li"><i class="fa-solid fa-link"></i></span>

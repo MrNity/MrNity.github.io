@@ -28,7 +28,7 @@ Vue.component('menu-nav', {
         <a class="nav-link disabled" id="BannersChars-tab" data-toggle="tab" href="#BannersChars" role="tab" aria-controls="BannersChars" aria-selected="false">Отсутствие персов....</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
+        <a class="nav-link disabled" id="SoftForWish-tab" data-toggle="tab" href="#SoftForWish" role="tab" aria-controls="SoftForWish" aria-selected="false"> <img src="imgs/Item_Primogem.webp" width="20" height="20" alt=""> Прога круток 1 кликом</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-cog"></i> Настройки</a>
