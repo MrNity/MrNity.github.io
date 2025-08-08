@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Калькулятор лакерства</title>
+<style>
+  :root {
+    --bg: #0b0f1a;
+    --surface: rgba(17, 24, 39, 0.55);
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: rgba(255, 255, 255, 0.08);
+    --primary: #8b5cf6; /* violet-500 */
+    --primary-2: #06b6d4; /* cyan-500 */
+    --success: #22c55e; /* green-500 */
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Inter", Arial, sans-serif;
+    background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, var(--bg) 45%, #06080f 100%);
+    color: var(--text);
+    min-height: 100dvh;
+    padding: 28px 20px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Ambient gradient blobs */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: auto auto 10% -10%;
+    width: 60vmax;
+    height: 60vmax;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(110px) saturate(110%);
+    opacity: 0.34;
+    transform: translateZ(0);
+  }
+  body::before {
+    top: -28%;
+    left: -28%;
+    background: radial-gradient(closest-side, color-mix(in oklab, var(--primary), white 3%) 0%, transparent 65%);
+    animation: float1 16s ease-in-out infinite alternate;
+  }
+  body::after {
+    right: -22%;
+    bottom: -22%;
+    background: radial-gradient(closest-side, color-mix(in oklab, var(--primary-2), white 2%) 0%, transparent 65%);
+    animation: float2 18s ease-in-out infinite alternate;
+  }
+  @keyframes float1 { to { transform: translate(8%, 6%) scale(1.05); } }
+  @keyframes float2 { to { transform: translate(-6%, -8%) scale(1.08); } }
+
+  .main {
+    max-width: 1200px;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #a78bfa, #22d3ee 55%, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .main p {
+    text-align: left;
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .container-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    position: relative;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid var(--border);
+    padding: 22px 26px;
+    border-radius: 16px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 20px 60px -25px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    will-change: transform;
+    animation: cardIn .6s ease both;
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .container:hover { transform: translateY(-2px); box-shadow: 0 26px 80px -30px rgba(0,0,0,0.7); border-color: rgba(255,255,255,0.12); }
+
+  h2 { text-align: center; margin-top: 2px; margin-bottom: 8px; opacity: .95; }
+
+  fieldset {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 14px 18px;
+  }
+  legend {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #dbeafe;
+    letter-spacing: .2px;
+  }
+  small { color: #c7d2fe; font-weight: 700; }
+
+  label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  input[type="number"]::placeholder {
+    color: color-mix(in oklab, var(--text), white 8%);
+    opacity: .85;
+  }
+  input[type="number"]:hover { border-color: rgba(255,255,255,0.14); }
+  input[type="number"]:focus { border-color: color-mix(in oklab, var(--primary), white 10%); box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary), transparent 80%); background: rgba(255, 255, 255, 0.08); }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
+  button {
+    margin-top: 18px;
+    width: 48%;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .15s ease, filter .2s ease, box-shadow .2s ease, background-position .3s ease;
+  }
+
+  /* Primary gradient buttons (calculate) */
+  button#calculate, button#calculateWW {
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    background-size: 200% 200%;
+    color: #fff;
+    box-shadow: 0 12px 30px -12px rgba(99,102,241,0.6);
+  }
+  button#calculate:hover, button#calculateWW:hover {
+    transform: translateY(-1px);
+    background-position: 100% 0;
+    box-shadow: 0 16px 40px -14px rgba(6,182,212,0.55);
+  }
+  button#calculate:active, button#calculateWW:active { transform: translateY(0); filter: brightness(.96); }
+
+  /* Secondary glass buttons (reset) */
+  button#reset, button#resetWW {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    color: #e2e8f0;
+    border-color: var(--border);
+  }
+  button#reset:hover, button#resetWW:hover { box-shadow: inset 0 -40px 80px rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.14); }
+  button#reset:active, button#resetWW:active { filter: brightness(.96); }
+
+  .result {
+    margin-top: 22px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--success);
+    text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 18px; }
+    .main p { max-width: 100%; }
+    button { width: 49%; padding: 11px 0; }
+  }
+
+  /* Desktop: убираем скролл — переносим градации вбок и фиксируем снизу слева */
+  @media (min-width: 1200px) {
+    .main p {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      width: 320px;
+      max-width: 26vw;
+      margin: 0;
+      opacity: 0.95;
+      text-align: left;
+      z-index: 1;
+    }
+    .container-wrapper { margin-top: 4px; }
+  }
+</style>
+</head>
+<body>
+  <div class="main">
+    <h1>Калькулятор лакерства</h1>
+    <p>
+      0–15: человек с проклятием<br>
+      15–30: сильный анлакер<br>
+      30–60: обычный игрок<br>
+      60–90: свинья<br>
+      90–100: проклятое свинство
+    </p>
+  </div>
+  <div class="container-wrapper">
+    <div class="container">
+        <h2>Genshin / HSR / ZZZ</h2>
+        <fieldset>
+          <legend><strong>Персонажный баннер</strong></legend>
+          <label for="charPulls">Всего круток</label>
+          <input type="number" id="charPulls" min="1" step="1" placeholder="Пример: 4207" />
+
+          <label for="charWinrate">Винрейт 50/50 (%)</label>
+          <input type="number" id="charWinrate" min="0" max="100" step="0.01" placeholder="Пример: 45.24" />
+
+          <label for="charAvg">Средняя лега</label>
+          <input type="number" id="charAvg" min="1" step="0.01" placeholder="Пример: 64.26" />
+        </fieldset>
+
+        <fieldset style="margin-top:20px;">
+          <legend><strong>Оружейный баннер</strong></legend>
+          <label for="weapPulls">Всего круток</label>
+          <input type="number" id="weapPulls" min="1" step="1" placeholder="Пример: 1769" />
+
+          <label for="weapWinrate">Винрейт 75/25 (%)</label>
+          <input type="number" id="weapWinrate" min="0" max="100" step="0.01" placeholder="Пример: 59.26" />
+
+          <label for="weapAvg">Средняя лега</label>
+          <input type="number" id="weapAvg" min="1" step="0.01" placeholder="Пример: 46.5" />
+        </fieldset>
+
+        <div style="display:flex; justify-content: space-between; margin-top:15px;">
+          <button id="calculate">Рассчитать</button>
+          <button id="reset">Сбросить</button>
+        </div>
+
+        <div class="result" id="result" style="margin-top:15px; font-weight:bold;"></div>
+    </div>
+    <div class="container">
+        <h2><small>WW</small></h2>
+        <fieldset>
+          <legend><strong>Персонажный баннер</strong></legend>
+          <label for="charPullsWW">Всего круток</label>
+          <input type="number" id="charPullsWW" min="1" step="1" placeholder="Пример: 1004" />
+
+          <label for="charWinrateWW">Винрейт 50/50 (%)</label>
+          <input type="number" id="charWinrateWW" min="0" max="100" step="0.01" placeholder="Пример: 47.62" />
+
+          <label for="charAvgWW">Средняя лега</label>
+          <input type="number" id="charAvgWW" min="1" step="0.01" placeholder="Пример: 60" />
+        </fieldset>
+
+        <fieldset style="margin-top:20px;">
+          <legend><strong>Оружейный баннер</strong></legend>
+          <label for="weapPullsWW">Всего круток</label>
+          <input type="number" id="weapPullsWW" min="1" step="1" placeholder="Пример: 568" />
+
+          <label for="weapAvgWW">Средняя лега</label>
+          <input type="number" id="weapAvgWW" min="1" step="0.01" placeholder="Пример: 62.89" />
+        </fieldset>
+
+        <div style="display:flex; justify-content: space-between; margin-top:15px;">
+          <button id="calculateWW">Рассчитать</button>
+          <button id="resetWW">Сбросить</button>
+        </div>
+
+        <div class="result" id="result-ww" style="margin-top:15px; font-weight:bold;"></div>
+    </div>
+  </div>
+
+<!-- Tilt эффект для карточек -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.VanillaTilt) {
+      VanillaTilt.init(document.querySelectorAll('.container'), {
+        max: 8,
+        speed: 600,
+        glare: true,
+        'max-glare': 0.15,
+        scale: 1.01
+      });
+    }
+  });
+</script>
+
+<script>
+
+const clamp = (x, min, max) => Math.min(Math.max(x, min), max);
+
+/**
+ * Расчет удачи для Genshin/HSR/ZZZ
+ * @param {number} WR - Винрейт игрока
+ * @param {number} AvgL - Средняя лега игрока
+ * @param {number} N - Количество круток
+ * @param {number} WR_avg - Эталонный винрейт
+ * @param {number} AvgL_avg - Эталонная средняя лега
+ * @param {number} N0 - Минимальное количество круток для достоверности
+ */
+function calcLuck(WR, AvgL, N, WR_avg, AvgL_avg, N0) {
+  // Коэффициент достоверности (от 0 до 1)
+  const confidence = Math.min(1, Math.sqrt(N / N0));
+  
+  // Фактор винрейта: больше винрейт = больше удачи
+  const wrFactor = (WR - WR_avg) / WR_avg;
+  
+  // Фактор средней леги: меньше средняя = больше удачи
+  const avgFactor = (AvgL_avg - AvgL) / AvgL_avg;
+  
+  // Комбинируем факторы с весами: винрейт 0.6, средняя лега 0.8
+  const luckRaw = (wrFactor * 6.1 + avgFactor * 0.9) * confidence;
+  
+  // Масштабируем к шкале 0-100 с центром в 50
+  const luck = 50 + luckRaw * 50;
+  
+  return clamp(luck, 0, 100);
+}
+
+/**
+ * Расчет общей удачи для Genshin/HSR/ZZZ
+ */
+function totalLuck(dataChar, dataWeap) {
+  const Lc = calcLuck(dataChar.WR, dataChar.AvgL, dataChar.N, 50, 75, 10000);
+  const Lw = calcLuck(dataWeap.WR, dataWeap.AvgL, dataWeap.N, 75, 65, 4000);
+  
+  // Взвешенное среднее по количеству круток
+  const total = (Lc * dataChar.N + Lw * dataWeap.N) / (dataChar.N + dataWeap.N);
+  return clamp(total, 0, 100);
+}
+
+/**
+ * Расчет удачи для WW
+ * @param {number} AvgL - Средняя лега игрока
+ * @param {number} N - Количество круток
+ * @param {number} AvgL_avg - Эталонная средняя лега
+ * @param {number} N0 - Минимальное количество круток для достоверности
+ * @param {number|null} WR - Винрейт (для персонажного баннера)
+ * @param {number|null} WR_avg - Эталонный винрейт
+ */
+function calcLuckWW(AvgL, N, AvgL_avg, N0, WR = null, WR_avg = null) {
+  // Коэффициент достоверности
+  const confidence = Math.min(1, Math.sqrt(N / N0));
+  
+  // Фактор средней леги
+  const avgFactor = (AvgL_avg - AvgL) / AvgL_avg;
+  
+  let luckRaw = avgFactor * 0.7; // Вес средней леги 0.7
+  
+  // Если есть винрейт (персонажный баннер)
+  if (WR !== null && WR_avg !== null) {
+    const wrFactor = (WR - WR_avg) / WR_avg;
+    luckRaw = avgFactor * 5.0 + wrFactor * 0.9; // Винрейт 0.5, средняя 0.7
+  }
+  
+  // Применяем коэффициент достоверности и масштабируем
+  luckRaw *= confidence;
+  const luck = 50 + luckRaw * 50;
+  
+  return clamp(luck, 0, 100);
+}
+
+/**
+ * Расчет общей удачи для WW
+ */
+function totalLuckWW(dataChar, dataWeap) {
+  // Персонажный баннер: эталон 65 круток, винрейт 50%, N0 = 10000
+  const Lc = calcLuckWW(dataChar.AvgL, dataChar.N, 65, 1200, dataChar.WR, 50);
+  
+  // Оружейный баннер: эталон 65 круток, без винрейта, N0 = 2000
+  const Lw = calcLuckWW(dataWeap.AvgL, dataWeap.N, 65, 1200);
+  
+  // Взвешенное среднее
+  const total = (Lc * dataChar.N + Lw * dataWeap.N) / (dataChar.N + dataWeap.N);
+  return clamp(total, 0, 100);
+}
+
+// Обработчики событий для Genshin/HSR/ZZZ
+document.getElementById('calculate').addEventListener('click', () => {
+  const pullsChar = parseFloat(document.getElementById('charPulls').value);
+  const winrateChar = parseFloat(document.getElementById('charWinrate').value);
+  const avgChar = parseFloat(document.getElementById('charAvg').value);
+
+  const pullsWeap = parseFloat(document.getElementById('weapPulls').value);
+  const winrateWeap = parseFloat(document.getElementById('weapWinrate').value);
+  const avgWeap = parseFloat(document.getElementById('weapAvg').value);
+
+  if (!pullsChar || isNaN(winrateChar) || !avgChar || !pullsWeap || isNaN(winrateWeap) || !avgWeap) {
+    document.getElementById('result').textContent = 'Пожалуйста, заполните все поля корректно.';
+    return;
+  }
+
+  const dataChar = { N: pullsChar, AvgL: avgChar, WR: winrateChar };
+  const dataWeap = { N: pullsWeap, AvgL: avgWeap, WR: winrateWeap };
+  const score = totalLuck(dataChar, dataWeap);
+  document.getElementById('result').textContent = `${graduateScore(score)}: ${score.toFixed(1)}/100`;
+});
+
+document.getElementById('reset').addEventListener('click', () => {
+  ['charPulls','charWinrate','charAvg','weapPulls','weapWinrate','weapAvg'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('result').textContent = '';
+});
+
+// Обработчики событий для WW
+document.getElementById('calculateWW').addEventListener('click', () => {
+  const pullsChar = parseFloat(document.getElementById('charPullsWW').value);
+  const winrateChar = parseFloat(document.getElementById('charWinrateWW').value);
+  const avgChar = parseFloat(document.getElementById('charAvgWW').value);
+  const pullsWeap = parseFloat(document.getElementById('weapPullsWW').value);
+  const avgWeap = parseFloat(document.getElementById('weapAvgWW').value);
+
+  if (!pullsChar || isNaN(winrateChar) || !avgChar || !pullsWeap || !avgWeap) {
+    document.getElementById('result-ww').textContent = 'Пожалуйста, заполните все поля корректно.';
+    return;
+  }
+
+  const dataChar = { N: pullsChar, AvgL: avgChar, WR: winrateChar };
+  const dataWeap = { N: pullsWeap, AvgL: avgWeap };
+  const score = totalLuckWW(dataChar, dataWeap);
+  document.getElementById('result-ww').textContent = `${graduateScore(score)}: ${score.toFixed(1)}/100`;
+});
+
+document.getElementById('resetWW').addEventListener('click', () => {
+  ['charPullsWW', 'charWinrateWW', 'charAvgWW', 'weapPullsWW', 'weapAvgWW'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('result-ww').textContent = '';
+});
+
+function graduateScore(score) {
+  if (score < 0 || score > 100 || isNaN(score)) {
+    return "Некорректный счет 😕";
+  }
+  if (score <= 15) {
+    return "Человек с проклятием 😣";
+  } else if (score <= 30) {
+    return "Сильный анлакер 😞";
+  } else if (score <= 60) {
+    return "Обычный игрок 😐";
+  } else if (score <= 90) {
+    return "Свинья 🐷";
+  } else {
+    return "Проклятое свинство 😈";
+  }
+}
+
+</script>
+</body>
+</html>
