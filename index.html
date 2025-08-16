@@ -1,11 +1,104 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-<title>Nity's Official Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nity's Official Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/common.css">
 </head>
+
 <body>
-  <a href="/genshin">Genshin Impact - Heal & Baffs</a>
-  <a href="/counter">Counter</a>
-  <a href="/luckiness">Калькулятор лакерства</a>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Nity's Projects</h1>
+      <p class="subtitle">
+        Коллекция моих полезных веб-приложений.
+        <!-- Каждый проект создан с любовью к деталям и удобству использования. -->
+      </p>
+    </header>
+
+    <main class="projects-grid">
+      <a href="/genshin" class="project-card">
+        <div class="project-icon genshin-icon">⚔️</div>
+        <h2 class="project-title">Раздел Genshin'а (старый)</h2>
+        <p class="project-description">
+          Продвинутый калькулятор для Genshin Impact с расчетом лечения, баффов и щитов персонажей.
+          Поддерживает все популярные саппорт-персонажи с детальной статистикой и сохранением данных.
+        </p>
+        <!-- <div class="project-tech">
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">Bootstrap</span>
+          <span class="tech-tag">Gaming</span>
+        </div> -->
+      </a>
+
+      <a href="/counter" class="project-card">
+        <div class="project-icon counter-icon">🔢</div>
+        <h2 class="project-title">Счетчик</h2>
+        <p class="project-description">
+          Умный счетчик с поддержкой звуковых уведомлений, системой кругов и настройкой громкости.
+          Идеально подходит для подсчета любых повторяющихся действий или событий.
+        </p>
+        <!-- <div class="project-tech">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Howler.js</span>
+          <span class="tech-tag">Utility</span>
+        </div> -->
+      </a>
+
+      <a href="/luckiness" class="project-card">
+        <div class="project-icon luckiness-icon">🎲</div>
+        <h2 class="project-title">Калькулятор лакерства</h2>
+        <p class="project-description">
+          Математически точный анализ удачи в гача-играх. Рассчитывает уровень везения на основе
+          винрейта, средней леги и количества круток для Genshin Impact, HSR, ZZZ и Wuthering Waves.
+        </p>
+        <!-- <div class="project-tech">
+          <span class="tech-tag">Mathematics</span>
+          <span class="tech-tag">Statistics</span>
+          <span class="tech-tag">Gaming</span>
+        </div> -->
+      </a>
+
+      <a href="/gamecards" class="project-card">
+        <div class="project-icon gamecards-icon">🃏</div>
+        <h2 class="project-title">Карточки</h2>
+        <p class="project-description">
+          Генератор красивых карточек. Создавайте стильные карточки персонажей, оружий, артефактов и банбу.
+        </p>
+        <!-- <div class="project-tech">
+          <span class="tech-tag">JSON</span>
+          <span class="tech-tag">Canvas</span>
+          <span class="tech-tag">Design</span>
+        </div> -->
+      </a>
+
+      <a href="/voiceovers" class="project-card">
+        <div class="project-icon voiceovers-icon">🎭</div>
+        <h2 class="project-title">БД сейю</h2>
+        <p class="project-description">
+          База данных сейю с информацией о персонажах из разных игр. Находите пересечения 
+          актеров озвучки, изучайте их роли и открывайте новые связи между любимыми персонажами.
+        </p>
+        <!-- <div class="project-tech">
+          <span class="tech-tag">Database</span>
+          <span class="tech-tag">Search</span>
+          <span class="tech-tag">Gaming</span>
+        </div> -->
+      </a>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">
+        © 2024 Nity's Projects. Создано с ❤️ для сообщества геймеров.
+      </p>
+    </footer>
+  </div>
 </body>
+
 </html>
