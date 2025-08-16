@@ -16,11 +16,34 @@
   box-sizing: border-box;
 }
 
+/* Ensure proper rendering on all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Force hardware acceleration for better performance */
+body {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  /* Fallback solid color for older browsers */
+  background-color: #0a0e1a;
+  background: #0a0e1a;
+  /* Modern gradient with fallback */
+  background: -webkit-linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
+  background: -moz-linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   color: var(--text-primary);
   min-height: 100vh;
+  min-height: 100dvh; /* Better mobile support */
   overflow-x: hidden;
   position: relative;
 }
@@ -33,6 +56,15 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
+  /* Fallback for older browsers */
+  background: rgba(120, 119, 198, 0.1);
+  /* Modern gradients with fallbacks */
+  background: -webkit-radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+              -webkit-radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+              -webkit-radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
+  background: -moz-radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+              -moz-radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+              -moz-radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
   background:
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
@@ -307,12 +339,27 @@ body::before {
   .coming-soon {
     padding: 2rem;
   }
+
+  /* Simplify background for mobile performance */
+  body::before {
+    background: rgba(120, 119, 198, 0.1) !important;
+    animation: none;
+  }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  body {
+    /* Ensure solid background on very small screens */
+    background: #0a0e1a !important;
+  }
+  
+  body::before {
+    display: none;
+  }
 }
+
+
 
 /* Loading animation */
 .project-card {
