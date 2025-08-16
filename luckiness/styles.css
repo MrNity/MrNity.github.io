@@ -207,3 +207,27 @@ button#reset:active, button#resetWW:active { filter: brightness(.96); }
   }
   .container-wrapper { margin-top: 4px; }
 }
+
+/* Back to home button */
+.back-home {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.back-home:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(-2px);
+}
+
+.back-home::before {
+  content: "← ";
+  margin-right: 0.25rem;
+}
