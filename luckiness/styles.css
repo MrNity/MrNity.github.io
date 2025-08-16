@@ -33,10 +33,7 @@ body {
 
 body {
     font-family: "Inter", Arial, sans-serif;
-    /* Fallback solid color for older browsers */
-    background-color: #0b0f1a;
-    background: #0b0f1a;
-    /* Modern gradient with fallback */
+    /* Beautiful radial gradient for all devices */
     background: -webkit-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
     background: -moz-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
     background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, var(--bg) 45%, #06080f 100%);
@@ -300,16 +297,6 @@ button#resetWW:active {
     button {
         width: 49%;
         padding: 11px 0;
-    }
-
-    /* Simplify background for mobile performance */
-    body::before,
-    body::after {
-        display: none;
-    }
-
-    body {
-        background: #0b0f1a !important;
     }
 }
 
