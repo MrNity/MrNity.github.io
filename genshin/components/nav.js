@@ -1,15 +1,18 @@
 Vue.component('menu-nav', {
     template: `
 <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <!--
     <li class="nav-item">
         <a class="nav-link active" id="resin-tab" data-toggle="tab" href="#resin" role="tab" aria-controls="resin" aria-selected="false"><img src="imgs/Item_Fragile_Resin.webp" width="20" height="20" alt=""> Таймеры</a>
     </li>
+-->
     <li class="nav-item">
         <a class="nav-link" id="wish-tab" data-toggle="tab" href="#wish" role="tab" aria-controls="wish" aria-selected="false">Пожелания для опроса</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">Полезные ссылки</a>
     </li>
+    <!--
     <li class="nav-item">
         <a class="nav-link " id="TableHeal-tab" data-toggle="tab" href="#TableHeal" role="tab" aria-controls="TableHeal" aria-selected="true"><i class="fa-solid fa-briefcase-medical"></i> Таблица хила и баффов</a>
     </li>
@@ -19,11 +22,9 @@ Vue.component('menu-nav', {
     <li class="nav-item">
         <a class="nav-link" id="crystals-tab" data-toggle="tab" href="#crystals" role="tab" aria-controls="crystals" aria-selected="false"><img src="imgs/Item_Radiant_Spincrystal.webp" width="20" height="20" alt=""> Лучистые кристаллы</a>
     </li>
-    <!--
     <li class="nav-item">
         <a class="nav-link" id="keki-tab" href="https://docs.google.com/spreadsheets/d/1DPJOtHTLB_y-MTcUheSBrMPFvV_EtBlcYA6Xy1F0R_c/edit?pli=1#gid=472936237" target="_blank"><i class="fa-solid fa-link"></i> Таблица примогемов</a>
     </li>
-    -->
     <li class="nav-item">
         <a class="nav-link disabled" id="BannersChars-tab" data-toggle="tab" href="#BannersChars" role="tab" aria-controls="BannersChars" aria-selected="false">Отсутствие персов....</a>
     </li>
@@ -36,7 +37,6 @@ Vue.component('menu-nav', {
     <li class="nav-item">
         <a class="nav-link" id="plans-tab" data-toggle="tab" href="#plans" role="tab" aria-controls="plans" aria-selected="false"><i class="fa-solid fa-calendar-check"></i> Планы</a>
     </li>
-<!--
     <li class="nav-item">
         <a class="nav-link disabled" id="builds-tab" data-toggle="tab" href="#builds" role="tab" aria-controls="builds" aria-selected="false">Билды</a>
     </li>

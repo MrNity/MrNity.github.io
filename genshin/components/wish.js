@@ -1,6 +1,6 @@
 Vue.component('wishes', {
 template: 
-`<div class="tab-pane fade" id="wish" role="tabpanel" aria-labelledby="wish-tab">
+`<div class="tab-pane " id="wish" role="tabpanel" aria-labelledby="wish-tab">
                 <div class="content ml-0">
                     <ul>
                         <li class="unselectable">МИР</li>
