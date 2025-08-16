@@ -33,10 +33,14 @@ body {
 
 body {
     font-family: "Inter", Arial, sans-serif;
-    /* Beautiful radial gradient for all devices */
+    /* Safari iOS fallback */
+    background-color: #0b0f1a;
+    /* Beautiful radial gradient for all devices with explicit colors for Safari */
     background: -webkit-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
     background: -moz-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
+    background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
     background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, var(--bg) 45%, #06080f 100%);
+    color: #e5e7eb;
     color: var(--text);
     min-height: 100vh;
     min-height: 100dvh;
@@ -341,4 +345,18 @@ button#resetWW:active {
 .back-home::before {
     content: "← ";
     margin-right: 0.25rem;
+}
+
+/* Safari iOS specific fixes */
+@supports (-webkit-appearance: none) {
+    body {
+        background: #0b0f1a !important;
+        background: -webkit-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%) !important;
+    }
+    
+    body::before,
+    body::after {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
 }
