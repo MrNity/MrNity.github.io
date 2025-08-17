@@ -1,0 +1,15 @@
+{
+  "name": "mrnity-github-io",
+  "version": "1.0.0",
+  "description": "Monorepo for MrNity GitHub Pages projects",
+  "scripts": {
+    "deploy:sleeptracker": "node deploy-local.js",
+    "build:sleeptracker": "cd dev/sleep-tracker && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrNity/MrNity.github.io.git"
+  },
+  "author": "MrNity",
+  "license": "MIT"
+}

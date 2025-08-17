@@ -1,0 +1,56 @@
+name: Deploy multipage repo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: 'npm'
+        cache-dependency-path: |
+          dev/sleep-tracker/package-lock.json
+    
+    # sleeptracker → билд прямо в корень sleeptracker/
+    - name: Build sleeptracker
+      run: |
+        cd dev/sleep-tracker
+        npm ci
+        npm run build
+        rm -rf ../../sleeptracker/*
+        cp -r dist/* ../../sleeptracker/
+    
+    # Можно добавить другие проекты по аналогии:
+    # palworld → билд в palworld/
+    # - name: Build palworld
+    #   run: |
+    #     cd dev/Pal/web
+    #     npm ci
+    #     npm run build
+    #     rm -rf ../../../palworld/*
+    #     cp -r dist/* ../../../palworld/
+    
+    # checktasks → билд в everydaytasks/
+    # - name: Build everydaytasks
+    #   run: |
+    #     cd dev/CheckTasks
+    #     npm ci
+    #     npm run build
+    #     rm -rf ../../everydaytasks/*
+    #     cp -r dist/* ../../everydaytasks/
+    
+    # деплой
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        publish_branch: gh-pages
+        keep_files: true

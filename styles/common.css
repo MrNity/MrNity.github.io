@@ -211,6 +211,10 @@ body::before {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
+.events-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
 .project-title {
     font-size: 1.25rem;
     font-weight: 700;

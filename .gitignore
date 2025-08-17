@@ -1,0 +1,19 @@
+# Игнор старых и ненужных
+genshin
+counter
+
+# Игнор dev'a
+dev
+
+# Игнор для всех подпроектов
+node_modules
+dist
+*.log
+
+# IDE
+.vscode
+.idea
+
+# Системные файлы
+.DS_Store
+Thumbs.db
