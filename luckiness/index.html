@@ -18,13 +18,44 @@
   <div class="main">
     <a href="/" class="back-home">Главная</a>
     <h1>Калькулятор лакерства</h1>
-    <p>
-      0–15: человек с проклятием<br>
-      15–30: сильный анлакер<br>
-      30–60: обычный игрок<br>
-      60–90: свинья<br>
-      90–100: проклятое свинство
-    </p>
+    <div class="luck-scale">
+      <div class="luck-item">
+        <span class="luck-range">0–15:</span>
+        <span class="luck-desc">опоссум</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">15–30:</span>
+        <span class="luck-desc">антисвин</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">30–40:</span>
+        <span class="luck-desc">почти нормис</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">40–55:</span>
+        <span class="luck-desc">нормис</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">55–60:</span>
+        <span class="luck-desc">почти свинка, скоро повезет</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">60–70:</span>
+        <span class="luck-desc">свинокотик</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">70–80:</span>
+        <span class="luck-desc">свинья</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">80–90:</span>
+        <span class="luck-desc">свинотавр</span>
+      </div>
+      <div class="luck-item">
+        <span class="luck-range">90–100:</span>
+        <span class="luck-desc">свинозавр</span>
+      </div>
+    </div>
   </div>
   <div class="container-wrapper">
     <div class="container">
@@ -53,7 +84,7 @@
         <input type="number" id="weapAvg" min="1" step="0.01" placeholder="Пример: 46.5" />
       </fieldset>
 
-      <div style="display:flex; justify-content: space-between; margin-top:15px;">
+      <div style="display:flex; justify-content: space-between;">
         <button id="calculate">Рассчитать</button>
         <button id="reset">Сбросить</button>
       </div>
@@ -83,7 +114,7 @@
         <input type="number" id="weapAvgWW" min="1" step="0.01" placeholder="Пример: 62.89" />
       </fieldset>
 
-      <div style="display:flex; justify-content: space-between; margin-top:15px;">
+      <div style="display:flex; justify-content: space-between;">
         <button id="calculateWW">Рассчитать</button>
         <button id="resetWW">Сбросить</button>
       </div>

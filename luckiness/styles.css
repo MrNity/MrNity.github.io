@@ -2,7 +2,8 @@
     --bg: #0b0f1a;
     --surface: rgba(17, 24, 39, 0.55);
     --text: #e5e7eb;
-    --muted: #9ca3af;
+    --light: #ffffff;
+    --muted: #9e9e9e;
     --border: rgba(255, 255, 255, 0.08);
     --primary: #8b5cf6;
     /* violet-500 */
@@ -14,80 +15,28 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Ensure proper rendering on all devices */
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-}
-
-/* Force hardware acceleration for better performance */
-body {
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-body {
-    font-family: "Inter", Arial, sans-serif;
-    /* Safari iOS fallback */
-    background-color: #0b0f1a;
-    /* Beautiful radial gradient for all devices with explicit colors for Safari */
-    background: -webkit-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
-    background: -moz-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
-    background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
-    background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, var(--bg) 45%, #06080f 100%);
-    color: #e5e7eb;
-    color: var(--text);
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 28px 20px;
-    position: relative;
+    height: 100%;
     overflow-x: hidden;
 }
 
-/* Ambient gradient blobs */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    inset: auto auto 10% -10%;
-    width: 60vmax;
-    height: 60vmax;
-    pointer-events: none;
-    z-index: -1;
-    filter: blur(110px) saturate(110%);
-    opacity: 0.34;
-    transform: translateZ(0);
-}
+/* Remove hardware acceleration to prevent scroll issues */
 
-body::before {
-    top: -28%;
-    left: -28%;
-    background: radial-gradient(closest-side, color-mix(in oklab, var(--primary), white 3%) 0%, transparent 65%);
-    animation: float1 16s ease-in-out infinite alternate;
-}
-
-body::after {
-    right: -22%;
-    bottom: -22%;
-    background: radial-gradient(closest-side, color-mix(in oklab, var(--primary-2), white 2%) 0%, transparent 65%);
-    animation: float2 18s ease-in-out infinite alternate;
-}
-
-@keyframes float1 {
-    to {
-        transform: translate(8%, 6%) scale(1.05);
-    }
-}
-
-@keyframes float2 {
-    to {
-        transform: translate(-6%, -8%) scale(1.08);
-    }
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #0b0f1a;
+    background: radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 28px 20px;
+    overflow-x: hidden;
 }
 
 .main {
@@ -107,12 +56,47 @@ h1 {
     color: transparent;
 }
 
-.main p {
-    text-align: left;
-    max-width: 560px;
+
+
+.luck-scale {
+    max-width: 700px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.luck-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    margin: 2px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.luck-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--light);
+}
+
+.luck-item:hover .luck-range,
+.luck-item:hover .luck-desc {
+    color: var(--light);
+}
+
+.luck-range {
+    display: inline-block;
+    width: 60px;
+    font-weight: 600;
     color: var(--muted);
-    line-height: 1.55;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.luck-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .container-wrapper {
@@ -294,28 +278,41 @@ button#resetWW:active {
         padding: 18px;
     }
 
-    .main p {
+    .luck-scale {
         max-width: 100%;
+        margin-bottom: 16px;
     }
 
     button {
         width: 49%;
         padding: 11px 0;
     }
+
+    body {
+        padding: 20px 16px;
+    }
 }
 
-/* Desktop: убираем скролл — переносим градации вбок и фиксируем снизу слева */
+
+
+/* Desktop: переносим градации в левый верхний угол */
 @media (min-width: 1200px) {
-    .main p {
+    .main .luck-scale {
         position: fixed;
-        bottom: 24px;
+        top: 24px;
         left: 24px;
-        width: 320px;
-        max-width: 26vw;
+        width: 340px;
+        max-width: 28vw;
         margin: 0;
-        opacity: 0.95;
+        opacity: 0.9;
         text-align: left;
-        z-index: 1;
+        z-index: 10;
+        background: rgba(11, 15, 26, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 0.85rem;
     }
 
     .container-wrapper {
@@ -333,11 +330,11 @@ button#resetWW:active {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.2s ease;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .back-home:hover {
-    color: var(--text);
+    color: var(--light);
     background: rgba(255, 255, 255, 0.05);
     transform: translateX(-2px);
 }
@@ -353,10 +350,10 @@ button#resetWW:active {
         background: #0b0f1a !important;
         background: -webkit-radial-gradient(1200px circle at 15% 10%, #0f172a 0%, #0b0f1a 45%, #06080f 100%) !important;
     }
-    
-    body::before,
+
+    /* body::before,
     body::after {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
-    }
+    } */
 }
