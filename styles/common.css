@@ -243,6 +243,13 @@ body::before {
     backdrop-filter: blur(20px);
     text-align: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
 }
 
 .project-card::before {
@@ -266,6 +273,29 @@ body::before {
     border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     background: rgba(0, 0, 0, 0.7);
+}
+
+.project-card:active {
+    transform: translateY(-4px) scale(0.98);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Убираем hover эффекты на touch устройствах */
+@media (hover: none) and (pointer: coarse) {
+    .project-card:hover {
+        transform: none;
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .project-card:active {
+        transform: scale(0.95);
+        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    }
 }
 
 .project-icon {
@@ -326,6 +356,10 @@ body::before {
     text-align: center;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .project-description {
@@ -338,6 +372,10 @@ body::before {
     text-align: left;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0.9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .project-tech {
