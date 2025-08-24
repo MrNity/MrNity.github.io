@@ -142,29 +142,41 @@
 
       // Функция для обновления высоты градиента
       function updateGradientHeight() {
-        const bodyHeight = document.body.scrollHeight;
-        const viewportHeight = window.innerHeight;
         const container = document.querySelector('.container');
 
-        // Получаем стили контейнера для учета паддингов
-        const containerStyles = window.getComputedStyle(container);
-        const paddingTop = parseInt(containerStyles.paddingTop);
-        const paddingBottom = parseInt(containerStyles.paddingBottom);
-        const totalPadding = paddingTop + paddingBottom;
+        if (container && mainblock && gradientBlock) {
+          // Получаем реальную высоту контейнера с контентом
+          const containerRect = container.getBoundingClientRect();
+          const containerHeight = container.offsetHeight;
+          const containerTop = container.offsetTop;
 
-        const minHeight = Math.max(bodyHeight + totalPadding + 20, viewportHeight);
+          // Высота градиента = позиция контейнера + его высота + 50px запас
+          const totalHeight = containerTop + containerHeight + 50;
 
-        if (mainblock) {
-          mainblock.style.height = minHeight + 'px';
+          // Минимум - высота viewport
+          const finalHeight = Math.max(totalHeight, window.innerHeight);
+
+          mainblock.style.height = finalHeight + 'px';
+          gradientBlock.style.height = finalHeight + 'px';
         }
-        if (gradientBlock) {
-          gradientBlock.style.height = (minHeight + 50) + 'px';
-        }
+      }
+
+      // Функция debounce для оптимизации resize события
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
       }
 
       // Обновляем высоту при загрузке и изменении размера окна
       updateGradientHeight();
-      window.addEventListener('resize', updateGradientHeight);
+      window.addEventListener('resize', debounce(updateGradientHeight, 100));
 
       // Наблюдаем за изменениями в DOM
       const observer = new MutationObserver(updateGradientHeight);
