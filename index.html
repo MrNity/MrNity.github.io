@@ -136,7 +136,39 @@
     document.addEventListener('DOMContentLoaded', function () {
       const animationToggle = document.getElementById('animationToggle');
       const body = document.body;
+      const mainblock = document.querySelector('.mainblock');
+      const gradientBlock = document.querySelector('.gradient-block');
       let isAnimationPaused = false;
+
+      // Функция для обновления высоты градиента
+      function updateGradientHeight() {
+        const bodyHeight = document.body.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        const container = document.querySelector('.container');
+
+        // Получаем стили контейнера для учета паддингов
+        const containerStyles = window.getComputedStyle(container);
+        const paddingTop = parseInt(containerStyles.paddingTop);
+        const paddingBottom = parseInt(containerStyles.paddingBottom);
+        const totalPadding = paddingTop + paddingBottom;
+
+        const minHeight = Math.max(bodyHeight + totalPadding + 20, viewportHeight);
+
+        if (mainblock) {
+          mainblock.style.height = minHeight + 'px';
+        }
+        if (gradientBlock) {
+          gradientBlock.style.height = (minHeight + 50) + 'px';
+        }
+      }
+
+      // Обновляем высоту при загрузке и изменении размера окна
+      updateGradientHeight();
+      window.addEventListener('resize', updateGradientHeight);
+
+      // Наблюдаем за изменениями в DOM
+      const observer = new MutationObserver(updateGradientHeight);
+      observer.observe(document.body, { childList: true, subtree: true });
 
       // Загружаем состояние из localStorage
       const savedState = localStorage.getItem('animationPaused');

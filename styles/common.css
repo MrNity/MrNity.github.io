@@ -93,8 +93,8 @@ body::before {
 
 .mainblock {
     width: 100vw;
-    height: 100vh;
-    position: fixed;
+    min-height: 100vh;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
@@ -103,7 +103,8 @@ body::before {
 
 .gradient-block {
     width: 120%;
-    height: 120vh;
+    height: 200vh;
+    min-height: calc(100vh + 500px);
     transform-origin: center center;
     position: absolute;
     top: -10vh;
