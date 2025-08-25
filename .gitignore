@@ -13,6 +13,7 @@ dist
 # IDE
 .vscode
 .idea
+.kiro
 
 # Системные файлы
 .DS_Store
