@@ -54,6 +54,40 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.header-logo .svg-logo {
+    fill: #22d3ee;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.header-logo {
+    width: 32px;
+    height: 32px;
+    /* background: linear-gradient(90deg, #a78bfa, #22d3ee 55%, #34d399);
+    -webkit-mask: url('../images/nity-logo-625x.svg') no-repeat center;
+    mask: url('../images/nity-logo-625x.svg') no-repeat center; */
+    /* -webkit-mask-size: contain; */
+    /* mask-size: contain; */
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover .header-logo {
+    transform: scale(1.05);
+    /* filter: brightness(1.1); */
 }
 
 
