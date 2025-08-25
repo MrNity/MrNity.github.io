@@ -133,6 +133,26 @@ h1 {
     line-height: 1.4;
 }
 
+.luck-item-special {
+    cursor: pointer;
+    position: relative;
+}
+
+.luck-item-special:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #a78bfa, #22d3ee 55%, #34d399) 1;
+}
+
+.luck-item-special:hover .luck-range,
+.luck-item-special:hover .luck-desc {
+    background: linear-gradient(90deg, #a78bfa, #22d3ee 55%, #34d399) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-weight: 600 !important;
+}
+
 .container-wrapper {
     display: flex;
     justify-content: center;
