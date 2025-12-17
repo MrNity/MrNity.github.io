@@ -1,6 +1,7 @@
 # Dynamic Quest System
 
 The UI base template and diamond icons were inspired by [asset store](https://act.hoyoverse.com/ys/prod/ugc/component-store/index.html#/item/1997381320145154048).
+
 *PS: All scripts and logic were written from scratch; only the visual design was borrowed.*
 
 ---

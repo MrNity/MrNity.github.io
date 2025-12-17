@@ -3,6 +3,7 @@
 [EN Version]()
 
 Взял за основу UI базу шаблона и алмазики у [asset store](https://act.hoyoverse.com/ys/prod/ugc/component-store/index.html#/item/1997381320145154048).
+
 *PS: скрипты и логику всю написал с нуля, взял только визуал.*
 
 ---
