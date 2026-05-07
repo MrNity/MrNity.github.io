@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-06T23:26:05.821Z",
+  "updatedAt": "2026-05-07T01:30:27.826Z",
   "games": [
     {
       "id": "g_genshin",
@@ -40,7 +40,7 @@
           "nameRu": "Люмин",
           "nameNative": "",
           "gender": "female",
-          "photo": "data/images/chars/gi/e57ff11e-d6ed-4564-8d24-6393eca74194.webp",
+          "photo": "data/images/chars/gi/ff1767b4-4a77-4fe2-8bc0-4d2432174c53.webp",
           "isNpc": false,
           "voices": {
             "JP": [
@@ -58,7 +58,7 @@
           "nameRu": "Итэр",
           "nameNative": "",
           "gender": "male",
-          "photo": "data/images/chars/gi/1c8bc60a-c4a6-428b-97cf-e37be9e3d82a.webp",
+          "photo": "data/images/chars/gi/2be4b984-8d22-4376-9b4b-20ae73835376.webp",
           "isNpc": false,
           "voices": {
             "JP": [
@@ -90,7 +90,7 @@
           "nameRu": "Айно",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/2670f3df-657c-44c7-a941-08ce22fc901d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -104,7 +104,7 @@
           "nameRu": "Альбедо",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/7bf4a6fd-5184-4ae0-81d6-a918142fc199.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -118,7 +118,7 @@
           "nameRu": "Аль-Хайтам",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/ea85f1cd-4e5a-46fe-bce4-e66743818fed.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -132,7 +132,7 @@
           "nameRu": "Элой",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/bafbe7e3-f88b-4883-8ef9-ce48fb7a02c1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -146,7 +146,7 @@
           "nameRu": "Эмбер",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/2ab51c75-f596-4ae4-9aa7-49aad09badb5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -160,7 +160,7 @@
           "nameRu": "Итто",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/63c639a2-3984-431b-948f-e9073a21e3b5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -174,7 +174,7 @@
           "nameRu": "Арлекино",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/58fd0155-5557-47fb-bc44-71cdebbef8b4.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -188,7 +188,7 @@
           "nameRu": "Бай Чжу",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/0ccd9dc7-09d1-4f3e-bc35-c33e300b28a0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -202,7 +202,7 @@
           "nameRu": "Барбара",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c2499971-70cc-4007-8cc8-9e7084c926e9.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -216,7 +216,7 @@
           "nameRu": "Бэй Доу",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/25c88c01-0d57-4987-8048-38c4ebf9ac14.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -230,7 +230,7 @@
           "nameRu": "Беннет",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/1a3830d7-8f2a-4086-aabd-341a8532a9e1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -244,7 +244,7 @@
           "nameRu": "Кандакия",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a8c7a6ce-bd2d-4b9c-b096-f383316ed8bd.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -258,7 +258,7 @@
           "nameRu": "Шарлотта",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/554557c9-9680-4f05-a051-fd6a48058afc.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -272,7 +272,7 @@
           "nameRu": "Часка",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/8ec1ac47-f786-40cf-82df-324643d59d9f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -286,7 +286,7 @@
           "nameRu": "Шеврёз",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e1f42a0f-bda3-4c37-bd20-de71e4f2448f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -300,7 +300,7 @@
           "nameRu": "Тиори",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/01c25082-9513-4aa4-ae4c-6c5812dba1e6.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -314,7 +314,7 @@
           "nameRu": "Чун Юнь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/6ac5a94d-b6ac-4c0a-b094-394ef9c36731.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -328,7 +328,7 @@
           "nameRu": "Ситлали",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c7691a45-bdfe-4edb-948f-d1ea55d50b9c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -342,7 +342,7 @@
           "nameRu": "Клоринда",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/1a060573-2fec-4d86-9f56-07a5753a87f6.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -356,7 +356,7 @@
           "nameRu": "Коллеи",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/315e00a0-b96c-499a-9d20-3997e3e0b13f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -370,7 +370,7 @@
           "nameRu": "Коломбина",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/f1d99571-a577-4d80-9b47-77cc81b27fa7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -384,7 +384,7 @@
           "nameRu": "Сайно",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/422e439f-0b1a-4179-89e0-f98f703845f7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -398,7 +398,7 @@
           "nameRu": "Далия",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/0804bf73-8bdd-41a6-8aec-f3a8994d0208.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -412,7 +412,7 @@
           "nameRu": "Дэхья",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/5e02bab0-82ee-4ebb-b46c-40a46654b319.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -426,7 +426,7 @@
           "nameRu": "Дилюк",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/50861c28-d868-4585-b48c-acac9db37be1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -440,7 +440,7 @@
           "nameRu": "Диона",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/de7dc742-1166-4989-8bbf-fde6b89f33fe.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -454,7 +454,7 @@
           "nameRu": "Дори",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e5c1f286-d74f-44a2-99f6-efbdad3ceb22.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -468,7 +468,7 @@
           "nameRu": "Дурин",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/b0190b9d-db7d-46d3-a02a-642454f71f88.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -482,7 +482,7 @@
           "nameRu": "Эмилия",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/d6a1d96b-a850-457c-8d22-71ca531c785c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -496,7 +496,7 @@
           "nameRu": "Эскофье",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/50dea6fd-3b54-4b54-8765-d23d60763217.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -510,7 +510,7 @@
           "nameRu": "Эола",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/9646a352-e636-4cea-b911-3c25ec60c715.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -524,7 +524,7 @@
           "nameRu": "Фарузан",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/235f2c84-7f49-464a-bd77-f85ed7de4542.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -538,7 +538,7 @@
           "nameRu": "Фишль",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/dfee8174-d5f3-4fe7-9686-884f31f022ef.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -552,7 +552,7 @@
           "nameRu": "Кирилл Чудомирович Флинс",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/09a453bb-e4fe-4046-93d1-a072838578e4.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -566,7 +566,7 @@
           "nameRu": "Фремине",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/6f6ccfe1-8db4-4493-8197-9340b1aa4d3e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -580,7 +580,7 @@
           "nameRu": "Фурина",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/950dfa5d-1ecc-4772-b7f3-839a1d3fd2e3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -594,7 +594,7 @@
           "nameRu": "Ка Мин",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/55ffbf7f-bf84-4469-90d0-9164a37f99ca.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -608,7 +608,7 @@
           "nameRu": "Гань Юй",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/b8932ce4-d12e-487c-b300-497f5fd61f5b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -622,7 +622,7 @@
           "nameRu": "Горо",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/706079fb-29c2-4750-862d-2b3a61ed8dcb.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -636,7 +636,7 @@
           "nameRu": "Ху Тао",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/fc4652a7-3730-40c5-9aee-8469b056f902.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -650,7 +650,7 @@
           "nameRu": "Иансан",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/fec3022d-30e6-4a27-b310-a42b97730a2f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -664,7 +664,7 @@
           "nameRu": "Ифа",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/81fbe09f-6c75-4f88-9c25-2d72dc4de0c8.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -678,7 +678,7 @@
           "nameRu": "Иллуги",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/476fd713-8701-48be-9fcd-31ccefc1e4c9.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -692,7 +692,7 @@
           "nameRu": "Инеффа",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e4cfdc13-8d33-4fdb-a634-51d0f99cda53.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -706,7 +706,7 @@
           "nameRu": "Ягода",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/62f687e2-4969-46e2-8685-396a8f9348d2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -720,7 +720,7 @@
           "nameRu": "Джинн",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/437d5582-35fe-4241-a3d4-f31b34c00daa.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -734,7 +734,7 @@
           "nameRu": "Качина",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/85a06e08-af11-40b5-ae6f-8cce0170dcaf.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -748,7 +748,7 @@
           "nameRu": "Кадзуха",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/bd3e3793-ccc6-4fc7-b7e6-83303e9398d7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -762,7 +762,7 @@
           "nameRu": "Кэйа",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/77761a53-6bef-4237-9357-a2979a7d2907.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -776,7 +776,7 @@
           "nameRu": "Аяка",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/4ac30ee2-8c42-4cd5-ae9d-b8c124c38625.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -790,7 +790,7 @@
           "nameRu": "Аято",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/1f74f57a-baa2-4cd6-b124-e6acfe48f728.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -804,7 +804,7 @@
           "nameRu": "Кавех",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/7579acdb-8382-4718-86b6-441746f31a70.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -818,7 +818,7 @@
           "nameRu": "Кэ Цин",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e21c4ce1-3ed5-4444-bb5d-fbe7bd6adf3f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -832,7 +832,7 @@
           "nameRu": "Кинич",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/54cc1430-6e14-4752-9a8a-1242f87aa437.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -846,7 +846,7 @@
           "nameRu": "Кирара",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a7f73d0c-3080-4029-9ed5-8bd744cc3061.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -860,7 +860,7 @@
           "nameRu": "Кли",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/682a046a-9ff9-4ecf-be4d-64e4f273da8b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -874,7 +874,7 @@
           "nameRu": "Сара",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/cc93e299-8e6d-4a24-b9f2-cca516bf7bec.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -888,7 +888,7 @@
           "nameRu": "Синобу",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/9db82794-07f3-4ea3-866a-abc5658bcae3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -902,7 +902,7 @@
           "nameRu": "Лань Янь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/ea7286bb-9059-404c-96df-cb80a0a262e0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -916,7 +916,7 @@
           "nameRu": "Лаума",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/0647dcd1-54a8-41d6-975e-fdf1255defea.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -930,7 +930,7 @@
           "nameRu": "Лайла",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/554176cd-129f-4833-a95e-ea9dd8199b0f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -944,7 +944,7 @@
           "nameRu": "Линнея",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c4b0bd64-cb44-4e11-aaf9-63f6b0fce709.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -958,7 +958,7 @@
           "nameRu": "Лиза",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/002a74ed-29de-486f-a4a0-c1ccf1344c73.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -972,7 +972,7 @@
           "nameRu": "Линетт",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c44c228d-7ad5-4417-b3b4-e3592c5a012f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -986,7 +986,7 @@
           "nameRu": "Лини",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/011f5eb0-8d9a-4c1d-b47e-1e3e3d268d6b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1000,7 +1000,7 @@
           "nameRu": "Мавуика",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e299157d-abbe-445f-acc0-c5aeb73189ac.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1014,7 +1014,7 @@
           "nameRu": "Мика",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/26aeaabe-0d23-48ee-9de2-b6fff8a2bf03.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1028,7 +1028,7 @@
           "nameRu": "Мона",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/98ad7767-040f-4fbc-aab0-63450b965e10.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1042,7 +1042,7 @@
           "nameRu": "Муалани",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/5dfcaf4b-4b3a-4ca3-9bdf-881857044d77.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1056,7 +1056,7 @@
           "nameRu": "Нахида",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a41d4889-b5e9-40ef-9b3f-f68219a532fa.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1070,7 +1070,7 @@
           "nameRu": "Навия",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/123de1cd-eb20-474f-b4ea-5f4fb96dc247.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1084,7 +1084,7 @@
           "nameRu": "Нефер",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/7c304015-4d4f-44fb-a0c7-6024ac846e46.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1098,7 +1098,7 @@
           "nameRu": "Нёвиллет",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/50d87d96-8ef1-4a05-a777-f2b2b1517bc0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1112,7 +1112,7 @@
           "nameRu": "Нилу",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/4dbdb919-ac31-42f1-a49d-65f0f6610b5c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1126,7 +1126,7 @@
           "nameRu": "Нин Гуан",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/d24f8628-ebad-41bd-bf34-4d2c5e0033ba.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1140,7 +1140,7 @@
           "nameRu": "Ноэлль",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/eab89aae-9d4e-4abb-80da-941c08e452f0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1154,7 +1154,7 @@
           "nameRu": "Оророн",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a845ab9b-eaad-41e1-8b08-2992e762fcb0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1168,7 +1168,7 @@
           "nameRu": "Ци Ци",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/493b32dc-c7d5-4f11-b267-3a56379de347.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1182,7 +1182,7 @@
           "nameRu": "Райдэн",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c01207ec-396a-4150-bbf1-de68012a7505.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1196,7 +1196,7 @@
           "nameRu": "Рэйзор",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a4446f26-6dbe-4cfb-aa59-9cdbcc401a80.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1210,7 +1210,7 @@
           "nameRu": "Розария",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/8111e10d-e2a1-48d6-945e-ca4f858c9b7d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1224,7 +1224,7 @@
           "nameRu": "Кокоми",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/d4799bee-4371-4f80-a14d-cfefa4dae1bf.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1238,7 +1238,7 @@
           "nameRu": "Саю",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/9e992f69-24fe-474d-95b0-2b367c62adb2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1252,7 +1252,7 @@
           "nameRu": "Сетос",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/42a03f8f-d287-4521-869e-461faed7d914.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1266,7 +1266,7 @@
           "nameRu": "Шэнь Хэ",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/4d105867-e57d-441a-a7c2-c13802307490.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1280,7 +1280,7 @@
           "nameRu": "Хэйдзо",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/71520712-8b60-428f-813e-4bfbe4a8a683.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1294,7 +1294,7 @@
           "nameRu": "Сиджвин",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/53a0709c-3ae6-4bf7-8132-2f79a076bea5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1308,7 +1308,7 @@
           "nameRu": "Скирк",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/2d2b4397-2398-4bd2-8f6c-cfa9f9e4f6fa.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1322,7 +1322,7 @@
           "nameRu": "Сахароза",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/7aef66e3-1c84-43f5-bd9b-5cedbd9fbd0b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1336,7 +1336,7 @@
           "nameRu": "Тарталья",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a98fed79-5d1a-4589-bd9d-7e6a7c9ed1da.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1350,7 +1350,7 @@
           "nameRu": "Тома",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/787264ce-d795-45d3-aa3f-3898b996598a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1364,7 +1364,7 @@
           "nameRu": "Тигнари",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/d1d132ad-03e9-4564-98ae-752b20b249bd.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1378,7 +1378,7 @@
           "nameRu": "Вареса",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/9d014c47-5e75-453b-a940-25a29ac1c26c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1392,7 +1392,7 @@
           "nameRu": "Варка",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/40ef1d6c-936a-4a7f-b5ee-633bbd641e00.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1406,7 +1406,7 @@
           "nameRu": "Венти",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/c2933b62-4957-40ff-962a-55ed7a282f4a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1420,7 +1420,7 @@
           "nameRu": "Странник",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/732b329a-5ec1-4da5-a275-73b427e9d254.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1430,16 +1430,32 @@
         },
         {
           "id": "c_wonderland_manekin",
-          "name": "Wonderland Manekin",
+          "name": "Manekin",
           "nameRu": "Манекен",
           "nameNative": "",
-          "gender": "other",
-          "photo": "",
+          "gender": "male",
+          "photo": "data/images/chars/gi/651e30fb-f248-4d83-ba2f-5d78cf271d72.webp",
           "voices": {},
           "isNpc": false,
           "names": {
-            "jp": "幻境ドール",
-            "cn": "奇域人偶"
+            "jp": "ドール（男）",
+            "cn": "奇偶·男性",
+            "kr": "별인형·남성"
+          }
+        },
+        {
+          "id": "c_wonderland_manekin",
+          "name": "Manekina",
+          "nameRu": "Манекина",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/gi/8f5cc34c-2409-444c-8827-1e226e299a75.webp",
+          "voices": {},
+          "isNpc": false,
+          "names": {
+            "jp": "ドール（女）",
+            "cn": "奇偶·女性",
+            "kr": "별인형·여성"
           }
         },
         {
@@ -1448,7 +1464,7 @@
           "nameRu": "Ризли",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/097e4717-136d-4fa9-9ff7-08a6a21065c2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1462,7 +1478,7 @@
           "nameRu": "Сян Лин",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a9f3a213-8ad8-45a7-ad42-057a79cda8f2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1476,7 +1492,7 @@
           "nameRu": "Сянь Юнь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/6b1eb899-1968-440b-b421-84b63cfed5cb.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1490,7 +1506,7 @@
           "nameRu": "Сяо",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/6b5fd990-2d9e-4106-91df-396d3164a841.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1504,7 +1520,7 @@
           "nameRu": "Шилонен",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e35c3258-6d8e-4f7a-a6ae-92c65eec4718.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1518,7 +1534,7 @@
           "nameRu": "Син Цю",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e68b78ec-b370-42bb-aec3-cac020ca564e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1532,7 +1548,7 @@
           "nameRu": "Синь Янь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/3f271843-5c5f-4f96-aaa0-c8602a2c6911.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1546,7 +1562,7 @@
           "nameRu": "Яэ Мико",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/7c048ec1-e815-407f-99a2-a59c3be8ba87.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1560,7 +1576,7 @@
           "nameRu": "Янь Фэй",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/8c6c4fde-a427-45a8-bf7c-9aee569fa241.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1574,7 +1590,7 @@
           "nameRu": "Яо Яо",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/08b1af6d-93e2-4481-a43b-4123c7f76ace.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1588,7 +1604,7 @@
           "nameRu": "Е Лань",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/8e47ae9d-7302-4cb7-9f38-1287fcdccffd.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1602,7 +1618,7 @@
           "nameRu": "Ёимия",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/e112b853-849d-4f66-923d-b42fb8215be5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1616,7 +1632,7 @@
           "nameRu": "Юмэмидзуки Мидзуки",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/a8809633-8240-42b6-bc6b-61df71e3ba2d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1630,7 +1646,7 @@
           "nameRu": "Юнь Цзинь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/b42f42e2-384a-443d-a70e-145083ef9aa7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1644,7 +1660,7 @@
           "nameRu": "Чжун Ли",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/22722782-0660-4bd7-ad5b-d03faafcb4cc.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1658,7 +1674,7 @@
           "nameRu": "Цзы Бай",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/28d74c6e-fd06-42eb-b90d-e1c1855b521a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1672,7 +1688,7 @@
           "nameRu": "Дайнслейф",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/0e93ce2e-a9c6-477d-b5f6-354725d52d37.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1686,7 +1702,7 @@
           "nameRu": "Лоэн",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/1f5fbd32-6629-40cb-b60c-a66f9de41cf7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1700,7 +1716,7 @@
           "nameRu": "Николь",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/4566e4d9-4e2d-4b25-8810-5213e486e417.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1714,7 +1730,7 @@
           "nameRu": "Прюн",
           "nameNative": "",
           "gender": "other",
-          "photo": "",
+          "photo": "data/images/chars/gi/82e1bbf0-42ea-47ef-a1b7-389f4612f27f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1726,7 +1742,6 @@
       "nameLanguages": [
         "ru",
         "en",
-        "cn",
         "jp"
       ],
       "imageFolder": "gi"
@@ -1742,8 +1757,12 @@
           "nameRu": "Ахерон",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
-          "voices": {},
+          "photo": "data/images/chars/hsr/25d4d697-0fc5-4093-bc90-ad1cb9b55815.webp",
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "黄よ泉み",
@@ -1756,7 +1775,7 @@
           "nameRu": "Аглая",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/82f2a0dd-f546-4848-8977-8526764ee4d5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1770,7 +1789,7 @@
           "nameRu": "Анакса",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/aa99fb4f-212a-4579-b047-af2188730153.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1784,7 +1803,7 @@
           "nameRu": "Арчер",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/70f69aad-915e-4abd-888f-eb75fc639e67.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1798,7 +1817,7 @@
           "nameRu": "Аргенти",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/b82265ce-31bf-4bbf-81d0-82aa34239f62.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1812,7 +1831,7 @@
           "nameRu": "Арлан",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/b6105353-ce84-4004-a4ee-955ec5d9e951.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1826,7 +1845,7 @@
           "nameRu": "Эшвейл",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/9f941cdb-c3d1-4150-9604-c3bb2e11cd17.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1840,7 +1859,7 @@
           "nameRu": "Аста",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/471ef1d5-0e60-41b1-aca0-5c14b8ff77e3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1854,7 +1873,7 @@
           "nameRu": "Авантюрин",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/ddceee06-8afb-4b21-932c-669d08ef1d9c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1868,7 +1887,7 @@
           "nameRu": "Байлу",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/24b38ae3-9660-4506-9a42-1cc4008d2f44.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1882,7 +1901,7 @@
           "nameRu": "Чёрный Лебедь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/6ccb8d63-fe0e-4a05-9456-1302ac5d1984.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1896,7 +1915,7 @@
           "nameRu": "Блэйд",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/f605b3ce-fd9f-432c-9b0a-987512cfce78.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1910,7 +1929,7 @@
           "nameRu": "Бутхилл",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/b91124b3-8a90-4b20-bea1-a73b96ac5e2a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1924,7 +1943,7 @@
           "nameRu": "Броня",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/083ef24f-6f77-461e-ad27-e54706902d90.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1938,7 +1957,7 @@
           "nameRu": "Кастория",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/fc53190f-164b-4f75-8724-f6553ef7aeb4.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1952,7 +1971,7 @@
           "nameRu": "Керидра",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/096562d5-41f1-436f-a214-3b3707181367.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1966,7 +1985,7 @@
           "nameRu": "Цифер",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/bebfbc4b-90b5-47cb-b736-a9e674487fc1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1980,7 +1999,7 @@
           "nameRu": "Клара",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/3c20afa4-49f4-4472-8507-871416418aa8.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -1994,7 +2013,7 @@
           "nameRu": "Кирена",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/e429c60f-425d-45d4-9f8a-83f42552711b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2008,7 +2027,7 @@
           "nameRu": "Дань Хэн",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/216975c5-ec45-4a1d-bda8-1106fe1c433d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2022,7 +2041,7 @@
           "nameRu": "Дань Хэн: Пожиратель Луны",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/dc643266-0535-4082-82c1-62e14b4f99cf.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2036,7 +2055,7 @@
           "nameRu": "Дань Хэн: Освободитель Пустошей",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/a295ecee-8e9f-44aa-a281-775908c41201.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2050,7 +2069,7 @@
           "nameRu": "Доктор Рацио",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/65a618f6-f40a-4278-8dc4-9765f24fd138.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2064,7 +2083,7 @@
           "nameRu": "Темень",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/1a0ba13e-52bc-4cc7-8063-62e66a3fbf6a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2078,7 +2097,7 @@
           "nameRu": "Фэйсяо",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/d77c86bd-63e2-4d40-86d0-7bc814a20345.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2092,7 +2111,7 @@
           "nameRu": "Светлячок",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/5d2dfa60-41d7-4903-bb88-28abd713e4de.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2106,7 +2125,7 @@
           "nameRu": "Фу Сюань",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/3cc68e73-3718-43cf-a7db-bd07406c3870.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2120,7 +2139,7 @@
           "nameRu": "Фуга",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/fe46623a-0beb-4dfe-b830-4db76859789a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2134,7 +2153,7 @@
           "nameRu": "Галлахер",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/e3d6d03d-882d-4231-b99a-e89ecfa56543.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2148,7 +2167,7 @@
           "nameRu": "Гепард",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/6c33903d-d4a5-445c-8f7e-70409dac0d55.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2162,7 +2181,7 @@
           "nameRu": "Гуйнайфэнь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/897a64c2-5029-4883-b0a1-39f011a7dd19.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2176,7 +2195,7 @@
           "nameRu": "Ханья",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/a57056f0-6e03-4340-b947-d87f3a275f3e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2190,7 +2209,7 @@
           "nameRu": "Герта",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/36ebc5e0-8f0e-4693-8a2b-1b85fa25dd57.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2204,7 +2223,7 @@
           "nameRu": "Химеко",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/203c0ad1-3e1c-43e6-abb0-128a09deb209.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2218,7 +2237,7 @@
           "nameRu": "Хук",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/42d579ae-3685-43ab-bfa8-f37f79de672c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2232,7 +2251,7 @@
           "nameRu": "Хохо",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/c5392371-c776-4039-af32-1a70a24c2a35.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2246,7 +2265,7 @@
           "nameRu": "Гиацина",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/13e159f0-c080-4103-b8cb-340ea1fb2192.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2260,7 +2279,7 @@
           "nameRu": "Гисиленса",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/e713a2cd-807f-46be-9d08-39591ed23ff6.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2274,7 +2293,7 @@
           "nameRu": "Яшма",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/e4d1c9c1-a4f6-47eb-a2be-2804b647b140.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2288,7 +2307,7 @@
           "nameRu": "Цзяоцю",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/f12c565f-d06f-47e9-8f97-9c653c779f42.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2302,7 +2321,7 @@
           "nameRu": "Цзин Юань",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/4738cd2b-8912-4f4e-a85b-a6e1ae9ea395.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2316,7 +2335,7 @@
           "nameRu": "Цзинлю",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/518f6781-7dcf-411b-996c-c0a4ec1482b1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2330,7 +2349,7 @@
           "nameRu": "Кафка",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/19d861fc-0964-49e1-9e7d-3f7136de5f70.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2344,7 +2363,7 @@
           "nameRu": "Линша",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/3eace349-5e0d-4cfa-86dd-69dc56c0e74e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2358,7 +2377,7 @@
           "nameRu": "Лука",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/5358c8ba-4e23-489c-b45b-572fc6db1142.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2372,7 +2391,7 @@
           "nameRu": "Лоча",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/512b4888-f948-4a2a-bf57-2f068913e46f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2386,7 +2405,7 @@
           "nameRu": "Рысь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/394c3a35-f0b7-421a-a060-749cb8a3c364.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2400,7 +2419,7 @@
           "nameRu": "Март 7",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/d2acc40d-3c61-47a5-adb4-d3d8c4d19beb.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2414,7 +2433,7 @@
           "nameRu": "Миша",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/40520c7f-b42c-4166-bcfa-7197cdcad134.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2428,7 +2447,7 @@
           "nameRu": "Моцзэ",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/2edaebfb-feb5-472b-91fb-f33cbbf04483.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2442,7 +2461,7 @@
           "nameRu": "Мидей",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/c0aac21e-7475-47bf-ae06-33a87583c271.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2456,7 +2475,7 @@
           "nameRu": "Наташа",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/a10764dd-0796-44e8-bae5-b4547fea4cd5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2470,7 +2489,7 @@
           "nameRu": "Пела",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/ffe89716-a8c3-4f17-8acc-dd6541d8d1ab.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2484,7 +2503,7 @@
           "nameRu": "Фаенон",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/85afe8c9-2bea-4aab-823d-a7d4a8f7a62a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2498,7 +2517,7 @@
           "nameRu": "Цинцюэ",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/60962f8a-a6a2-4b77-a5db-de2632444c4d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2512,7 +2531,7 @@
           "nameRu": "Раппа",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/33628ffe-7f0d-41bc-b7eb-e97788f0cc6d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2526,7 +2545,7 @@
           "nameRu": "Зарянка",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/2dc176f1-7552-46e6-acac-924fdbf6000d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2540,7 +2559,7 @@
           "nameRu": "Жуань Мэй",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/8241353c-03e7-4c85-89ec-f132f28cb4b3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2554,7 +2573,7 @@
           "nameRu": "Сэйбер",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/d6cc412c-43cb-4a7e-b18e-3144c523ca95.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2568,7 +2587,7 @@
           "nameRu": "Сампо",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/57461524-08f6-477b-a999-36344209bb53.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2582,7 +2601,7 @@
           "nameRu": "Зеле",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/6ae478cd-8b45-4501-ae93-517546566028.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2596,7 +2615,7 @@
           "nameRu": "Сервал",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/05e656ec-27f8-4f96-a574-09341a7ff914.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2610,7 +2629,7 @@
           "nameRu": "Серебряный Волк",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/acee8c75-6fd2-4d45-ba14-3ea09286dd51.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2624,7 +2643,7 @@
           "nameRu": "Серебряный Волк ур. 999",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/d4a9d5d6-673e-43db-bbd6-0688b77fce7b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2638,7 +2657,7 @@
           "nameRu": "Искорка",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/cb168316-8439-4943-83fc-9927d6a01c62.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2652,7 +2671,7 @@
           "nameRu": "Искра",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/3577186a-fb82-4943-b64d-281959991993.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2666,7 +2685,7 @@
           "nameRu": "Воскресенье",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/93a8582d-2ea0-4d24-a445-cbca6159dbdf.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2680,7 +2699,7 @@
           "nameRu": "Ли Сушан",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/b0199127-32e3-42d3-a21f-0de0ba29ff30.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2694,7 +2713,7 @@
           "nameRu": "Георгина",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/75022fc1-dedd-419d-878e-0e5b17b32ed1.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2708,7 +2727,7 @@
           "nameRu": "Великая Герта",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/f5b0882d-62c5-4611-81f7-90d98f40646c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2722,7 +2741,7 @@
           "nameRu": "Тинъюнь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/5b7320dd-530f-4474-abec-1517f50bd927.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2736,7 +2755,7 @@
           "nameRu": "Топаз и Счетовод",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/df26e1fb-6259-43a7-a618-cf7ac9c03281.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2746,11 +2765,25 @@
         },
         {
           "id": "c_trailblazer",
-          "name": "Trailblazer",
-          "nameRu": "Первопроходец",
+          "name": "Trailblazer (male)",
+          "nameRu": "Первопроходец (муж)",
           "nameNative": "",
-          "gender": "other",
-          "photo": "",
+          "gender": "male",
+          "photo": "data/images/chars/hsr/2415a460-6e50-44e5-b663-64c2b441cf69.webp",
+          "voices": {},
+          "isNpc": false,
+          "names": {
+            "jp": "開かい拓たく者しゃ",
+            "cn": "开拓者"
+          }
+        },
+        {
+          "id": "c_trailblazer",
+          "name": "Trailblazer (female)",
+          "nameRu": "Первопроходец (жен)",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/hsr/c18d9859-c1d5-49ec-a524-f457586dfcb8.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2764,7 +2797,7 @@
           "nameRu": "Трибби",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/212724d3-62d7-4734-a343-a7607b61ebdf.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2778,7 +2811,7 @@
           "nameRu": "Вельт",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/4c900070-7428-422c-8c9b-510a87695914.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2792,7 +2825,7 @@
           "nameRu": "Сюэи",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/36580a48-f676-4629-943b-1751f0aa5376.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2806,7 +2839,7 @@
           "nameRu": "Яньцин",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/hsr/488c1a94-9e79-4469-9d13-fbd9ab86ac40.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2820,7 +2853,7 @@
           "nameRu": "Яо Гуан",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/51a7f4a9-df73-41aa-8e0d-418d77d3c80e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2834,7 +2867,7 @@
           "nameRu": "Юйкун",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/c50eb9d8-befe-4772-a735-7655a1c24b0e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2848,7 +2881,7 @@
           "nameRu": "Юньли",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/hsr/09520364-aa44-47d7-a083-1c181c4ae019.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2860,7 +2893,6 @@
       "nameLanguages": [
         "ru",
         "en",
-        "cn",
         "jp"
       ],
       "imageFolder": "hsr"
@@ -2876,8 +2908,12 @@
           "nameRu": "Александрина Себастиан",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
-          "voices": {},
+          "photo": "data/images/chars/zzz/65da9572-69df-4c45-963d-dafd4d1b456b.webp",
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アレクサンドリナ・セバスチャン",
@@ -2890,8 +2926,12 @@
           "nameRu": "Элис Таймфилд",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
-          "voices": {},
+          "photo": "data/images/chars/zzz/38a8bfa2-3bf4-4721-822c-4ec79e5b9cce.webp",
+          "voices": {
+            "JP": [
+              "a_dar2cbke5war"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アリス・タイムフィールド",
@@ -2904,7 +2944,7 @@
           "nameRu": "Энби Демара",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/001e01d0-aabf-47fa-98f3-00b112370a96.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2918,7 +2958,7 @@
           "nameRu": "Антон Иванов",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/0401a8cf-b809-435f-9f3a-6e6d24f27d76.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2932,7 +2972,7 @@
           "nameRu": "Ария",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/83ed10f0-7a9c-4797-8bda-8e7045c1b2d0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2946,7 +2986,7 @@
           "nameRu": "Асаба Харумаса",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/26549f75-2a54-464f-8b12-7ecc80c45c1a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2960,7 +3000,7 @@
           "nameRu": "Астра Яо",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/967c10fd-840f-4837-ab60-22512f49c3e9.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2974,7 +3014,7 @@
           "nameRu": "Баньюэ",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/c623746d-cc9b-4703-b3b9-0806b2d81a38.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -2988,7 +3028,7 @@
           "nameRu": "Бен Биггер",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/10f28f12-a562-43db-87ef-14205a15c541.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3002,7 +3042,7 @@
           "nameRu": "Билли Кид",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/b618fa92-b44f-4f44-8b39-cd2969e35b5b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3016,7 +3056,7 @@
           "nameRu": "Бёрнис Уайт",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/2386a3e9-56e5-46c9-b9df-3ec581eb542a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3030,7 +3070,7 @@
           "nameRu": "Цезарь Кинг",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/4fe79594-1852-40cd-95fe-48258e706494.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3044,7 +3084,7 @@
           "nameRu": "Циссия",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/1b121d18-c1dd-47b2-85ca-01d3b1f285aa.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3058,7 +3098,7 @@
           "nameRu": "Корин Уикс",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/9a1ebd7b-afc9-45cc-8c2f-4f21dfcdd06c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3072,7 +3112,7 @@
           "nameRu": "Диалинь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/2a31b526-869c-4b9b-b1df-793774665569.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3086,7 +3126,7 @@
           "nameRu": "Эллен Джо",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/a91f8df1-9cef-4fd2-a154-78d1361b0a11.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3100,7 +3140,7 @@
           "nameRu": "Эвелин Шевалье",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/9608628b-e495-4004-835a-54f6fe162f88.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3114,7 +3154,7 @@
           "nameRu": "Грейс Ховард",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/faa3c059-537b-4126-b62d-7736dd607445.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3128,7 +3168,7 @@
           "nameRu": "Хосими Мияби",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/758dbe39-13ca-44e5-ab2b-bb62517dc654.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3142,7 +3182,7 @@
           "nameRu": "Хуго Влад",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/dda4ac71-5769-4f74-9c72-a1143dcae920.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3156,7 +3196,7 @@
           "nameRu": "Джейн Доу",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/424a070d-838f-43fb-b692-6b0c19c63121.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3170,7 +3210,7 @@
           "nameRu": "Цзюй Фуфу",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/250e8189-265e-4019-aa04-87eb1628023d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3184,7 +3224,7 @@
           "nameRu": "Коляда Белобог",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/2a9f8bb8-3355-47f6-9c33-c30913160313.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3198,7 +3238,7 @@
           "nameRu": "Комано Манато",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/8290efa4-4b55-46c0-b6d7-7dc16a12e34d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3212,7 +3252,7 @@
           "nameRu": "Лайтер",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/3a76f706-8f42-4a1e-a93a-aebc804b7a8f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3226,7 +3266,7 @@
           "nameRu": "Люсия Эловен",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/51bec22e-1191-4a3f-bfe5-1fd31d7b003f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3240,7 +3280,7 @@
           "nameRu": "Люсиана Ауксизис Теодоро де Монтефио",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/76a37595-bda0-450b-8be1-f84792752112.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3254,7 +3294,7 @@
           "nameRu": "Наньгун Юй",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/b4b8cc67-4fc1-49ed-be29-657e4bd4df30.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3268,7 +3308,7 @@
           "nameRu": "Нэкомия Мана",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/fcdb5f9f-9717-402c-975e-d98a1cd9e2c8.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3282,7 +3322,7 @@
           "nameRu": "Николь Демара",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/de6a7d92-ca5f-4090-8aa0-4939f91140b0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3296,7 +3336,7 @@
           "nameRu": "Орфея Магнуссон и Магус",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/c78ad4f4-fe47-4e2f-b439-de9e50c8aaa3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3310,7 +3350,7 @@
           "nameRu": "Пань Иньху",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/5f3dea28-8283-4eef-b3b7-1b498bf5a3e5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3324,7 +3364,7 @@
           "nameRu": "Пайпер Уил",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/1274518f-8e49-4d66-a5f6-8c5b12599399.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3338,7 +3378,7 @@
           "nameRu": "Пульхра Феллини",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/e2d27a7c-7f94-43a4-96e5-fb962fe6ac8b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3352,7 +3392,7 @@
           "nameRu": "Цинъи",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/5de7b461-0be5-4c4d-8e99-60b494239d1f.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3366,7 +3406,7 @@
           "nameRu": "Сид",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/0d0fc81e-db94-473f-bec3-d09660036313.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3380,7 +3420,7 @@
           "nameRu": "Сет Лоуэлл",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/513ee8d7-2e24-4589-b459-fa0eb8e33900.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3394,7 +3434,7 @@
           "nameRu": "Солдат 0 Энби",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/40b214ff-021d-4828-ae0e-050b5814a7f5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3408,7 +3448,7 @@
           "nameRu": "Солдат 11",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/f12cdb52-96a0-4791-aa2d-5d3f99008eba.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3422,7 +3462,7 @@
           "nameRu": "Сокаку",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/a1c4f578-1a39-487a-b907-272c40ecb7d2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3436,7 +3476,7 @@
           "nameRu": "Санна",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/9a14b271-01a1-494e-bb98-12b4e45a94aa.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3450,7 +3490,7 @@
           "nameRu": "Гашетка",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/98aea8f3-2aef-4542-a14a-140bec1cb96e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3464,7 +3504,7 @@
           "nameRu": "Цукисиро Янаги",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/46b2add1-24c6-4cd9-a9a5-63bc3b3536bc.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3478,7 +3518,7 @@
           "nameRu": "Укинами Юдзуха",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/a3971ba7-e5d0-4a2e-af50-36fdc3642c9c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3492,7 +3532,7 @@
           "nameRu": "Вивиан Банши",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/137248d9-c779-424e-a25c-629aa4de068a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3506,7 +3546,7 @@
           "nameRu": "Фон Ликаон",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/b9d91577-31ec-4b18-ab44-6645e32d17f5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3520,7 +3560,7 @@
           "nameRu": "Е Шуньгуан",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/1475ba89-887f-4684-b324-02baa9125e05.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3534,7 +3574,7 @@
           "nameRu": "Йидхари Мёрфи",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/3dc80e54-022b-46a2-b458-89f5be6c4077.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3548,7 +3588,7 @@
           "nameRu": "Исюань",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/9f73e20c-0e88-4967-8e6c-d250931a3a15.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3562,7 +3602,7 @@
           "nameRu": "Чжао",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/901c63da-0315-467b-9f8b-d3a340ef4889.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3576,7 +3616,7 @@
           "nameRu": "Чжу Юань",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/e998a537-a248-4198-8b4a-4d599de940c7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3590,7 +3630,7 @@
           "nameRu": "Промея",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/b9dcbd7b-dbda-4ac0-a626-52159165ecde.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3618,7 +3658,7 @@
           "nameRu": "Звёздный Билли",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/zzz/0ed89b10-11a2-45ed-89b2-58459aa87d34.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3630,7 +3670,6 @@
       "nameLanguages": [
         "ru",
         "en",
-        "cn",
         "jp"
       ],
       "imageFolder": "zzz"
@@ -3646,7 +3685,7 @@
           "nameRu": "Аальто",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/58229273-0c57-4d8e-8a63-efd0ec8c79d3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3660,8 +3699,12 @@
           "nameRu": "Эмит",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
-          "voices": {},
+          "photo": "data/images/chars/ww/e7cda402-2a90-4347-b552-c5ee4138001d.webp",
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "エイメス",
@@ -3674,7 +3717,7 @@
           "nameRu": "Августа",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/5582ddad-1b06-4f02-be59-ec47b4e85315.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3688,11 +3731,11 @@
           "nameRu": "Байжи",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/684314b1-1408-480f-8dbd-61c3a1638f02.webp",
           "voices": {},
           "isNpc": false,
           "names": {
-            "jp": "白ビャク芷シ",
+            "jp": "白ビ��ク芷シ",
             "cn": "白芷"
           }
         },
@@ -3702,7 +3745,7 @@
           "nameRu": "Брант",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/0ee972a7-7b8f-424d-90db-603a883cc8d5.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3716,7 +3759,7 @@
           "nameRu": "Булинг",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/ead196a3-7028-4bcf-8706-64f15bef325e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3730,7 +3773,7 @@
           "nameRu": "Калчаро",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/e1e409d5-40cf-473c-a9a4-d0af77ff2e76.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3744,7 +3787,7 @@
           "nameRu": "Камеллия",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/cb75e66d-d335-4608-93ed-8b20c6c15726.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3758,7 +3801,7 @@
           "nameRu": "Кантарелла",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/2f659054-3e4c-4efd-a8ce-32f333d890a3.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3772,7 +3815,7 @@
           "nameRu": "Карлотта",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/38c5cdfb-f191-496f-9bae-297e81fe429b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3786,7 +3829,7 @@
           "nameRu": "Картетия",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/f9958e89-cb9e-4f46-9101-4ba09ca2057d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3800,7 +3843,7 @@
           "nameRu": "Чангли",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/1171ef10-5742-4f56-b2ab-45fd7186575d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3814,7 +3857,7 @@
           "nameRu": "Чиса",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/cb329955-1d6a-411d-b797-6e21ae82441a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3828,7 +3871,7 @@
           "nameRu": "Чиксия",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/de9acebf-9fee-45b8-adf9-e96d8e008622.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3842,7 +3885,7 @@
           "nameRu": "Чаккона",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/149c91fc-30eb-4820-b784-dc976cdf4d29.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3856,7 +3899,7 @@
           "nameRu": "Данжин",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/f2630e6f-f94d-465a-b9b1-bb59e17b8c81.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3870,7 +3913,7 @@
           "nameRu": "Энкор",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/cf1ae8cb-1912-43f3-8dda-5506f945616e.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3884,7 +3927,7 @@
           "nameRu": "Галбрена",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/63c4f9fe-f664-44ad-95be-918719c1b0cc.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3898,7 +3941,7 @@
           "nameRu": "Юно",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/b61ab749-ee91-4dce-87fa-3a0ac7a169eb.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3912,7 +3955,7 @@
           "nameRu": "Джианксин",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/efb3694b-71a6-452e-9e6e-2b3e72d31fcc.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3926,7 +3969,7 @@
           "nameRu": "Джинси",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/6128b1ff-64b0-43de-8f23-802f8b4fd771.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3940,7 +3983,7 @@
           "nameRu": "Джиян",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/94f08f34-26d8-4245-bd0d-14b37120c98a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3954,7 +3997,7 @@
           "nameRu": "Лингянг",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/ce00c799-296c-45b2-b335-69f381f4f495.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3968,7 +4011,7 @@
           "nameRu": "Люми",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/772c7d41-af17-48f8-bdb7-3dd324ff6f04.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3982,7 +4025,7 @@
           "nameRu": "Лупа",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/609d2592-95e0-4eba-9c38-19f7a6202784.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -3996,7 +4039,7 @@
           "nameRu": "Люк Херссен",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/f51dc71a-9fe4-4edb-9db5-0a03cbbb18a8.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4010,7 +4053,7 @@
           "nameRu": "Линея",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/f34c2a57-c69a-46c5-aa84-3537a5be4f02.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4024,7 +4067,7 @@
           "nameRu": "Морни",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/64896378-8334-4d1f-8d3b-ac4f81336eb4.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4038,7 +4081,7 @@
           "nameRu": "Мортефи",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/1820283d-3a48-453a-b16b-c93dea661f42.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4052,7 +4095,7 @@
           "nameRu": "Фиби",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/569e4a10-200d-4107-a07e-fab2dd2fe553.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4066,7 +4109,7 @@
           "nameRu": "Фролова",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/54d36dfd-8088-4ef0-aa98-63d2802ed20b.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4080,7 +4123,7 @@
           "nameRu": "Циюань",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/bfd2c2c9-584b-41cb-b0ca-0ba038c4b5d2.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4094,7 +4137,7 @@
           "nameRu": "Рочча",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/1d3e6a32-2307-41de-8637-a36381da68a6.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4108,7 +4151,7 @@
           "nameRu": "Санхуа",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/b9ee685a-969e-4cbe-85d4-dced4b4d7f42.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4122,7 +4165,7 @@
           "nameRu": "Хранительница Берегов",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/93c7f85d-b62d-4fe3-b019-cf2d47a6b9f0.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4136,7 +4179,7 @@
           "nameRu": "Сигрика",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/842448f2-7605-4064-82a5-4c8dd9c5b35d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4150,7 +4193,7 @@
           "nameRu": "Таоци",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/28868994-f87c-4ef4-8b63-70e2c3c4a504.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4164,7 +4207,7 @@
           "nameRu": "Верина",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/a60e12df-d119-43a9-a832-624f4ec38b9a.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4178,7 +4221,7 @@
           "nameRu": "Сянгли Яо",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/e8a809ce-a103-4461-b8e8-7aa51e80d39d.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4192,7 +4235,7 @@
           "nameRu": "Янгянг",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/99832418-9672-4a2a-912d-da996ad98f69.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4206,7 +4249,7 @@
           "nameRu": "Иньлинь",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/3e7b818f-1a97-4a3b-924b-03b2288c9b19.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4220,7 +4263,7 @@
           "nameRu": "Юху",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/ae49d6b1-e0ae-4a96-b318-ef09f259656c.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4234,7 +4277,7 @@
           "nameRu": "Янву",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/96a2e474-6107-4653-af9c-5a60eb02eab7.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4248,7 +4291,7 @@
           "nameRu": "Зани",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/7c16038f-6676-495a-8b54-b1d6bdf0c372.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4262,7 +4305,7 @@
           "nameRu": "Жежи",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/da241337-923e-4e1b-b804-e54825ff1880.webp",
           "voices": {},
           "isNpc": false,
           "names": {
@@ -4276,7 +4319,7 @@
           "nameRu": "Ровер (муж)",
           "nameNative": "",
           "gender": "male",
-          "photo": "",
+          "photo": "data/images/chars/ww/a415b540-16af-4451-a3ee-42b6cbffac65.webp",
           "isNpc": false,
           "voices": {}
         },
@@ -4286,7 +4329,7 @@
           "nameRu": "Ровер (жен)",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/1b5a77cd-9aac-49c3-9e16-7f8f2c6a8d89.webp",
           "isNpc": false,
           "voices": {}
         },
@@ -4296,7 +4339,7 @@
           "nameRu": "Дения",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/3f7a061d-d65a-4c52-8ce7-05c9936bcded.webp",
           "isNpc": false,
           "voices": {},
           "names": {
@@ -4310,7 +4353,7 @@
           "nameRu": "Хиюки",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/ww/1013e520-7ca6-495a-88c8-1f9bdcd0e341.webp",
           "isNpc": false,
           "voices": {},
           "names": {
@@ -4336,7 +4379,6 @@
       "nameLanguages": [
         "en",
         "ru",
-        "cn",
         "jp"
       ],
       "imageFolder": "ww"
@@ -4521,7 +4563,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c581_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7065,7 +7111,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/68aa2bb8-de0b-4800-915f-0d4bc23382e5.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7391,7 +7441,6 @@
       "nameLanguages": [
         "ru",
         "en",
-        "cn",
         "jp"
       ]
     },
@@ -7589,7 +7638,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/nte/0644e729-3f35-4768-b905-085c574a07ee.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_aoi_koga"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ナナリ",
@@ -7635,7 +7688,12 @@
           "voices": {}
         }
       ],
-      "imageFolder": "nte"
+      "imageFolder": "nte",
+      "nameLanguages": [
+        "ru",
+        "en",
+        "jp"
+      ]
     }
   ],
   "actors": [
