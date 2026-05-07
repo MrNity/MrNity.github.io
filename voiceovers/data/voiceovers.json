@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-07T04:22:29.817Z",
+  "updatedAt": "2026-05-07T06:10:42.822Z",
   "games": [
     {
       "id": "g_genshin",
@@ -7785,7 +7785,8 @@
       "links": [
         {
           "type": "other",
-          "url": "https://zh.moegirl.org.cn/%E5%A4%9A%E5%A4%9Apoi"
+          "url": "https://zh.moegirl.org.cn/%E5%A4%9A%E5%A4%9Apoi",
+          "label": "moegirl"
         }
       ]
     },
@@ -7799,7 +7800,8 @@
       "links": [
         {
           "type": "other",
-          "url": "https://namu.wiki/w/%EA%B9%80%EA%B0%80%EB%A0%B9"
+          "url": "https://namu.wiki/w/%EA%B9%80%EA%B0%80%EB%A0%B9",
+          "label": "namu"
         }
       ]
     },
@@ -7839,7 +7841,7 @@
     },
     {
       "id": "a_corina_boettger",
-      "name": "Corina Boettger",
+      "name": "Corina Boettger (1.0 - 5.7)",
       "nameRu": "Корина Бёттгер (1.0 - 5.7)",
       "nameNative": "",
       "gender": "female",
