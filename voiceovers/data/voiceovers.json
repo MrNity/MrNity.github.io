@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-07T01:30:27.826Z",
+  "updatedAt": "2026-05-07T01:35:17.826Z",
   "games": [
     {
       "id": "g_genshin",
@@ -2929,7 +2929,7 @@
           "photo": "data/images/chars/zzz/38a8bfa2-3bf4-4721-822c-4ec79e5b9cce.webp",
           "voices": {
             "JP": [
-              "a_dar2cbke5war"
+              "a_kyrpg63n0h6y"
             ]
           },
           "isNpc": false,
@@ -2945,7 +2945,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/001e01d0-aabf-47fa-98f3-00b112370a96.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_kyrpg63n0h6y"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アンビー・デマラ",
@@ -2973,7 +2977,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/83ed10f0-7a9c-4797-8bda-8e7045c1b2d0.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_kyrpg63n0h6y"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アリア",
@@ -3735,7 +3743,7 @@
           "voices": {},
           "isNpc": false,
           "names": {
-            "jp": "白ビ��ク芷シ",
+            "jp": "白ビ���ク芷シ",
             "cn": "白芷"
           }
         },
