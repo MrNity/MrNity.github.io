@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+  "exportDate": "2026-05-09T20:12:10.572Z",
+  "tasks": [
+    {
+      "title": "Шахматы 3 задачи",
+      "type": "daily",
+      "resetTime": "00:00",
+      "id": "moy3pw2nkk9nwwepc9",
+      "createdAt": "2026-05-09T08:48:02.975Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:56.244Z",
+          "lastModified": "2026-05-09T08:55:56.244Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:56.244Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Шахматы Задача дня",
+      "type": "daily",
+      "resetTime": "10:00",
+      "id": "moy3q4py871y0yush73",
+      "createdAt": "2026-05-09T08:48:14.182Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:56.887Z",
+          "lastModified": "2026-05-09T08:55:56.887Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:56.887Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Геншин дейлики",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3q9gdupsrfk0mlwb",
+      "createdAt": "2026-05-09T08:48:20.317Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:57.884Z",
+          "lastModified": "2026-05-09T08:55:57.884Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:57.884Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Геншин Кириллу",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3qe7rycyh2o3ncr",
+      "createdAt": "2026-05-09T08:48:26.486Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:58.912Z",
+          "lastModified": "2026-05-09T08:55:58.912Z"
+        }
+      ],
+      "lastModified": "2026-05-09T09:21:59.166Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Хср дейлики",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3qh871pwtoqoa2lrj",
+      "createdAt": "2026-05-09T08:48:30.391Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:56:06.452Z",
+          "lastModified": "2026-05-09T08:56:06.452Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:56:06.452Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Зетка дейлики",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3qjzs0e6j44gw12b",
+      "createdAt": "2026-05-09T08:48:33.976Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:56:07.609Z",
+          "lastModified": "2026-05-09T08:56:07.609Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:56:07.609Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "НТЕ дейлики",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3qn26411pne9nf57",
+      "createdAt": "2026-05-09T08:48:37.950Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:56:09.219Z",
+          "lastModified": "2026-05-09T08:56:09.219Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:56:09.219Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Отметить сон",
+      "type": "daily",
+      "resetTime": "06:00",
+      "id": "moy3r6o7a0frf5fy3q",
+      "createdAt": "2026-05-09T08:49:03.367Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:56:10.874Z",
+          "lastModified": "2026-05-09T08:56:10.874Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:56:10.874Z",
+      "lastResetDate": "2026-05-09"
+    },
+    {
+      "title": "Преобразователь",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "daysOfWeek": [
+        0
+      ],
+      "id": "moy3s2dbt3wfhyzew1",
+      "createdAt": "2026-05-09T08:49:44.447Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:35.165Z",
+          "lastModified": "2026-05-09T08:55:35.165Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:35.165Z"
+    },
+    {
+      "title": "Чайник",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "daysOfWeek": [
+        0,
+        3,
+        2,
+        5
+      ],
+      "id": "moy3sh3rzgg6eem94r",
+      "createdAt": "2026-05-09T08:50:03.543Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:37.078Z",
+          "lastModified": "2026-05-09T08:55:37.078Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:37.078Z"
+    },
+    {
+      "title": "Каверна",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "id": "moy3sodtst4xvylsins",
+      "createdAt": "2026-05-09T08:50:12.977Z",
+      "completions": [],
+      "lastModified": "2026-05-09T08:50:12.977Z"
+    },
+    {
+      "title": "Виртуалка/Валютки",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "id": "moy3svuqngqbei8zgdm",
+      "createdAt": "2026-05-09T08:50:22.658Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T18:24:57.516Z",
+          "lastModified": "2026-05-09T18:24:57.516Z"
+        }
+      ],
+      "lastModified": "2026-05-09T18:24:57.516Z"
+    },
+    {
+      "title": "Геншин Недельные боссы",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "id": "moy3ta1mmjgi37sc25m",
+      "createdAt": "2026-05-09T08:50:41.050Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:39.403Z",
+          "lastModified": "2026-05-09T08:55:39.403Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:39.403Z"
+    },
+    {
+      "title": "Недельные боссы Кириллу",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "id": "moy3thbs33iimppy2ys",
+      "createdAt": "2026-05-09T08:50:50.488Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:40.013Z",
+          "lastModified": "2026-05-09T08:55:40.013Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:40.013Z"
+    },
+    {
+      "title": "Зетка Недельные боссы",
+      "type": "weekly",
+      "resetTime": "06:00",
+      "id": "moy3tmg3tbzkuhssbbm",
+      "createdAt": "2026-05-09T08:50:57.122Z",
+      "completions": [
+        {
+          "date": "2026-05-09",
+          "completed": true,
+          "completedAt": "2026-05-09T08:55:40.720Z",
+          "lastModified": "2026-05-09T08:55:40.720Z"
+        }
+      ],
+      "lastModified": "2026-05-09T08:55:40.720Z"
+    },
+    {
+      "title": "Никке дейлики",
+      "type": "daily",
+      "resetTime": "23:00",
+      "id": "moys5kgsniuwg9e6na",
+      "createdAt": "2026-05-09T20:12:05.212Z",
+      "completions": [],
+      "lastModified": "2026-05-09T20:12:05.212Z"
+    }
+  ],
+  "metadata": {
+    "totalTasks": 16,
+    "dailyTasks": 9,
+    "weeklyTasks": 7
+  }
+}
