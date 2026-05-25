@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-20T23:12:53.341Z",
+  "updatedAt": "2026-05-25T20:00:51.702Z",
   "games": [
     {
       "id": "g_genshin",
@@ -165,7 +165,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/63c639a2-3984-431b-948f-e9073a21e3b5.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_ji3ol13okzik"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "荒瀧一斗",
@@ -489,7 +493,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/b0190b9d-db7d-46d3-a02a-642454f71f88.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_sjtishhzipb8"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ドゥリン",
@@ -609,7 +617,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/950dfa5d-1ecc-4772-b7f3-839a1d3fd2e3.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_lu3r64y9gms7"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "フリーナ",
@@ -1041,7 +1053,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/e299157d-abbe-445f-acc0-c5aeb73189ac.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_r260s2krm9n9"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "マーヴィカ",
@@ -1431,7 +1447,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/9d014c47-5e75-453b-a940-25a29ac1c26c.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6bif7d9qqvfe"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ヴァレサ",
@@ -1477,7 +1497,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/732b329a-5ec1-4da5-a275-73b427e9d254.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_sbprqyiuf1zm"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "放浪者",
@@ -1563,7 +1587,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/6b5fd990-2d9e-4106-91df-396d3164a841.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_ubpcptrnk2gs"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "魈",
@@ -1661,7 +1689,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/8e47ae9d-7302-4cb7-9f38-1287fcdccffd.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_k85lx2ikshdl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "夜蘭イェラン",
@@ -1830,7 +1862,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/82f2a0dd-f546-4848-8977-8526764ee4d5.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_k85lx2ikshdl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アグライア",
@@ -2160,7 +2196,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/d77c86bd-63e2-4d40-86d0-7bc814a20345.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_r260s2krm9n9"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "飛ヒ霄ショウ",
@@ -3029,7 +3069,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/001e01d0-aabf-47fa-98f3-00b112370a96.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zbll5b7doncd"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アンビー・デマラ",
@@ -3071,7 +3115,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/zzz/26549f75-2a54-464f-8b12-7ecc80c45c1a.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_sbprqyiuf1zm"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "浅羽悠真",
@@ -3085,7 +3133,12 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/967c10fd-840f-4837-ab60-22512f49c3e9.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_k85lx2ikshdl",
+              "a_drdjb0c5tpi7"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アストラ・ヤオ",
@@ -3289,7 +3342,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/424a070d-838f-43fb-b692-6b0c19c63121.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6gfxdgadntmf"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ジェーン・ドゥ",
@@ -3531,7 +3588,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/40b214ff-021d-4828-ae0e-050b5814a7f5.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zbll5b7doncd"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "0号・アンビー",
@@ -3545,7 +3606,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/f12cdb52-96a0-4791-aa2d-5d3f99008eba.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_dk3vyyj5pygz"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "「11号」",
@@ -3657,7 +3722,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/1475ba89-887f-4684-b324-02baa9125e05.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6bif7d9qqvfe"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "葉瞬光",
@@ -4477,7 +4546,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/ww/e8a809ce-a103-4461-b8e8-7aa51e80d39d.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_sjtishhzipb8"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "相ソウ里リ要ヨウ",
@@ -5046,7 +5119,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c080_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_r260s2krm9n9"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6658,7 +6735,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c401_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zbll5b7doncd"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6686,7 +6767,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c220_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6bif7d9qqvfe"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6700,7 +6785,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c471_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6bif7d9qqvfe"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6714,7 +6803,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c224_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6bif7d9qqvfe"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6764,7 +6857,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c071_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_lu3r64y9gms7"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6778,7 +6875,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c074_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_lu3r64y9gms7"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7478,7 +7579,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/1a920025-6f23-4333-8f9c-23d44d056fb6.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_r260s2krm9n9"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -8166,6 +8271,362 @@
     }
   ],
   "actors": [
+    {
+      "id": "a_drdjb0c5tpi7",
+      "name": "Zibei Yu (Astra: Song Vocals)",
+      "nameRu": "Цзибей Ю (Астра: Вокал)",
+      "nameNative": "于梓贝 (Astra: Song Vocals)",
+      "gender": "female",
+      "photo": "data/images/cv/d19d55e3-ec76-4d96-9163-22f37c5ac412.jpg",
+      "links": [
+        {
+          "type": "other",
+          "url": "https://music.youtube.com/channel/UCrmUeQW8aiKDi3FZD2fQA3g",
+          "label": "YouTube Music"
+        }
+      ]
+    },
+    {
+      "id": "a_k85lx2ikshdl",
+      "name": "Aya Endou",
+      "nameRu": "Ая Эндо",
+      "nameNative": "遠藤 綾",
+      "gender": "female",
+      "photo": "data/images/cv/d00d0551-dac5-47fe-959d-88a72f7726db.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/54-aya-endou"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/54/Aya_Endou?q=Aya%20Endou&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2594314/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_Aya%20Endou"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Aya-Endo/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Aya_End%C5%8D"
+        }
+      ],
+      "famousWorks": "data/images/cv/98024d5d-c131-4257-9e2a-b14c5479786b.jpg"
+    },
+    {
+      "id": "a_6bif7d9qqvfe",
+      "name": "Mao Ichimichi",
+      "nameRu": "Мао Итимити",
+      "nameNative": "市道 真央",
+      "gender": "female",
+      "photo": "data/images/cv/89c247a3-974a-4b91-b484-4462ad64956e.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/25437-mao-ichimichi"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/25437/Mao_Ichimichi?q=Mao%20Ichimichi&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4289479/?ref_=nv_sr_srsg_0_tt_5_nm_3_in_0_q_Mao%20Ichimichi"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/MAO/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mao_Ichimichi"
+        }
+      ],
+      "famousWorks": "data/images/cv/adad8374-83ad-4713-8993-cdd0274cfaf7.jpg"
+    },
+    {
+      "id": "a_dk3vyyj5pygz",
+      "name": "Yukiyo Fujii",
+      "nameRu": "Юкиё Фудзии",
+      "nameNative": "藤井 ゆきよ",
+      "gender": "female",
+      "photo": "data/images/cv/df4d62e5-bb0d-4066-a424-86d261c253a1.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/11162-yukiyo-fujii"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/11162/Yukiyo_Fujii?q=Yukiyo%20Fujii&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4480120/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_Yukiyo%20Fujii"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yukiyo-Fujii/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yukiyo_Fujii"
+        }
+      ],
+      "famousWorks": "data/images/cv/b63dd314-61b5-4d46-9f65-7ba28ad0eb51.jpg"
+    },
+    {
+      "id": "a_zbll5b7doncd",
+      "name": "Atsumi Tanezaki",
+      "nameRu": "Ацуми Танэдзаки",
+      "nameNative": "種﨑 敦美",
+      "gender": "female",
+      "photo": "data/images/cv/d9050d7a-e4e6-4779-bd2c-015922834be7.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/17215-atsumi-tanezaki"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/17215/Atsumi_Tanezaki?q=Atsumi%20Tanezaki&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm6662487/?ref_=nv_sr_srsg_0_tt_0_nm_1_in_0_q_Atsumi%20Tanezaki"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Atsumi-Tanezaki/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Atsumi_Tanezaki"
+        }
+      ],
+      "famousWorks": "data/images/cv/5917e827-d700-41db-ae79-e0f12ce9b0c5.jpg"
+    },
+    {
+      "id": "a_6gfxdgadntmf",
+      "name": "Yuu Shimamura",
+      "nameRu": "Ю Симамура",
+      "nameNative": "嶋村 侑",
+      "gender": "female",
+      "photo": "data/images/cv/85f19b1f-4eb4-4413-ac26-8aff490836b5.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/5295-yuu-shimamura"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/5295/Yuu_Shimamura?q=Yuu%20Shimamura&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2944513/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_Yuu%20Shimamura"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yu-Shimamura/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Y%C5%AB_Shimamura"
+        }
+      ],
+      "famousWorks": "data/images/cv/1fcc4862-721b-4429-b3ce-11f4a98982bd.jpg"
+    },
+    {
+      "id": "a_r260s2krm9n9",
+      "name": "Mikako Komatsu",
+      "nameRu": "Микако Комацу",
+      "nameNative": "小松 未可子",
+      "gender": "female",
+      "photo": "data/images/cv/055c86b5-98cf-4914-81ec-ff78b2aa5a3f.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/10071-mikako-komatsu"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/10071/Mikako_Komatsu?q=Mikako%20Komatsu&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4262853/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Mikako%20Komatsu"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Mikako-Komatsu/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mikako_Komatsu"
+        }
+      ],
+      "famousWorks": "data/images/cv/a0a0c863-41f8-4da7-b341-ea2372ba50e1.jpg"
+    },
+    {
+      "id": "a_ji3ol13okzik",
+      "name": "Takanori Nishikawa",
+      "nameRu": "Таканори Нисикава",
+      "nameNative": "西川 貴教",
+      "gender": "male",
+      "photo": "data/images/cv/c4102b59-d346-4d9c-8316-5c8f802f3af1.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/714-t-m-revolution"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/714/TMRevolution?q=Takanori%20Nishikawa&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0632708/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_Takanori%20Nishikawa"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Takanori-Nishikawa/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Takanori_Nishikawa"
+        }
+      ],
+      "famousWorks": "data/images/cv/b441b543-b5dc-413e-b1b9-383327ba7bd3.jpg"
+    },
+    {
+      "id": "a_ubpcptrnk2gs",
+      "name": "Yoshitsugu Matsuoka",
+      "nameRu": "Ёсицугу Мацуока",
+      "nameNative": "松岡 禎丞",
+      "gender": "male",
+      "photo": "data/images/cv/ab7518ae-c3bf-4725-b5f7-4d600b03d774.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/11817-yoshitsugu-matsuoka"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/11817/Yoshitsugu_Matsuoka?q=Yoshitsugu%20Matsuoka&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4303311/?ref_=nv_sr_srsg_0_tt_0_nm_2_in_0_q_Yoshitsugu%20Matsuoka"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yoshitsugu-Matsuoka/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yoshitsugu_Matsuoka"
+        }
+      ],
+      "famousWorks": "data/images/cv/13cf4e53-7fe0-4b79-83db-681f215aa195.jpg"
+    },
+    {
+      "id": "a_sjtishhzipb8",
+      "name": "Chiaki Kobayashi",
+      "nameRu": "Тиаки Кобаяси",
+      "nameNative": "小林 千晃",
+      "gender": "male",
+      "photo": "data/images/cv/05116e86-f0b5-48e5-9614-ab2156eba7c0.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/47439-chiaki-kobayashi"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/47439/Chiaki_Kobayashi?q=Chiaki%20Kobayashi&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm10115277/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Chiaki%20Kobayashi"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Chiaki-Kobayashi/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Chiaki_Kobayashi"
+        }
+      ],
+      "famousWorks": "data/images/cv/2555f602-4b50-44b2-b2e7-14b421e9a5b3.jpg"
+    },
+    {
+      "id": "a_lu3r64y9gms7",
+      "name": "Inori Minase",
+      "nameRu": "Инори Минасэ",
+      "nameNative": "水瀬 いのり",
+      "gender": "female",
+      "photo": "data/images/cv/9baaa7dc-a8ce-401b-a662-37fbe07f56f8.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/11297-inori-minase"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/11297/Inori_Minase?q=Inori%20minase&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm5667822/?ref_=nv_sr_srsg_0_tt_5_nm_3_in_0_q_inori"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Inori-Minase/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Inori_Minase"
+        }
+      ],
+      "famousWorks": "data/images/cv/1635a79b-6371-4ecf-ad8d-5043a5615013.jpg"
+    },
+    {
+      "id": "a_sbprqyiuf1zm",
+      "name": "Tetsuya Kakihara",
+      "nameRu": "Тэцуя Какихара",
+      "nameNative": "柿原 徹也",
+      "gender": "male",
+      "photo": "data/images/cv/9fbd5565-14ca-4872-abb4-916525f7771a.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/167-tetsuya-kakihara"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/167/Tetsuya_Kakihara"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2132616/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Tetsuya%20Kakihara"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Tetsuya-Kakihara/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tetsuya_Kakihara"
+        }
+      ],
+      "famousWorks": "data/images/cv/47dba424-7ed4-43ac-8abb-6f479dda5e7f.jpg"
+    },
     {
       "id": "a_jopbe5hy3fmn",
       "name": "Maria Naganawa",
