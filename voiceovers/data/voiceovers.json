@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-25T20:00:51.702Z",
+  "updatedAt": "2026-05-25T22:57:51.701Z",
   "games": [
     {
       "id": "g_genshin",
@@ -867,7 +867,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/e21c4ce1-3ed5-4444-bb5d-fbe7bd6adf3f.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_1g3gux3i5h0i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "刻晴",
@@ -895,7 +899,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/a7f73d0c-3080-4029-9ed5-8bd744cc3061.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_bid73ge0mv6w"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "綺良々",
@@ -951,7 +959,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/ea7286bb-9059-404c-96df-cb80a0a262e0.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_vr7vdlqnju5a"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "藍ラン硯ヤン",
@@ -1749,7 +1761,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/22722782-0660-4bd7-ad5b-d03faafcb4cc.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_u6ih2i29ybk8"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "鍾離",
@@ -2302,7 +2318,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/a57056f0-6e03-4340-b947-d87f3a275f3e.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_bid73ge0mv6w"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "寒カン鴉ア",
@@ -3012,7 +3032,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/09520364-aa44-47d7-a083-1c181c4ae019.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_vr7vdlqnju5a"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "雲ウン璃リ",
@@ -3137,6 +3161,15 @@
             "JP": [
               "a_k85lx2ikshdl",
               "a_drdjb0c5tpi7"
+            ],
+            "CN": [
+              "a_drdjb0c5tpi7"
+            ],
+            "EN": [
+              "a_drdjb0c5tpi7"
+            ],
+            "KR": [
+              "a_drdjb0c5tpi7"
             ]
           },
           "isNpc": false,
@@ -3152,7 +3185,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/zzz/c623746d-cc9b-4703-b3b9-0806b2d81a38.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_xdkm0f6l5ooy"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "盤岳",
@@ -3268,7 +3305,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/a91f8df1-9cef-4fd2-a154-78d1361b0a11.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_vr7vdlqnju5a"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "エレン・ジョー",
@@ -5671,7 +5712,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c352_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_m67ccqt83ypo"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5685,7 +5730,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c353_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_m67ccqt83ypo"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5829,7 +5878,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c262_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_1g3gux3i5h0i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7653,7 +7706,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/endfield/65c4afc4-bee7-4be6-b349-f75a23bc0261.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_xdkm0f6l5ooy"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7751,7 +7808,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/7627c02f-3f9f-4cd1-800b-6f1905ad67d0.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_1g3gux3i5h0i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7765,7 +7826,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/6cd07c3f-0b9d-4744-b95b-a1cfea9079b1.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_bid73ge0mv6w"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7793,7 +7858,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/347d7982-7a6a-4b4c-a186-76ce6b5112e7.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_vr7vdlqnju5a"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7821,7 +7890,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/endfield/cd0f9a79-7fdc-45a7-9886-e9f4cdae6e0f.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_u6ih2i29ybk8"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -8271,6 +8344,181 @@
     }
   ],
   "actors": [
+    {
+      "id": "a_1g3gux3i5h0i",
+      "name": "Eri Kitamura",
+      "nameRu": "Эри Китамура",
+      "nameNative": "喜多村英梨",
+      "gender": "female",
+      "photo": "data/images/cv/dbbdf56b-b89c-42c0-97fa-fb248a11f12c.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/413-eri-kitamura"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/413/Eri_Kitamura"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm1543296/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Eri-Kitamura/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%82%D0%B0%D0%BC%D1%83%D1%80%D0%B0,_%D0%AD%D1%80%D0%B8"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Eri_Kitamura",
+          "label": ""
+        }
+      ],
+      "famousWorks": "data/images/cv/0706decc-2ee9-4a3a-bc47-5b29bad78db8.webp"
+    },
+    {
+      "id": "a_u6ih2i29ybk8",
+      "name": "Tomoaki Maeno",
+      "nameRu": "Томоаки Маэно",
+      "nameNative": "前野智昭",
+      "gender": "male",
+      "photo": "data/images/cv/cbb45288-d393-4621-84ec-f2892bf38e06.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/1489-tomoaki-maeno"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/1489/Tomoaki_Maeno"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2966078/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Tomoaki-Maeno/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tomoaki_Maeno"
+        }
+      ],
+      "famousWorks": "data/images/cv/f3f71c67-1f63-4334-81d1-2c78f6c3bf9e.jfif"
+    },
+    {
+      "id": "a_bid73ge0mv6w",
+      "name": "Sayumi Suzushiro",
+      "nameRu": "Саюми Судзусиро",
+      "nameNative": "鈴代紗弓",
+      "gender": "female",
+      "photo": "data/images/cv/949dbf62-2dc2-452a-93b6-39562c906eca.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/48122-sayumi-suzushiro"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/48122/Sayumi_Suzushiro"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm10273089/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Sayumi-Suzushiro/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://ru.wikipedia.org/wiki/Судзусиро,_Саюми"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sayumi_Suzushiro",
+          "label": ""
+        }
+      ],
+      "famousWorks": "data/images/cv/412e2294-c02d-4c88-b5f0-6d8d6f32fb8c.jfif"
+    },
+    {
+      "id": "a_vr7vdlqnju5a",
+      "name": "Shion Wakayama",
+      "nameRu": "Сион Вакаяма",
+      "nameNative": "若山詩音",
+      "gender": "female",
+      "photo": "data/images/cv/9788546c-b320-438a-8377-801173a5d5f4.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/35511-shion-wakayama"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/35511/Shion_Wakayama"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm11134848/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Shion-Wakayama/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://ru.wikipedia.org/wiki/Вакаяма,_Сион"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Shion_Wakayama",
+          "label": ""
+        }
+      ],
+      "famousWorks": "data/images/cv/ec2f22f1-ed24-4c17-b66d-6abef7fb0f83.jpg"
+    },
+    {
+      "id": "a_xdkm0f6l5ooy",
+      "name": "Show Hayami",
+      "nameRu": "Шо Хаями",
+      "nameNative": "速水 奨",
+      "gender": "male",
+      "photo": "data/images/cv/b0336086-1173-4f49-be0c-68815e951e23.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/137-show-hayami"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/137/Show_Hayami"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0370582/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Show-Hayami/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%8F%D0%BC%D0%B8,_%D0%A1%D1%91"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Show_Hayami",
+          "label": ""
+        }
+      ],
+      "famousWorks": "data/images/cv/36055fc8-bf3d-4097-a5aa-0c8379fba2a5.jfif"
+    },
     {
       "id": "a_drdjb0c5tpi7",
       "name": "Zibei Yu (Astra: Song Vocals)",
@@ -9507,8 +9755,28 @@
           "url": "shiki:people/41328-aoi-koga"
         },
         {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/41328/Aoi_Koga"
+        },
+        {
           "type": "imdb",
-          "url": "https://www.imdb.com/name/nm7612988/"
+          "url": "https://www.imdb.com/name/nm7612988/",
+          "label": ""
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Aoi-Koga/",
+          "label": ""
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B0,_%D0%90%D0%BE%D0%B9",
+          "label": ""
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Aoi_Koga",
+          "label": ""
         }
       ],
       "famousWorks": "data/images/cv/1b8c5db1-7597-4778-996b-eabf78989eeb.webp"
