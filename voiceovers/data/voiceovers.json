@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-05-25T22:57:51.701Z",
+  "updatedAt": "2026-06-23T09:14:52.194Z",
   "games": [
     {
       "id": "g_genshin",
@@ -553,7 +553,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/235f2c84-7f49-464a-bd77-f85ed7de4542.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ファルザン",
@@ -677,7 +681,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/fc4652a7-3730-40c5-9aee-8469b056f902.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_fv1h95pxacyg"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "胡桃フータオ",
@@ -1389,7 +1397,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/2d2b4397-2398-4bd2-8f6c-cfa9f9e4f6fa.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_179tgh45hosl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "スカーク",
@@ -1542,7 +1554,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/8f5cc34c-2409-444c-8827-1e226e299a75.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ドール（女）",
@@ -1719,7 +1735,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/gi/e112b853-849d-4f66-923d-b42fb8215be5.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_08qtv9c2ju4i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "宵宮",
@@ -1807,7 +1827,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/gi/1f5fbd32-6629-40cb-b60c-a66f9de41cf7.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_oqqg1cukfuas"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ローエン",
@@ -1840,6 +1864,21 @@
           "names": {
             "jp": "プルーネ",
             "cn": "布伦妮"
+          }
+        },
+        {
+          "id": "c_b2k75bw3qooa",
+          "name": "Sandrone",
+          "nameRu": "Сандроне",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/gi/eaa97a01-2171-46c8-a69c-4934747272a7.webp",
+          "isNpc": false,
+          "voices": {},
+          "names": {
+            "cn": "桑多涅",
+            "jp": "サンドローネ",
+            "kr": "산드로네"
           }
         }
       ],
@@ -1956,7 +1995,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/hsr/9f941cdb-c3d1-4150-9604-c3bb2e11cd17.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_tct9m2o98x8s"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "不死途シナズ",
@@ -1970,7 +2013,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/471ef1d5-0e60-41b1-aca0-5c14b8ff77e3.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_9cjgi8zqglkq"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アスター",
@@ -2040,7 +2087,11 @@
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/hsr/b91124b3-8a90-4b20-bea1-a73b96ac5e2a.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_7p7tw2xx3jna"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ブートヒル",
@@ -2618,7 +2669,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/hsr/a10764dd-0796-44e8-bae5-b4547fea4cd5.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zaudqdf1bggv"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "ナターシャ",
@@ -3042,6 +3097,74 @@
             "jp": "雲ウン璃リ",
             "cn": "云璃"
           }
+        },
+        {
+          "id": "c_irlpsvu1c2su",
+          "name": "Mortenax Blade",
+          "nameRu": "Мортенакс Блэйд",
+          "nameNative": "",
+          "gender": "male",
+          "photo": "data/images/chars/hsr/7da1d883-92aa-48e8-8878-379955cf4a2d.webp",
+          "isNpc": false,
+          "voices": {},
+          "names": {
+            "cn": "千冶•刃",
+            "jp": "千冶・刃",
+            "kr": "천야•블레이드"
+          }
+        },
+        {
+          "id": "c_rbh58ntkgfua",
+          "name": "Himeko • Nova",
+          "nameRu": "Химеко: Нова",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/hsr/3eb8cfc9-f7b4-4b14-9c9f-9ba1a99ddcda.webp",
+          "isNpc": false,
+          "voices": {},
+          "names": {
+            "cn": "姬子•启行",
+            "kr": "히메코•노바",
+            "jp": "姫子・旅立ち"
+          }
+        },
+        {
+          "id": "c_9shmftzzhwws",
+          "name": "Rin Tohsaka",
+          "nameRu": "Рин Тосака",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/hsr/89050ded-4436-4c74-b126-48cf34d49b53.webp",
+          "isNpc": false,
+          "voices": {
+            "JP": [
+              "a_08qtv9c2ju4i"
+            ]
+          },
+          "names": {
+            "cn": "远坂凛",
+            "jp": "遠坂凛",
+            "kr": "토오사카 린"
+          }
+        },
+        {
+          "id": "c_bj7cuo7mjb14",
+          "name": "Gilgamesh",
+          "nameRu": "Гильгамеш",
+          "nameNative": "",
+          "gender": "male",
+          "photo": "data/images/chars/hsr/af5c3b6a-ad06-49a7-b535-1e0b98dcdd6f.webp",
+          "isNpc": false,
+          "voices": {
+            "JP": [
+              "a_lhqo8etiiotm"
+            ]
+          },
+          "names": {
+            "cn": "吉尔伽美什",
+            "jp": "ギルガメッシュ",
+            "kr": "길가메시"
+          }
         }
       ],
       "nameLanguages": [
@@ -3065,7 +3188,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/65da9572-69df-4c45-963d-dafd4d1b456b.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_q2ugoee9cjin"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "アレクサンドリナ・セバスチャン",
@@ -3415,7 +3542,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/2a9f8bb8-3355-47f6-9c33-c30913160313.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zle7qhntmgpq"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "クレタ・ベロボーグ",
@@ -3759,7 +3890,7 @@
         {
           "id": "c_ye_shunguang",
           "name": "Ye Shunguang",
-          "nameRu": "Е Шуньгуан",
+          "nameRu": "Е Шун��гуан",
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/1475ba89-887f-4684-b324-02baa9125e05.webp",
@@ -3795,7 +3926,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/zzz/9f73e20c-0e88-4967-8e6c-d250931a3a15.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_179tgh45hosl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "儀玄",
@@ -3857,7 +3992,7 @@
           "name": "Pyrois",
           "nameRu": "Пироис",
           "nameNative": "",
-          "gender": "male",
+          "gender": "other",
           "photo": "data/images/chars/zzz/293ead84-8803-43c3-9ead-efb8ad3def3d.webp",
           "voices": {},
           "isNpc": false,
@@ -3897,7 +4032,8 @@
           },
           "names": {
             "cn": "维琳娜・艾嘉德",
-            "jp": "ヴェリナ・エガード"
+            "jp": "ヴェリナ・エガード",
+            "kr": "벨리나 에어기드"
           }
         },
         {
@@ -3911,7 +4047,8 @@
           "voices": {},
           "names": {
             "cn": "诺姆・霍洛维尔",
-            "jp": "ノルムー・ホローウェル"
+            "jp": "ノルムー・ホローウェル",
+            "kr": "노르마 할로웰"
           }
         },
         {
@@ -3920,7 +4057,7 @@
           "nameRu": "Ремиэлла Дан",
           "nameNative": "",
           "gender": "female",
-          "photo": "",
+          "photo": "data/images/chars/zzz/0e99a938-4293-4357-9ce0-e696f5535eb5.webp",
           "isNpc": false,
           "voices": {},
           "names": {
@@ -3932,12 +4069,16 @@
         {
           "id": "c_9b25vskz9rl2",
           "name": "Claret",
-          "nameRu": "",
+          "nameRu": "Кларет",
           "nameNative": "",
           "gender": "female",
           "photo": "",
           "isNpc": false,
-          "voices": {}
+          "voices": {
+            "JP": [
+              "a_08qtv9c2ju4i"
+            ]
+          }
         },
         {
           "id": "c_dm5h5djgedhr",
@@ -3961,7 +4102,7 @@
         {
           "id": "c_j5cb1qx8wawy",
           "name": "Roxy",
-          "nameRu": "",
+          "nameRu": "Рокси",
           "nameNative": "",
           "gender": "female",
           "photo": "",
@@ -3970,18 +4111,23 @@
         },
         {
           "id": "c_0lkqm47jwf3r",
-          "name": "Sigrid",
-          "nameRu": "",
+          "name": "Sigrid de L'Azur",
+          "nameRu": "Сигрид де л'Азур",
           "nameNative": "",
           "gender": "female",
           "photo": "",
           "isNpc": false,
-          "voices": {}
+          "voices": {},
+          "names": {
+            "cn": "希格莉德・德拉叙尔",
+            "jp": "シグリッド・ドゥ・ラズール",
+            "kr": "시그리드・드라주르"
+          }
         },
         {
           "id": "c_cmeihn3mwqdj",
           "name": "Phoenix",
-          "nameRu": "",
+          "nameRu": "Феникс",
           "nameNative": "",
           "gender": "female",
           "photo": "",
@@ -4165,7 +4311,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/ww/38c5cdfb-f191-496f-9bae-297e81fe429b.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_08qtv9c2ju4i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "カルロッタ",
@@ -4545,7 +4695,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/ww/842448f2-7605-4064-82a5-4c8dd9c5b35d.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_9cjgi8zqglkq"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "シグリカ",
@@ -5486,7 +5640,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c821_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_fv1h95pxacyg"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5500,7 +5658,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c090_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_179tgh45hosl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5514,7 +5676,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c093_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_179tgh45hosl"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5808,7 +5974,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c041_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_08qtv9c2ju4i"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5896,7 +6066,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c082_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zle7qhntmgpq"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5952,7 +6126,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c181_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -5966,7 +6144,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c183_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -6170,7 +6352,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c032_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7394,7 +7580,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c822_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_zowf85fmdgpk"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -7664,7 +7854,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "data/images/chars/endfield/68aa2bb8-de0b-4800-915f-0d4bc23382e5.png",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_atgzhp1dejm2"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
@@ -8001,9 +8195,49 @@
           "nameRu": "Эндминистратор (жен)",
           "nameNative": "",
           "gender": "female",
+          "photo": "data/images/chars/endfield/41d9928c-952e-4cc9-a89f-d0e57fd9db8e.png",
+          "isNpc": false,
+          "voices": {}
+        },
+        {
+          "id": "c_f1g0hxu2z8fy",
+          "name": "Mi Fu",
+          "nameRu": "Ми Фу",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "data/images/chars/endfield/39b31100-765c-484c-a03f-488ae6135032.png",
+          "isNpc": false,
+          "voices": {},
+          "names": {
+            "cn": "弭弗",
+            "jp": "ミ・フ",
+            "kr": "미브"
+          }
+        },
+        {
+          "id": "c_mim50u242bbx",
+          "name": "Camille",
+          "nameRu": "Камиль",
+          "nameNative": "",
+          "gender": "male",
           "photo": "",
           "isNpc": false,
           "voices": {}
+        },
+        {
+          "id": "c_fs6eh4jl2r51",
+          "name": "Li Zhiyan",
+          "nameRu": "Ли Чжиянь",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "",
+          "isNpc": false,
+          "voices": {},
+          "names": {
+            "jp": "オクギ",
+            "cn": "诀",
+            "kr": "결"
+          }
         }
       ],
       "imageFolder": "endfield",
@@ -8328,6 +8562,30 @@
           "nameRu": "Хаос",
           "nameNative": "",
           "gender": "male",
+          "photo": "data/images/chars/nte/a83e3cca-e2df-4141-a940-fc89c727763f.webp",
+          "isNpc": false,
+          "voices": {
+            "JP": [
+              "a_7p7tw2xx3jna"
+            ]
+          }
+        },
+        {
+          "id": "c_9y1w32qtu44r",
+          "name": "Shinku",
+          "nameRu": "Шинку",
+          "nameNative": "",
+          "gender": "female",
+          "photo": "",
+          "isNpc": false,
+          "voices": {}
+        },
+        {
+          "id": "c_5bbh3avhu7e3",
+          "name": "Iroi",
+          "nameRu": "Ирой",
+          "nameNative": "",
+          "gender": "female",
           "photo": "",
           "isNpc": false,
           "voices": {}
@@ -8344,6 +8602,409 @@
     }
   ],
   "actors": [
+    {
+      "id": "a_7p7tw2xx3jna",
+      "name": "Katsuyuki Konishi",
+      "nameRu": "Кацуюки Кониси",
+      "nameNative": "小西 克幸",
+      "gender": "male",
+      "photo": "data/images/cv/4ff9d76e-6139-4bfe-9c33-24ab3da731e6.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/20-katsuyuki-konishi"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/20/Katsuyuki_Konishi"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0465160/"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Katsuyuki-Konishi/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Katsuyuki_Konishi"
+        }
+      ],
+      "famousWorks": "data/images/cv/eeeaa8e5-6ce1-4e66-82b0-db24b32a0495.jfif"
+    },
+    {
+      "id": "a_zle7qhntmgpq",
+      "name": "Yuka Iguchi",
+      "nameRu": "Юка Игути",
+      "nameNative": "井口 裕香",
+      "gender": "female",
+      "photo": "data/images/cv/b6dd48b8-fa25-45bc-aad8-98ba6f451277.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/885-yuka-iguchi"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/885/Yuka_Iguchi?q=Yuka%20Iguchi&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2885728/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Yuka%20Iguchi"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yuka-Iguchi/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yuka_Iguchi"
+        }
+      ],
+      "famousWorks": "data/images/cv/108d63b4-d534-487b-92a4-a0f048d6f934.jpg"
+    },
+    {
+      "id": "a_08qtv9c2ju4i",
+      "name": "Kana Ueda",
+      "nameRu": "Кана Уэда",
+      "nameNative": "植田 佳奈",
+      "gender": "female",
+      "photo": "data/images/cv/81c4e8f5-514b-4649-8d08-41a7e1bd4017.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/116-kana-ueda"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/116/Kana_Ueda?q=Kana%20Ueda&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm1290090/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_Kana%20Ueda"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Kana-Ueda/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kana_Ueda"
+        }
+      ],
+      "famousWorks": "data/images/cv/604ddd84-2d2b-43eb-8aea-986c69b7ce3b.jpg"
+    },
+    {
+      "id": "a_lhqo8etiiotm",
+      "name": "Tomokazu Seki",
+      "nameRu": "Томокадзу Сэки",
+      "nameNative": "関 智一",
+      "gender": "male",
+      "photo": "data/images/cv/79c5146a-7947-41c1-903c-b16d89d77547.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/1-tomokazu-seki"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/1/Tomokazu_Seki?q=Tomokazu%20Seki&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0782840/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Tomokazu%20Seki"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Tomokazu-Seki/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tomokazu_Seki"
+        }
+      ],
+      "famousWorks": "data/images/cv/5cebc0a9-abc0-4d31-bc17-d62517993d2c.jpg"
+    },
+    {
+      "id": "a_179tgh45hosl",
+      "name": "Mamiko Noto",
+      "nameRu": "Мамико Ното",
+      "nameNative": "能登 麻美子",
+      "gender": "female",
+      "photo": "data/images/cv/4b8a111b-dfa1-427d-8010-8dd04a47abea.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/40-mamiko-noto"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/40/Mamiko_Noto?q=Mamiko%20Noto&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm1145982/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Mamiko%20Noto"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Mamiko-Noto/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mamiko_Noto"
+        }
+      ],
+      "famousWorks": "data/images/cv/6457991c-1342-4fb2-9b9e-b9781c8dc32e.jpg"
+    },
+    {
+      "id": "a_9cjgi8zqglkq",
+      "name": "Chinatsu Akasaki",
+      "nameRu": "Тинацу Акасаки",
+      "nameNative": "赤﨑 千夏",
+      "gender": "female",
+      "photo": "data/images/cv/47e7697f-bb50-4043-aa4b-bbebf9fae713.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/z12652-chinatsu-akasaki"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/12652/Chinatsu_Akasaki?q=Chinatsu%20Akasaki&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4533533/?ref_=nv_sr_srsg_0_tt_1_nm_1_in_0_q_Chinatsu%20Akasaki"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Chinatsu-Akasaki/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Chinatsu_Akasaki"
+        }
+      ],
+      "famousWorks": "data/images/cv/9f730faa-30ed-4549-a407-78f731af6303.jpg"
+    },
+    {
+      "id": "a_oqqg1cukfuas",
+      "name": "Kouhei Amasaki",
+      "nameRu": "Кохэй Амасаки",
+      "nameNative": "天崎 滉平",
+      "gender": "male",
+      "photo": "data/images/cv/e0970da8-503f-47eb-8add-b02abfffa2e2.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/38438-kouhei-amasaki"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/38438/Kouhei_Amasaki?q=Kouhei%20Amasaki&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm7502119/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Kouhei%20Amasaki"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Kohei-Amasaki/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/K%C5%8Dhei_Amasaki"
+        }
+      ],
+      "famousWorks": "data/images/cv/2b51f3f5-4472-4ba9-bbc2-2ee8e5dbac39.jpg"
+    },
+    {
+      "id": "a_atgzhp1dejm2",
+      "name": "Yui Horie",
+      "nameRu": "Юи Хориэ",
+      "nameNative": "堀江 由衣",
+      "gender": "female",
+      "photo": "data/images/cv/361acbb3-417d-4cbb-b861-123ff27c55a8.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/28-yui-horie"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/28/Yui_Horie?q=Yui%20Horie&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0394679/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_Yui%20Horie"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yui-Horie/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yui_Horie"
+        }
+      ],
+      "famousWorks": "data/images/cv/70c97291-b3e2-43f9-b5d7-330df179925c.jpg"
+    },
+    {
+      "id": "a_zowf85fmdgpk",
+      "name": "Rie Murakawa",
+      "nameRu": "Риэ Муракава",
+      "nameNative": "村川 梨衣",
+      "gender": "female",
+      "photo": "data/images/cv/44dcb794-a568-47da-9132-385aaabde018.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/12212-rie-murakawa"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/12212/Rie_Murakawa?q=Rie%20Murakawa&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm5390656/?ref_=nv_sr_srsg_0_tt_4_nm_4_in_0_q_Rie%20Murakawa"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Rie-Murakawa/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rie_Murakawa"
+        }
+      ],
+      "famousWorks": "data/images/cv/7a8cd07c-881b-4970-bd2c-f23bb37753ca.jpg"
+    },
+    {
+      "id": "a_q2ugoee9cjin",
+      "name": "Satomi Arai",
+      "nameRu": "Сатоми Араи",
+      "nameNative": "新井 里美",
+      "gender": "female",
+      "photo": "data/images/cv/2876d200-366d-4b26-ac4a-3f52a849acad.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/124-satomi-arai"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/124/Satomi_Arai?q=Satomi%20Arai&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm2344361/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_Satomi%20Arai"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Satomi-Arai/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Satomi_Arai"
+        }
+      ],
+      "famousWorks": "data/images/cv/45b2855e-7af4-4599-a61a-edb1a800afa3.jpg"
+    },
+    {
+      "id": "a_zaudqdf1bggv",
+      "name": "Yumi Uchiyama",
+      "nameRu": "Юми Утияма",
+      "nameNative": "内山 夕実",
+      "gender": "female",
+      "photo": "data/images/cv/d95e6288-2617-4945-bbe0-2215a4ec3e3e.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/11784-yumi-uchiyama"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/11784/Yumi_Uchiyama?q=Yumi%20Uchiyama&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm4679086/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_Yumi%20Uchiyama"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Yumi-Uchiyama/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yumi_Uchiyama"
+        }
+      ],
+      "famousWorks": "data/images/cv/aa3fa126-9d8a-488c-8985-f779393c2220.jpg"
+    },
+    {
+      "id": "a_fv1h95pxacyg",
+      "name": "Rie Takahashi",
+      "nameRu": "Риэ Такахаси",
+      "nameNative": "高橋 李依",
+      "gender": "female",
+      "photo": "data/images/cv/df3078e3-9423-4342-b525-cc19760e2cca.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/34785-rie-takahashi"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/34785/Rie_Takahashi?q=Rie%20Takahashi&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm3615728/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Rie%20Takahashi"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Rie-Takahashi/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rie_Takahashi"
+        }
+      ],
+      "famousWorks": "data/images/cv/054582d2-7c23-49ec-a70b-b8378ba1949a.jpg"
+    },
+    {
+      "id": "a_tct9m2o98x8s",
+      "name": "Takehito Koyasu",
+      "nameRu": "Такэхито Коясу",
+      "nameNative": "子安 武人",
+      "gender": "male",
+      "photo": "data/images/cv/b1363a2f-6a97-458d-9757-717617b3d059.webp",
+      "links": [
+        {
+          "type": "shikimori",
+          "url": "shiki:people/160-takehito-koyasu"
+        },
+        {
+          "type": "myanimelist",
+          "url": "https://myanimelist.net/people/160/Takehito_Koyasu?q=Takehito%20Koyasu&cat=person"
+        },
+        {
+          "type": "imdb",
+          "url": "https://www.imdb.com/name/nm0468729/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_Takehito%20Koyasu"
+        },
+        {
+          "type": "behindthevoiceactors",
+          "url": "https://www.behindthevoiceactors.com/Takehito-Koyasu/"
+        },
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Takehito_Koyasu"
+        }
+      ],
+      "famousWorks": "data/images/cv/2463a82c-36b7-4a8b-bf2d-2a409eff6d77.jpg"
+    },
     {
       "id": "a_1g3gux3i5h0i",
       "name": "Eri Kitamura",
