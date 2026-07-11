@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-07-11T12:13:21.252Z",
+  "updatedAt": "2026-07-11T12:22:01.248Z",
   "games": [
     {
       "id": "g_genshin",
@@ -6102,7 +6102,11 @@
           "nameNative": "",
           "gender": "female",
           "photo": "https://static.dotgg.gg/nikke/characters/si_c513_00_s.webp",
-          "voices": {},
+          "voices": {
+            "JP": [
+              "a_6gfxdgadntmf"
+            ]
+          },
           "isNpc": false,
           "names": {
             "jp": "",
