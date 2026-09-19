@@ -1,0 +1,399 @@
+{
+  "games": [
+    {
+      "id": "genshin",
+      "name": "Genshin Impact",
+      "positions": [
+        {
+          "name": "Благословение полой луны",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Жемчужный гимн (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Жемчужный хор (БП макс)",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Путевые заметки (Улучшение БП)",
+          "priceJPY": 1260,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "60 Кристаллов Сотворения",
+          "priceJPY": 120,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "300+30 Кристаллов Сотворения",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "980+110 Кристаллов Сотворения",
+          "priceJPY": 1840,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "1980+260 Кристаллов Сотворения",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 20
+        },
+        {
+          "name": "3280+600 Кристаллов Сотворения",
+          "priceJPY": 6100,
+          "priceRUB": 0,
+          "margin": 35
+        },
+        {
+          "name": "6480+1600 Кристаллов Сотворения",
+          "priceJPY": 12000,
+          "priceRUB": 0,
+          "margin": 50
+        }
+      ]
+    },
+    {
+      "id": "hsr",
+      "name": "Honkai: Star Rail",
+      "positions": [
+        {
+          "name": "Пропуск снабжения экспресса",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Слава Безымянных (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Медаль Безымянных (БП макс)",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "(Улучшение БП)",
+          "priceJPY": 1260,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "60 Сущность древних снов",
+          "priceJPY": 120,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "300+30 Сущность древних снов",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "980+110 Сущность древних снов",
+          "priceJPY": 1840,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "1980+260 Сущность древних снов",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 20
+        },
+        {
+          "name": "3280+600 Сущность древних снов",
+          "priceJPY": 6100,
+          "priceRUB": 0,
+          "margin": 35
+        },
+        {
+          "name": "6480+1600 Сущность древних снов",
+          "priceJPY": 12000,
+          "priceRUB": 0,
+          "margin": 50
+        }
+      ]
+    },
+    {
+      "id": "zzz",
+      "name": "Zenless Zone Zero",
+      "positions": [
+        {
+          "name": "Интернот-подписка",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Фонд Риду: Продвинутый план (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Фонд Риду: Премиальный план (БП макс)",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Фонд Риду: Повышение плана (Улучшение БП)",
+          "priceJPY": 1260,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "60 Монохромы",
+          "priceJPY": 120,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "300+30 Монохромы",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "980+110 Монохромы",
+          "priceJPY": 1840,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "1980+260 Монохромы",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 20
+        },
+        {
+          "name": "3280+600 Монохромы",
+          "priceJPY": 6100,
+          "priceRUB": 0,
+          "margin": 35
+        },
+        {
+          "name": "6480+1600 Монохромы",
+          "priceJPY": 12000,
+          "priceRUB": 0,
+          "margin": 50
+        }
+      ]
+    },
+    {
+      "id": "wuwa",
+      "name": "Wuthering Waves",
+      "positions": [
+        {
+          "name": "Лунит подписка",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Insider Channel (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Connoisseur Channel (БП макс)",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Upgrade to Connoisseur Channel (Улучшение БП)",
+          "priceJPY": 1260,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "60 Лунитов",
+          "priceJPY": 120,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "300+30 Лунитов",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "980+110 Лунитов",
+          "priceJPY": 1840,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "1980+260 Лунитов",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 20
+        },
+        {
+          "name": "3280+600 Лунитов",
+          "priceJPY": 6100,
+          "priceRUB": 0,
+          "margin": 35
+        },
+        {
+          "name": "6480+1600 Лунитов",
+          "priceJPY": 12000,
+          "priceRUB": 0,
+          "margin": 50
+        }
+      ]
+    },
+    {
+      "id": "nte",
+      "name": "Neverness to Everness",
+      "positions": [
+        {
+          "name": "Разрешение на добычу рифткристаллов",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Припасы элитного охотника (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Припасы почётного охотника (БП макс)",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "(Улучшение БП)",
+          "priceJPY": 1260,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "60 Pифткристаллов",
+          "priceJPY": 120,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "300+30 Pифткристаллов",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "980+110 Pифткристаллов",
+          "priceJPY": 1840,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "1980+260 Pифткристаллов",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 20
+        },
+        {
+          "name": "3280+600 Pифткристаллов",
+          "priceJPY": 6100,
+          "priceRUB": 0,
+          "margin": 35
+        },
+        {
+          "name": "6480+1600 Pифткристаллов",
+          "priceJPY": 12000,
+          "priceRUB": 0,
+          "margin": 50
+        }
+      ]
+    },
+    {
+      "id": "ake",
+      "name": "Arknight: Endfield",
+      "positions": [
+        {
+          "name": "Месячный пропуск",
+          "priceJPY": 610,
+          "priceRUB": 0,
+          "margin": 4
+        },
+        {
+          "name": "Настроенный протокол (БП)",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "4+2 Ориджеметрия (12 первый раз)",
+          "priceJPY": 280,
+          "priceRUB": 0,
+          "margin": 2
+        },
+        {
+          "name": "21+5 Ориджеметрия",
+          "priceJPY": 1200,
+          "priceRUB": 0,
+          "margin": 9
+        },
+        {
+          "name": "34+6 Ориджеметрия",
+          "priceJPY": 1800,
+          "priceRUB": 0,
+          "margin": 13
+        },
+        {
+          "name": "57+11 Ориджеметрия",
+          "priceJPY": 3000,
+          "priceRUB": 0,
+          "margin": 18
+        },
+        {
+          "name": "92+20 Ориджеметрия",
+          "priceJPY": 4800,
+          "priceRUB": 0,
+          "margin": 22
+        },
+        {
+          "name": "194+48 Ориджеметрия",
+          "priceJPY": 10000,
+          "priceRUB": 0,
+          "margin": 27
+        },
+        {
+          "name": "320+80 Ориджеметрия",
+          "priceJPY": 16500,
+          "priceRUB": 0,
+          "margin": 40
+        }
+      ]
+    }
+  ],
+  "exchangeRates": {
+    "jpyToUah": 0.28454,
+    "uahToRub": 1.8888
+  },
+  "lastUpdated": "2026-09-19T20:20:49.929Z"
+}
