@@ -261,6 +261,36 @@
           "priceJPY": 12000,
           "priceRUB": 0,
           "margin": 50
+        },
+        {
+          "name": "Jade Steed's Radiant Chest",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Jade Steed's Forging Chest",
+          "priceJPY": 1220,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Shaftpost Yard's Monthly Aid",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Shaftpost Yard's Tuning Collection",
+          "priceJPY": 2480,
+          "priceRUB": 0,
+          "margin": 10
+        },
+        {
+          "name": "Shaftpost Yard's Radiant Chest",
+          "priceJPY": 3680,
+          "priceRUB": 0,
+          "margin": 15
         }
       ]
     },
@@ -389,11 +419,77 @@
           "margin": 40
         }
       ]
+    },
+    {
+      "id": "aniimo",
+      "name": "Aniimo",
+      "positions": [
+        {
+          "name": "Ежемесячный пропуск",
+          "priceJPY": 800,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "Продвинутый справочник компаньона (БП)",
+          "priceJPY": 1500,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "Коллекционный справочник компаньона (БП макс)",
+          "priceJPY": 3000,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "(Улучшение БП)",
+          "priceJPY": 0,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "60+6 Кристаллов люмина",
+          "priceJPY": 138,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "300+30 Кристаллов люмина",
+          "priceJPY": 736,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "980+98 Кристаллов люмина",
+          "priceJPY": 2300,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "1980+198 Кристаллов люмина",
+          "priceJPY": 4600,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "3280+328 Кристаллов люмина",
+          "priceJPY": 7360,
+          "priceRUB": 0,
+          "margin": 0
+        },
+        {
+          "name": "6480+648 Кристаллов люмина",
+          "priceJPY": 13800,
+          "priceRUB": 0,
+          "margin": 0
+        }
+      ]
     }
   ],
   "exchangeRates": {
-    "jpyToUah": 0.28454,
-    "uahToRub": 1.8888
+    "jpyToUah": 0.28446,
+    "uahToRub": 1.8866
   },
-  "lastUpdated": "2026-09-19T20:20:49.929Z"
+  "lastUpdated": "2026-09-20T09:07:54.579Z"
 }
