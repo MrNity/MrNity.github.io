@@ -1,0 +1,49 @@
+name: Deploy Prices Calculator
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'prices/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'prices/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./prices
+        run: npm ci
+
+      - name: Build
+        working-directory: ./prices
+        run: npm run build
+
+      - name: Copy build to root prices folder
+        run: |
+          rm -rf prices-dist
+          cp -r prices/dist prices-dist
+          rm -rf prices/*
+          cp -r prices-dist/* prices/
+          cp prices-dist/.gitignore prices/ || true
+          rm -rf prices-dist
+
+      - name: Commit and push if changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add prices/
+          git diff --staged --quiet || git commit -m "🚀 Auto-deploy prices calculator"
+          git push
