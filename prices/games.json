@@ -8,7 +8,7 @@
           "name": "Благословение полой луны",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "Жемчужный гимн (БП)",
@@ -38,7 +38,7 @@
           "name": "300+30 Кристаллов Сотворения",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "980+110 Кристаллов Сотворения",
@@ -56,13 +56,13 @@
           "name": "3280+600 Кристаллов Сотворения",
           "priceJPY": 6100,
           "priceRUB": 0,
-          "margin": 35
+          "margin": 25
         },
         {
           "name": "6480+1600 Кристаллов Сотворения",
           "priceJPY": 12000,
           "priceRUB": 0,
-          "margin": 50
+          "margin": 30
         }
       ]
     },
@@ -74,7 +74,7 @@
           "name": "Пропуск снабжения экспресса",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "Слава Безымянных (БП)",
@@ -104,7 +104,7 @@
           "name": "300+30 Сущность древних снов",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "980+110 Сущность древних снов",
@@ -122,13 +122,13 @@
           "name": "3280+600 Сущность древних снов",
           "priceJPY": 6100,
           "priceRUB": 0,
-          "margin": 35
+          "margin": 25
         },
         {
           "name": "6480+1600 Сущность древних снов",
           "priceJPY": 12000,
           "priceRUB": 0,
-          "margin": 50
+          "margin": 30
         }
       ]
     },
@@ -140,7 +140,7 @@
           "name": "Интернот-подписка",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "Фонд Риду: Продвинутый план (БП)",
@@ -170,7 +170,7 @@
           "name": "300+30 Монохромы",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "980+110 Монохромы",
@@ -188,13 +188,13 @@
           "name": "3280+600 Монохромы",
           "priceJPY": 6100,
           "priceRUB": 0,
-          "margin": 35
+          "margin": 25
         },
         {
           "name": "6480+1600 Монохромы",
           "priceJPY": 12000,
           "priceRUB": 0,
-          "margin": 50
+          "margin": 30
         }
       ]
     },
@@ -206,7 +206,7 @@
           "name": "Лунит подписка",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "Insider Channel (БП)",
@@ -236,7 +236,7 @@
           "name": "300+30 Лунитов",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "980+110 Лунитов",
@@ -254,13 +254,13 @@
           "name": "3280+600 Лунитов",
           "priceJPY": 6100,
           "priceRUB": 0,
-          "margin": 35
+          "margin": 25
         },
         {
           "name": "6480+1600 Лунитов",
           "priceJPY": 12000,
           "priceRUB": 0,
-          "margin": 50
+          "margin": 30
         },
         {
           "name": "Jade Steed's Radiant Chest",
@@ -278,19 +278,19 @@
           "name": "Shaftpost Yard's Monthly Aid",
           "priceJPY": 2480,
           "priceRUB": 0,
-          "margin": 10
+          "margin": 20
         },
         {
           "name": "Shaftpost Yard's Tuning Collection",
           "priceJPY": 2480,
           "priceRUB": 0,
-          "margin": 10
+          "margin": 20
         },
         {
           "name": "Shaftpost Yard's Radiant Chest",
           "priceJPY": 3680,
           "priceRUB": 0,
-          "margin": 15
+          "margin": 25
         }
       ]
     },
@@ -302,7 +302,7 @@
           "name": "Разрешение на добычу рифткристаллов",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "Припасы элитного охотника (БП)",
@@ -332,7 +332,7 @@
           "name": "300+30 Pифткристаллов",
           "priceJPY": 610,
           "priceRUB": 0,
-          "margin": 4
+          "margin": 3
         },
         {
           "name": "980+110 Pифткристаллов",
@@ -350,13 +350,13 @@
           "name": "3280+600 Pифткристаллов",
           "priceJPY": 6100,
           "priceRUB": 0,
-          "margin": 35
+          "margin": 25
         },
         {
           "name": "6480+1600 Pифткристаллов",
           "priceJPY": 12000,
           "priceRUB": 0,
-          "margin": 50
+          "margin": 30
         }
       ]
     },
