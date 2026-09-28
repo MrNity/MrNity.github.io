@@ -7,62 +7,52 @@
         {
           "name": "Благословение полой луны",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "Жемчужный гимн (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Жемчужный хор (БП макс)",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Путевые заметки (Улучшение БП)",
           "priceJPY": 1260,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "60 Кристаллов Сотворения",
           "priceJPY": 120,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "300+30 Кристаллов Сотворения",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "980+110 Кристаллов Сотворения",
           "priceJPY": 1840,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "1980+260 Кристаллов Сотворения",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "3280+600 Кристаллов Сотворения",
           "priceJPY": 6100,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         },
         {
           "name": "6480+1600 Кристаллов Сотворения",
           "priceJPY": 12000,
-          "priceRUB": 0,
-          "margin": 30
+          "priceRUB": 0
         }
       ]
     },
@@ -73,62 +63,52 @@
         {
           "name": "Пропуск снабжения экспресса",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "Слава Безымянных (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Медаль Безымянных (БП макс)",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "(Улучшение БП)",
           "priceJPY": 1260,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "60 Сущность древних снов",
           "priceJPY": 120,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "300+30 Сущность древних снов",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "980+110 Сущность древних снов",
           "priceJPY": 1840,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "1980+260 Сущность древних снов",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "3280+600 Сущность древних снов",
           "priceJPY": 6100,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         },
         {
           "name": "6480+1600 Сущность древних снов",
           "priceJPY": 12000,
-          "priceRUB": 0,
-          "margin": 30
+          "priceRUB": 0
         }
       ]
     },
@@ -139,62 +119,52 @@
         {
           "name": "Интернот-подписка",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "Фонд Риду: Продвинутый план (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Фонд Риду: Премиальный план (БП макс)",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Фонд Риду: Повышение плана (Улучшение БП)",
           "priceJPY": 1260,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "60 Монохромы",
           "priceJPY": 120,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "300+30 Монохромы",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "980+110 Монохромы",
           "priceJPY": 1840,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "1980+260 Монохромы",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "3280+600 Монохромы",
           "priceJPY": 6100,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         },
         {
           "name": "6480+1600 Монохромы",
           "priceJPY": 12000,
-          "priceRUB": 0,
-          "margin": 30
+          "priceRUB": 0
         }
       ]
     },
@@ -205,92 +175,77 @@
         {
           "name": "Лунит подписка",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "Insider Channel (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Connoisseur Channel (БП макс)",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Upgrade to Connoisseur Channel (Улучшение БП)",
           "priceJPY": 1260,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "60 Лунитов",
           "priceJPY": 120,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "300+30 Лунитов",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "980+110 Лунитов",
           "priceJPY": 1840,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "1980+260 Лунитов",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "3280+600 Лунитов",
           "priceJPY": 6100,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         },
         {
           "name": "6480+1600 Лунитов",
           "priceJPY": 12000,
-          "priceRUB": 0,
-          "margin": 30
+          "priceRUB": 0
         },
         {
           "name": "Jade Steed's Radiant Chest",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Jade Steed's Forging Chest",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Shaftpost Yard's Monthly Aid",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "Shaftpost Yard's Tuning Collection",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "Shaftpost Yard's Radiant Chest",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         }
       ]
     },
@@ -301,62 +256,52 @@
         {
           "name": "Разрешение на добычу рифткристаллов",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "Припасы элитного охотника (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "Припасы почётного охотника (БП макс)",
           "priceJPY": 2480,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "(Улучшение БП)",
           "priceJPY": 1260,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "60 Pифткристаллов",
           "priceJPY": 120,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "300+30 Pифткристаллов",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 3
+          "priceRUB": 0
         },
         {
           "name": "980+110 Pифткристаллов",
           "priceJPY": 1840,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "1980+260 Pифткристаллов",
           "priceJPY": 3680,
-          "priceRUB": 0,
-          "margin": 20
+          "priceRUB": 0
         },
         {
           "name": "3280+600 Pифткристаллов",
           "priceJPY": 6100,
-          "priceRUB": 0,
-          "margin": 25
+          "priceRUB": 0
         },
         {
           "name": "6480+1600 Pифткристаллов",
           "priceJPY": 12000,
-          "priceRUB": 0,
-          "margin": 30
+          "priceRUB": 0
         }
       ]
     },
@@ -367,56 +312,47 @@
         {
           "name": "Месячный пропуск",
           "priceJPY": 610,
-          "priceRUB": 0,
-          "margin": 4
+          "priceRUB": 0
         },
         {
           "name": "Настроенный протокол (БП)",
           "priceJPY": 1220,
-          "priceRUB": 0,
-          "margin": 10
+          "priceRUB": 0
         },
         {
           "name": "4+2 Ориджеметрия (12 первый раз)",
           "priceJPY": 280,
-          "priceRUB": 0,
-          "margin": 2
+          "priceRUB": 0
         },
         {
           "name": "21+5 Ориджеметрия",
           "priceJPY": 1200,
-          "priceRUB": 0,
-          "margin": 9
+          "priceRUB": 0
         },
         {
           "name": "34+6 Ориджеметрия",
           "priceJPY": 1800,
-          "priceRUB": 0,
-          "margin": 13
+          "priceRUB": 0
         },
         {
           "name": "57+11 Ориджеметрия",
           "priceJPY": 3000,
-          "priceRUB": 0,
-          "margin": 18
+          "priceRUB": 0
         },
         {
           "name": "92+20 Ориджеметрия",
           "priceJPY": 4800,
-          "priceRUB": 0,
-          "margin": 22
+          "priceRUB": 0
         },
         {
           "name": "194+48 Ориджеметрия",
           "priceJPY": 10000,
-          "priceRUB": 0,
-          "margin": 27
+          "priceRUB": 0
         },
         {
           "name": "320+80 Ориджеметрия",
           "priceJPY": 16500,
-          "priceRUB": 0,
-          "margin": 40
+          "priceRUB": 0
         }
       ]
     },
@@ -427,62 +363,52 @@
         {
           "name": "Ежемесячный пропуск",
           "priceJPY": 800,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "Продвинутый справочник компаньона (БП)",
           "priceJPY": 1500,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "Коллекционный справочник компаньона (БП макс)",
           "priceJPY": 3000,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "(Улучшение БП)",
           "priceJPY": 0,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "60+6 Кристаллов люмина",
           "priceJPY": 138,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "300+30 Кристаллов люмина",
           "priceJPY": 736,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "980+98 Кристаллов люмина",
           "priceJPY": 2300,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "1980+198 Кристаллов люмина",
           "priceJPY": 4600,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "3280+328 Кристаллов люмина",
           "priceJPY": 7360,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         },
         {
           "name": "6480+648 Кристаллов люмина",
           "priceJPY": 13800,
-          "priceRUB": 0,
-          "margin": 0
+          "priceRUB": 0
         }
       ]
     }
@@ -491,6 +417,6 @@
     "jpyToUah": 0.28478,
     "uahToRub": 1.8771
   },
-  "remaining": 15000,
-  "lastUpdated": "2026-09-28T04:05:21.945Z"
+  "remaining": 14850,
+  "lastUpdated": "2026-09-28T16:42:47.174Z"
 }
