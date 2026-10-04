@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updatedAt": "2026-10-04T07:15:44.579Z",
+  "updatedAt": "2026-10-04T07:24:45.956Z",
   "games": [
     {
       "id": "g_genshin",
@@ -2113,8 +2113,12 @@
           "nameNative": "",
           "gender": "female",
           "photo": "",
-          "isNpc": false,
-          "voices": {},
+          "isNpc": true,
+          "voices": {
+            "JP": [
+              "a_i2nb801s4zge"
+            ]
+          },
           "names": {
             "cn": "艾莉丝",
             "jp": "アリス",
@@ -3918,7 +3922,7 @@
           "isNpc": false,
           "names": {
             "jp": "ルシアーナ・オクシスィース・テオドロ・デ・モンテフィーノ",
-            "cn": "露西亚娜・奥克希斯・提奥多・德・蒙特夫"
+            "cn": "露西亚娜・奥克希斯・提奥��・德・蒙特夫"
           }
         },
         {
@@ -8263,7 +8267,7 @@
         {
           "id": "c_pogranichnik",
           "name": "Pogranichnik",
-          "nameRu": "Погра����ичник",
+          "nameRu": "Погра�����ичник",
           "nameNative": "",
           "gender": "male",
           "photo": "data/images/chars/endfield/65c4afc4-bee7-4be6-b349-f75a23bc0261.png",
