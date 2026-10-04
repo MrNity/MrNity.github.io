@@ -415,8 +415,15 @@
   ],
   "exchangeRates": {
     "jpyToUah": 0.28482,
-    "uahToRub": 1.8576
+    "uahToRub": 1.8574,
+    "history": [
+      {
+        "date": "2026-10-04T00:25:15.990Z",
+        "jpyToUah": 0.28482,
+        "uahToRub": 1.8574
+      }
+    ]
   },
   "remaining": 4450,
-  "lastUpdated": "2026-10-03T14:41:13.065Z"
+  "lastUpdated": "2026-10-04T00:25:15.990Z"
 }
