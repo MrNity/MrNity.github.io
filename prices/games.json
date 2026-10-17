@@ -418,8 +418,10 @@
       ]
     }
   ],
+  "remaining": 6500,
+  "lastUpdated": "2026-10-17T23:33:19.143Z",
   "exchangeRates": {
-    "jpyToAka": 0.28555,
+    "jpyToAka": 0.28584,
     "akaToRub": 1.8661,
     "history": [
       {
@@ -551,9 +553,12 @@
         "date": "2026-10-17T10:54:46.355Z",
         "jpyToAka": 0.28555,
         "akaToRub": 1.8661
+      },
+      {
+        "date": "2026-10-17T23:33:19.141Z",
+        "jpyToAka": 0.28584,
+        "akaToRub": 1.8661
       }
     ]
-  },
-  "remaining": 6500,
-  "lastUpdated": "2026-10-17T10:54:46.355Z"
+  }
 }
