@@ -280,7 +280,7 @@
         },
         {
           "name": "(Улучшение БП)",
-          "priceJPY": 1260,
+          "priceJPY": 1840,
           "priceRUB": 0
         },
         {
@@ -311,6 +311,16 @@
         {
           "name": "6480+1600 Pифткристаллов",
           "priceJPY": 12000,
+          "priceRUB": 0
+        },
+        {
+          "name": "Lite Supply Pack (120 аннулитов + 10 книжек + 20к жуков)",
+          "priceJPY": 120,
+          "priceRUB": 0
+        },
+        {
+          "name": "Shopping Day Special Bundle (400 аннулитов, 5 круток, спец карточка профиля)",
+          "priceJPY": 1220,
           "priceRUB": 0
         }
       ]
@@ -423,6 +433,6 @@
       ]
     }
   ],
-  "remaining": 1100,
-  "lastUpdated": "2026-10-25T09:44:18.207Z"
+  "remaining": 900,
+  "lastUpdated": "2026-10-25T11:24:47.123Z"
 }
