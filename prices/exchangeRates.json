@@ -1,6 +1,6 @@
 {
-  "jpyToAka": 0.29261,
-  "akaToRub": 1.02,
+  "jpyToAka": 0.29043,
+  "akaToRub": 1.80657,
   "history": [
     {
       "date": "2026-10-01T01:36:08.963Z",
@@ -148,9 +148,9 @@
       "akaToRub": 1.81344
     },
     {
-      "date": "2026-10-31T10:09:46.510Z",
-      "jpyToAka": 0.29261,
-      "akaToRub": 1.02
+      "date": "2026-10-31T10:10:05.797Z",
+      "jpyToAka": 0.29043,
+      "akaToRub": 1.80657
     }
   ]
 }
