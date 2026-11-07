@@ -228,32 +228,42 @@
           "priceRUB": 0
         },
         {
-          "name": "Jade Steed's Radiant Chest",
+          "name": "Spring in Bloom (веер)",
+          "priceJPY": 0,
+          "priceRUB": 0
+        },
+        {
+          "name": "Glazed Roseate (очки)",
+          "priceJPY": 0,
+          "priceRUB": 0
+        },
+        {
+          "name": "Jade Steed's Radiant Chest (5 круток персонажа + 400 астритов)",
           "priceJPY": 1220,
           "priceRUB": 0
         },
         {
-          "name": "Jade Steed's Forging Chest",
+          "name": "Jade Steed's Forging Chest (5 круток оружки + 400 астритов)",
           "priceJPY": 1220,
           "priceRUB": 0
         },
         {
-          "name": "Shaftpost Yard's Monthly Aid",
+          "name": "Shaftpost Yard's Monthly Aid (5 перса + 5 оружки + 500 астритов)",
           "priceJPY": 2480,
           "priceRUB": 0
         },
         {
-          "name": "Shaftpost Yard's Battlesong Collection",
+          "name": "Shaftpost Yard's Battlesong Collection (600 астритов)",
           "priceJPY": 2480,
           "priceRUB": 0
         },
         {
-          "name": "Shaftpost Yard's Tuning Collection",
+          "name": "Xuanfang's Support Ration (600 астритов)",
           "priceJPY": 2480,
           "priceRUB": 0
         },
         {
-          "name": "Shaftpost Yard's Radiant Chest",
+          "name": "Shaftpost Yard's Radiant Chest (15 перса + 500 астритов)",
           "priceJPY": 3680,
           "priceRUB": 0
         }
