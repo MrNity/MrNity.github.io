@@ -228,16 +228,6 @@
           "priceRUB": 0
         },
         {
-          "name": "Spring in Bloom (веер)",
-          "priceJPY": 0,
-          "priceRUB": 0
-        },
-        {
-          "name": "Glazed Roseate (очки)",
-          "priceJPY": 0,
-          "priceRUB": 0
-        },
-        {
           "name": "Jade Steed's Radiant Chest (5 круток персонажа + 400 астритов)",
           "priceJPY": 1220,
           "priceRUB": 0
@@ -265,6 +255,16 @@
         {
           "name": "Shaftpost Yard's Radiant Chest (15 перса + 500 астритов)",
           "priceJPY": 3680,
+          "priceRUB": 0
+        },
+        {
+          "name": "Spring in Bloom (веер)",
+          "priceJPY": 0,
+          "priceRUB": 0
+        },
+        {
+          "name": "Glazed Roseate (очки)",
+          "priceJPY": 0,
           "priceRUB": 0
         }
       ]
@@ -444,5 +444,5 @@
     }
   ],
   "remaining": 0,
-  "lastUpdated": "2026-11-07T04:07:42.754Z"
+  "lastUpdated": "2026-11-08T08:22:10.366Z"
 }
